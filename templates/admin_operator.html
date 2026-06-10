@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}{{ operator.name }} — Twinplex Training{% endblock %}
+{% block content %}
+<div class="page-header">
+  <a href="{{ url_for('admin') }}" class="back-link">← Dashboard</a>
+  <h1>{{ operator.name }}</h1>
+  <p>Employee ID: {{ operator.employee_id }} &nbsp;·&nbsp; Role: {{ operator.role }}</p>
+</div>
+
+<div class="operator-detail">
+  {% for c in completions %}
+  {% set m = mod_map.get(c.module_code, {}) %}
+  <div class="detail-card">
+    <h3>{{ m.get('name_en', c.module_code) }}</h3>
+    <table class="detail-table">
+      <tr><td>Lesson viewed</td><td>{% if c.lesson_viewed %}<span class="badge badge-pass">Yes</span>{% else %}<span class="badge badge-new">No</span>{% endif %}</td></tr>
+      <tr><td>Language used</td><td>{{ (c.lang_used or 'en') | upper }}</td></tr>
+      {% if m.get('has_pc1') %}
+      <tr>
+        <td>PC#1 — Knowledge Test</td>
+        <td>
+          {% if c.pc1_passed == 1 %}<span class="badge badge-pass">PASSED</span>
+          {% elif c.pc1_passed == 0 %}<span class="badge badge-recheck">RE-CHECK</span>
+          {% elif c.pc1_submitted_at %}<span class="badge badge-pending">Awaiting sign-off</span>
+          {% else %}<span class="badge badge-new">Not taken</span>{% endif %}
+          {% if c.pc1_signed_at %} <small>{{ c.pc1_signed_at[:10] }} · Trainer: {{ c.pc1_trainer_name or '—' }}</small>{% endif %}
+          {% if c.pc1_score is not none %} <small>Auto: {{ c.pc1_score }}/{{ c.pc1_max_auto }} MC/TF</small>{% endif %}
+        </td>
+      </tr>
+      {% if c.pc1_comments %}<tr><td>PC#1 Comments</td><td><em>{{ c.pc1_comments }}</em></td></tr>{% endif %}
+      {% endif %}
+      {% if m.get('has_pc2') %}
+      <tr>
+        <td>PC#2 — Practical Demo</td>
+        <td>
+          {% if c.pc2_passed == 1 %}<span class="badge badge-pass">PASSED</span>
+          {% elif c.pc2_passed == 0 %}<span class="badge badge-recheck">RE-CHECK</span>
+          {% else %}<span class="badge badge-new">Not signed off</span>{% endif %}
+          {% if c.pc2_signed_at %} <small>{{ c.pc2_signed_at[:10] }} · Trainer: {{ c.pc2_trainer_name or '—' }}</small>{% endif %}
+        </td>
+      </tr>
+      {% if c.pc2_comments %}<tr><td>PC#2 Comments</td><td><em>{{ c.pc2_comments }}</em></td></tr>{% endif %}
+      {% endif %}
+      {% if m.get('has_pc3') %}
+      <tr>
+        <td>PC#3 — Advanced Demo</td>
+        <td>
+          {% if c.pc3_passed == 1 %}<span class="badge badge-pass">PASSED</span>
+          {% elif c.pc3_passed == 0 %}<span class="badge badge-recheck">RE-CHECK</span>
+          {% else %}<span class="badge badge-new">Not signed off</span>{% endif %}
+          {% if c.pc3_signed_at %} <small>{{ c.pc3_signed_at[:10] }} · Trainer: {{ c.pc3_trainer_name or '—' }}</small>{% endif %}
+        </td>
+      </tr>
+      {% if c.pc3_comments %}<tr><td>PC#3 Comments</td><td><em>{{ c.pc3_comments }}</em></td></tr>{% endif %}
+      {% endif %}
+    </table>
+  </div>
+  {% endfor %}
+  {% if not completions %}
+  <p class="empty-note">No training activity recorded yet for this operator.</p>
+  {% endif %}
+</div>
+{% endblock %}

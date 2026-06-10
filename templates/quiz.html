@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}PC#1 – {{ mod.name_en }} — Twinplex Training{% endblock %}
+{% block content %}
+<div class="page-header">
+  <a href="{{ url_for('lesson', code=mod.code) }}" class="back-link">← {{ mod.name_en if lang=='en' else mod.name_es }}</a>
+  <h1>Performance Check #1 — {{ mod.pc1.title_en }}</h1>
+  <p class="quiz-instructions">
+    Answer all questions <strong>without</strong> reference materials. Your trainer will review your answers and sign off.
+  </p>
+</div>
+
+<form method="post" action="{{ url_for('quiz', code=mod.code) }}" id="quiz-form">
+  <div class="question-list">
+  {% for q in questions %}
+  <div class="question-card" id="q{{ q.idx }}">
+    <div class="q-num">Q{{ q.idx + 1 }}</div>
+    <div class="q-body">
+      <p class="q-text">{{ q.text }}</p>
+
+      {% if q.type == 'mc' %}
+        <div class="mc-options">
+          {% for letter, label in q.options.items() %}
+          <label class="mc-option">
+            <input type="radio" name="q{{ q.idx }}" value="{{ letter }}" required>
+            <span class="mc-letter">{{ letter.upper() }}.</span> {{ label }}
+          </label>
+          {% endfor %}
+        </div>
+
+      {% elif q.type == 'tf' %}
+        <div class="tf-options">
+          <label class="tf-option">
+            <input type="radio" name="q{{ q.idx }}" value="T" required>
+            <span>True</span>
+          </label>
+          <label class="tf-option">
+            <input type="radio" name="q{{ q.idx }}" value="F" required>
+            <span>False</span>
+          </label>
+        </div>
+
+      {% elif q.type == 'fill' %}
+        {% set blanks = q.get('blanks', 1) %}
+        {% if blanks == 1 %}
+          <input type="text" name="q{{ q.idx }}_b0" class="fill-input" placeholder="Your answer" required>
+        {% else %}
+          {% for b in range(blanks) %}
+          <div class="fill-row">
+            <span class="fill-label">Blank {{ b+1 }}:</span>
+            <input type="text" name="q{{ q.idx }}_b{{ b }}" class="fill-input" placeholder="Your answer" required>
+          </div>
+          {% endfor %}
+        {% endif %}
+
+      {% elif q.type == 'list' %}
+        {% set labels = q.get('labels', []) %}
+        {% for p in range(q.parts) %}
+        <div class="fill-row">
+          {% if labels and p < labels|length %}
+            <span class="fill-label">{{ labels[p] }}</span>
+          {% else %}
+            <span class="fill-label">{{ p+1 }}.</span>
+          {% endif %}
+          <input type="text" name="q{{ q.idx }}_p{{ p }}" class="fill-input"
+                 placeholder="Your answer" required>
+        </div>
+        {% endfor %}
+
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+
+  <div class="quiz-submit-bar">
+    <p>Review your answers, then submit. Your trainer will review and sign off.</p>
+    <button type="submit" class="btn btn-primary btn-large">Submit Answers</button>
+  </div>
+</form>
+{% endblock %}

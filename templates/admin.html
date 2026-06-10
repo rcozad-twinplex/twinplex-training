@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard — Twinplex Training{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Supervisor / Admin Dashboard</h1>
+  <p>Training completion records — Press Operator Training Series</p>
+</div>
+
+<!-- Add User -->
+<div class="admin-section">
+  <h2>Add User</h2>
+  <form method="post" action="{{ url_for('add_user') }}" class="add-user-form">
+    <div class="field">
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+    </div>
+    <div class="field">
+      <label>Employee ID</label>
+      <input type="text" name="employee_id" required autocomplete="off">
+    </div>
+    <div class="field">
+      <label>PIN (4+ digits)</label>
+      <input type="text" name="pin" inputmode="numeric" minlength="4" maxlength="8" required>
+    </div>
+    <div class="field">
+      <label>Role</label>
+      <select name="role">
+        <option value="operator">Operator</option>
+        <option value="trainer">Trainer</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add User</button>
+  </form>
+</div>
+
+<!-- Completion Matrix -->
+<div class="admin-section">
+  <h2>Completion Matrix</h2>
+  {% set module_codes = modules | map(attribute='code') | list %}
+  {% set mod_names = {} %}
+  {% for m in modules %}{% set _ = mod_names.update({m.code: m.name_en}) %}{% endfor %}
+
+  <!-- Group completions by operator -->
+  {% set operators = {} %}
+  {% for c in completions %}
+    {% if c.operator_name not in operators %}
+      {% set _ = operators.update({c.operator_name: {'id': c.operator_id, 'emp': c.employee_id, 'modules': {}}}) %}
+    {% endif %}
+    {% set _ = operators[c.operator_name].modules.update({c.module_code: c}) %}
+  {% endfor %}
+
+  <div class="matrix-scroll">
+  <table class="matrix-table">
+    <thead>
+      <tr>
+        <th>Operator</th>
+        {% for m in modules %}
+        <th class="matrix-mod-head" title="{{ m.name_en }}">
+          {{ m.name_en | truncate(14, true, '…') }}
+        </th>
+        {% endfor %}
+        <th>Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for op_name, op_data in operators.items() | sort %}
+    <tr>
+      <td class="op-name">{{ op_name }}</td>
+      {% for m in modules %}
+        {% set c = op_data.modules.get(m.code) %}
+        <td class="matrix-cell">
+          {% if c %}
+            {% if not m.has_pc1 and not m.has_pc2 and not m.has_pc3 %}
+              {% if c.lesson_viewed %}<span class="dot dot-pass" title="Viewed">●</span>{% else %}<span class="dot dot-new" title="Not started">○</span>{% endif %}
+            {% else %}
+              <div class="dot-row">
+                {% if m.has_pc1 %}<span class="dot {% if c.pc1_passed==1 %}dot-pass{% elif c.pc1_passed==0 %}dot-fail{% elif c.pc1_submitted_at %}dot-pending{% else %}dot-new{% endif %}" title="PC#1">1</span>{% endif %}
+                {% if m.has_pc2 %}<span class="dot {% if c.pc2_passed==1 %}dot-pass{% elif c.pc2_passed==0 %}dot-fail{% else %}dot-new{% endif %}" title="PC#2">2</span>{% endif %}
+                {% if m.has_pc3 %}<span class="dot {% if c.pc3_passed==1 %}dot-pass{% elif c.pc3_passed==0 %}dot-fail{% else %}dot-new{% endif %}" title="PC#3">3</span>{% endif %}
+              </div>
+            {% endif %}
+          {% else %}
+            <span class="dot dot-new" title="Not started">—</span>
+          {% endif %}
+        </td>
+      {% endfor %}
+      <td><a href="{{ url_for('admin_operator', operator_id=op_data.id) }}" class="btn btn-small">View</a></td>
+    </tr>
+    {% endfor %}
+    {% if not operators %}
+    <tr><td colspan="{{ modules|length + 2 }}" class="empty-row">No training records yet.</td></tr>
+    {% endif %}
+    </tbody>
+  </table>
+  </div>
+  <div class="matrix-legend">
+    <span class="dot dot-pass">●</span> Passed &nbsp;
+    <span class="dot dot-fail">●</span> Re-check &nbsp;
+    <span class="dot dot-pending">●</span> Awaiting sign-off &nbsp;
+    <span class="dot dot-new">—</span> Not started
+  </div>
+</div>
+
+<!-- All Users -->
+<div class="admin-section">
+  <h2>All Users</h2>
+  <table class="users-table">
+    <thead><tr><th>Name</th><th>Employee ID</th><th>Role</th><th>Language</th></tr></thead>
+    <tbody>
+    {% for u in users %}
+    <tr>
+      <td>{{ u.name }}</td>
+      <td>{{ u.employee_id }}</td>
+      <td><span class="badge badge-{{ u.role }}">{{ u.role }}</span></td>
+      <td>{{ u.lang_pref | upper }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

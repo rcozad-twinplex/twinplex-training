@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Login — Twinplex Training{% endblock %}
+{% block content %}
+<div class="login-wrap">
+  <div class="login-card">
+    <h1>Twinplex Training System</h1>
+    <p class="login-sub">Sign in with your Employee ID and PIN</p>
+    <form method="post" action="{{ url_for('login') }}">
+      <input type="hidden" name="next" value="{{ next }}">
+      <div class="field">
+        <label for="employee_id">Employee ID</label>
+        <input type="text" id="employee_id" name="employee_id"
+               autocomplete="off" autocapitalize="off" required>
+      </div>
+      <div class="field">
+        <label for="pin">PIN</label>
+        <input type="password" id="pin" name="pin"
+               inputmode="numeric" pattern="[0-9]*" maxlength="8" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

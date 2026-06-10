@@ -1,0 +1,702 @@
+[
+  {
+    "code": "00_overview",
+    "sort_order": 0,
+    "name_en": "Overview",
+    "name_es": "Descripción General",
+    "has_pc1": false, "has_pc2": false, "has_pc3": false,
+    "lesson_en": ["trainee/00 - Overview.md"],
+    "lesson_es": ["trainee/00 - Overview.md"],
+    "pc1": null, "pc2": null, "pc3": null
+  },
+  {
+    "code": "01_safety",
+    "sort_order": 1,
+    "name_en": "Safety & Housekeeping",
+    "name_es": "Seguridad y Orden",
+    "has_pc1": true, "has_pc2": true, "has_pc3": true,
+    "lesson_en": [
+      "trainee/01 - Safety & Housekeeping - part1.md",
+      "trainee/01 - Safety & Housekeeping - part2.md"
+    ],
+    "lesson_es": [
+      "instructor/01 - Safety & Housekeeping - ES - part1.md",
+      "instructor/01 - Safety & Housekeeping - ES - part2.md"
+    ],
+    "pc1": {
+      "title_en": "Safety & Housekeeping Knowledge",
+      "questions": [
+        {
+          "idx": 0, "type": "mc",
+          "text": "Our safety goal is:",
+          "options": {"a": "To have a 2% accident rate", "b": "To have zero accidents", "c": "To reduce the number of accidents", "d": "OSHA does not require us to have a safety goal"},
+          "answer": "b"
+        },
+        {
+          "idx": 1, "type": "fill", "blanks": 1,
+          "text": "When lifting, a safe practice is to use your ________, rather than your back.",
+          "answer": ["legs"]
+        },
+        {
+          "idx": 2, "type": "fill", "blanks": 2,
+          "text": "Working safely begins with an excellent safety ________ where you believe that all accidents can be ________.",
+          "answer": ["attitude", "prevented"]
+        },
+        {
+          "idx": 3, "type": "list", "parts": 3,
+          "text": "List the three actions that can improve safety:",
+          "answer": ["follow all safety rules", "identify and report unsafe conditions", "work defensively"]
+        },
+        {
+          "idx": 4, "type": "mc",
+          "text": "Which of the following is NOT a common rule for preventing accidents:",
+          "options": {
+            "a": "Never place your hands or any part of your body in the die area.",
+            "b": "Never try to beat, cheat, or modify any point of operation safeguarding.",
+            "c": "Follow all safety rules and regulations for your job and area.",
+            "d": "Don't remove scrap or material from a die with your hands.",
+            "e": "None of the above — they all prevent accidents."
+          },
+          "answer": "e"
+        },
+        {
+          "idx": 5, "type": "fill", "blanks": 1,
+          "text": "What is our housekeeping goal? (describe in your own words)",
+          "answer": ["continuously clean and organized"]
+        },
+        {
+          "idx": 6, "type": "fill", "blanks": 1,
+          "text": "The responsibility for housekeeping belongs with ________.",
+          "answer": ["me"]
+        },
+        {
+          "idx": 7, "type": "list", "parts": 3,
+          "text": "Where do the following types of scrap get dumped?",
+          "labels": ["a. Paper", "b. Steel scrap", "c. Trash"],
+          "answer": ["recycle container", "scrap barrels or luggers", "trash container or compactor"]
+        },
+        {
+          "idx": 8, "type": "fill", "blanks": 1,
+          "text": "Metal scrap must not be ________ together.",
+          "answer": ["mixed"]
+        },
+        {
+          "idx": 9, "type": "mc",
+          "text": "Used mop water must be disposed of:",
+          "options": {"a": "Down any drain.", "b": "Out the back door.", "c": "A specifically designated spot.", "d": "None of the above."},
+          "answer": "c"
+        },
+        {
+          "idx": 10, "type": "fill", "blanks": 1,
+          "text": "The best housekeeping technique is to ________ messes from occurring.",
+          "answer": ["prevent"]
+        },
+        {
+          "idx": 11, "type": "fill", "blanks": 2,
+          "text": "We want to create a first impression that says that we produce ________ with the same attention to detail and quality as we do our ________.",
+          "answer": ["parts", "housekeeping"]
+        },
+        {
+          "idx": 12, "type": "fill", "blanks": 1,
+          "text": "Housekeeping activities prepare the plant for our ________ customers — those who follow us on the next shift.",
+          "answer": ["internal"]
+        },
+        {
+          "idx": 13, "type": "fill", "blanks": 1,
+          "text": "Each of us must look for and ________ things that cause a mess.",
+          "answer": ["correct"]
+        },
+        {
+          "idx": 14, "type": "fill", "blanks": 1,
+          "text": "Any loose tooling components or shims must be ________ to the correct tool so that it does not become lost.",
+          "answer": ["fastened"]
+        },
+        {
+          "idx": 15, "type": "fill", "blanks": 1,
+          "text": "The old coolant must be dumped in the ________.",
+          "answer": ["waste oil holding tank"]
+        },
+        {
+          "idx": 16, "type": "tf",
+          "text": "While cleaning the press you must always look for indications that something broke during the last run.",
+          "answer": "T"
+        },
+        {
+          "idx": 17, "type": "fill", "blanks": 1,
+          "text": "Measuring and recording documentation measurements takes place ________ pulling the tools.",
+          "answer": ["before"]
+        }
+      ]
+    },
+    "pc2": {
+      "title_en": "Safety & Housekeeping Practices",
+      "statement_en": "Using standard equipment, demonstrate safety and continuous housekeeping practices in a production environment, following the items listed on the performance check.",
+      "items": [
+        {"idx": 0, "text": "Adhered to all safety policies, rules, and guidelines."},
+        {"idx": 1, "text": "Consistently demonstrated safe working practices on the job."},
+        {"idx": 2, "text": "Informed the appropriate person or corrected unsafe conditions or situations."},
+        {"idx": 3, "text": "Followed the rules of safe lifting when lifting or moving objects."},
+        {"idx": 4, "text": "Worked without creating fingerprints and spots of oil and grease."},
+        {"idx": 5, "text": "Kept the floor and benches free of scrap, paper, garbage, and oil spills."},
+        {"idx": 6, "text": "Replaced brooms, dustpans, mops, mop buckets, tools, and equipment to the designated spot after use."},
+        {"idx": 7, "text": "Identified items that create housekeeping problems and took corrective action."},
+        {"idx": 8, "text": "Cleaned tools and equipment after use."},
+        {"idx": 9, "text": "Garbage cans have been emptied into the proper hopper and returned to their designated spot."},
+        {"idx": 10, "text": "Scrap and loose parts have been cleaned from inside the press and dumped in the correct container."},
+        {"idx": 11, "text": "Dumped paper, bands, and other clutter after coil changes."},
+        {"idx": 12, "text": "All rags have been picked up and placed in the appropriate spot."},
+        {"idx": 13, "text": "Kept benches organized and free of clutter."},
+        {"idx": 14, "text": "Mop room is clean and all equipment returned to its designated spot."},
+        {"idx": 15, "text": "Used clean containers for steel scrap."},
+        {"idx": 16, "text": "Used gloves when handling sharp or dangerous objects."},
+        {"idx": 17, "text": "Disposed of used mop water in the proper spot."},
+        {"idx": 18, "text": "Empty tool carts have been cleaned and returned to their designated spot."},
+        {"idx": 19, "text": "Department is neat and organized, with all items in their proper place."}
+      ]
+    },
+    "pc3": {
+      "title_en": "Pulling Tools and Cleaning the Press",
+      "statement_en": "Using standard equipment, pull the tools and clean the press so that the standards found on the checklist below have been completed.",
+      "items": [
+        {"idx": 0, "text": "Removed all scrap and dumped into proper containers."},
+        {"idx": 1, "text": "Correctly measured and recorded all documentation measurements for the job just completed."},
+        {"idx": 2, "text": "Located and brought to the press: a cart for pulling tools, the power washer, and the coolant vacuum."},
+        {"idx": 3, "text": "Correctly removed all tooling from the press."},
+        {"idx": 4, "text": "Shims are tied to the correct punch, die, or tooling."},
+        {"idx": 5, "text": "All tools unique to the job have been taken to the cleaning station."},
+        {"idx": 6, "text": "All press components are cleaned and brought back to the press."},
+        {"idx": 7, "text": "The press is locked out by all those cleaning the press before cleaning begins."},
+        {"idx": 8, "text": "Press is power washed appropriately (ICOP roller boxes have not been sprayed)."},
+        {"idx": 9, "text": "Inside of press and coolant tank have been wiped down and are clean and dry."},
+        {"idx": 10, "text": "Coolant sucker was emptied into the waste oil holding tank."},
+        {"idx": 11, "text": "Floor is mopped and clean."},
+        {"idx": 12, "text": "Outside of press is clean."},
+        {"idx": 13, "text": "Power washer and coolant sucker are clean, ready for next person, and returned to their designated spot."},
+        {"idx": 14, "text": "All tools, equipment, and accessories have been returned to their designated spot."},
+        {"idx": 15, "text": "Team Leader or toolmaker has been notified."}
+      ]
+    }
+  },
+  {
+    "code": "02_lubrication",
+    "sort_order": 2,
+    "name_en": "Lubrication",
+    "name_es": "Lubricación",
+    "has_pc1": true, "has_pc2": true, "has_pc3": false,
+    "lesson_en": ["trainee/02 - Lubrication.md"],
+    "lesson_es": ["instructor/02 - Lubrication - ES.md"],
+    "pc1": {
+      "title_en": "Lubrication Knowledge",
+      "questions": [
+        {
+          "idx": 0, "type": "list", "parts": 4,
+          "text": "List the four main ways in which you can monitor a lubrication system to prevent problems.",
+          "answer": ["Use correct oil", "Maintain reservoir level", "Monitor oil pressure", "Watch for excessively fast or extremely slow oil consumption"]
+        },
+        {
+          "idx": 1, "type": "tf",
+          "text": "There is only one type of lubrication system and it is used on all presses.",
+          "answer": "F"
+        },
+        {
+          "idx": 2, "type": "tf",
+          "text": "Any oil can be used in a lubrication system, as long as the reservoir is full.",
+          "answer": "F"
+        },
+        {
+          "idx": 3, "type": "fill", "blanks": 1,
+          "text": "Lubrication systems provide lubrication for ________, moving parts, and wear surfaces.",
+          "answer": ["bearings"]
+        },
+        {
+          "idx": 4, "type": "tf",
+          "text": "Filling reservoirs while the press is down for another reason is a good way to save time and problems, because you don't have to stop and re-start the press.",
+          "answer": "T"
+        },
+        {
+          "idx": 5, "type": "fill", "blanks": 1,
+          "text": "Oil pressure in a lubrication system should stay in a range of ________ psi.",
+          "answer": ["20 - 40"]
+        },
+        {
+          "idx": 6, "type": "list", "parts": 3,
+          "text": "List three lubrication system contaminants.",
+          "answer": ["Wrong oil (different type than recommended)", "Dirt and garbage", "Mixed oils"]
+        }
+      ]
+    },
+    "pc2": {
+      "title_en": "Lubricant Reservoir Level and Pressure",
+      "statement_en": "Given existing presses and lubrication systems, check and refill the oil reservoir and check the oil pressure. Standard tools and lubricants must be used. Standards must match the criteria found on the performance check.",
+      "items": [
+        {"idx": 0, "text": "Correctly identified where the oil reservoir is located on each press."},
+        {"idx": 1, "text": "Each reservoir is at least one-quarter full at all times."},
+        {"idx": 2, "text": "Correctly identified the correct oil to be used in each press."},
+        {"idx": 3, "text": "Correctly located each type of oil in the oil storage area."},
+        {"idx": 4, "text": "Selected, cleaned, and refilled the correct oil can for each press."},
+        {"idx": 5, "text": "Wiped up all spills and overflows."},
+        {"idx": 6, "text": "Used the correct oil for each press."},
+        {"idx": 7, "text": "Did not mix one oil with any others."},
+        {"idx": 8, "text": "Refilled reservoirs during times when the press was down for other reasons."},
+        {"idx": 9, "text": "Oiled rollers on all presses at end-of-shift when requested by toolmaker."},
+        {"idx": 10, "text": "Filled all sight-feed oil cups as required."},
+        {"idx": 11, "text": "Maintained pressure of 20-40 psi on each system."},
+        {"idx": 12, "text": "Took appropriate corrective action when pressure fell below 20 psi."},
+        {"idx": 13, "text": "Moly-coated upper cams and cam rollers on Baird presses after each shift of operation."},
+        {"idx": 14, "text": "Greased each individual grease zerk."},
+        {"idx": 15, "text": "Filters are cleaned and maintained so that they work as intended."}
+      ]
+    },
+    "pc3": null
+  },
+  {
+    "code": "03_coolant",
+    "sort_order": 3,
+    "name_en": "Coolant Systems",
+    "name_es": "Sistemas de Refrigerante",
+    "has_pc1": true, "has_pc2": true, "has_pc3": false,
+    "lesson_en": ["trainee/03 - Coolant Systems.md"],
+    "lesson_es": ["instructor/03 - Coolant Systems - ES.md"],
+    "pc1": {
+      "title_en": "Coolant Systems Knowledge",
+      "questions": [
+        {
+          "idx": 0, "type": "fill", "blanks": 1,
+          "text": "What is the proper method of mixing water soluble coolant?",
+          "answer": ["Mix oil into the water while stirring"]
+        },
+        {
+          "idx": 1, "type": "tf",
+          "text": "You should always double-check the coolant type before refilling the reservoir.",
+          "answer": "T"
+        },
+        {
+          "idx": 2, "type": "fill", "blanks": 1,
+          "text": "The coolant ________ direct and adjust the flow of coolant to the tooling.",
+          "answer": ["lines"]
+        },
+        {
+          "idx": 3, "type": "fill", "blanks": 2,
+          "text": "Coolant does the job of ________ and ________ the tools and material as the press is running.",
+          "answer": ["cooling", "lubricating"]
+        },
+        {
+          "idx": 4, "type": "fill", "blanks": 1,
+          "text": "If coolant is mixed ________ it could lose its properties of lubrication.",
+          "answer": ["improperly"]
+        },
+        {
+          "idx": 5, "type": "fill", "blanks": 1,
+          "text": "Where must used coolant be dumped?",
+          "answer": ["In an approved, designated location"]
+        },
+        {
+          "idx": 6, "type": "fill", "blanks": 2,
+          "text": "The mixing ratio refers to the amounts of ________ and ________ in the mixture.",
+          "answer": ["water", "drawing compound"]
+        },
+        {
+          "idx": 7, "type": "fill", "blanks": 1,
+          "text": "How often should you check the coolant level in a press?",
+          "answer": ["As often as every time you walk up to the press"]
+        }
+      ]
+    },
+    "pc2": {
+      "title_en": "Coolant Reservoir Level",
+      "statement_en": "Given any press, check, mix, and refill the reservoir so that the reservoir level is constantly maintained. Standards must match the criteria found on the performance check.",
+      "items": [
+        {"idx": 0, "text": "Correctly located the coolant reservoir on each press."},
+        {"idx": 1, "text": "Each reservoir is at least ½ full at all times."},
+        {"idx": 2, "text": "Selected the correct oils to use with each job."},
+        {"idx": 3, "text": "Selected, cleaned, and used the appropriate container for each job."},
+        {"idx": 4, "text": "Correctly mixed the \"oil into the water\" when mixing coolants."},
+        {"idx": 5, "text": "Mixed coolant to the correct ratio for each job."},
+        {"idx": 6, "text": "Wiped up all spills and overflows."},
+        {"idx": 7, "text": "Refilled reservoirs during times when the press was down for other reasons, when possible."},
+        {"idx": 8, "text": "Disposed of old coolant in the approved, designated location."},
+        {"idx": 9, "text": "Correctly thinned out a thick mixture by first mixing a thin mixture in another container, then mixing into the larger tank."},
+        {"idx": 10, "text": "All containers, tools, and equipment are cleaned and returned to their designated spot after use."}
+      ]
+    },
+    "pc3": null
+  },
+  {
+    "code": "04_inspection",
+    "sort_order": 4,
+    "name_en": "Inspection",
+    "name_es": "Inspección",
+    "has_pc1": true, "has_pc2": true, "has_pc3": true,
+    "lesson_en": [
+      "trainee/04 - Inspection - part1.md",
+      "trainee/04 - Inspection - part2.md"
+    ],
+    "lesson_es": [
+      "instructor/04 - Inspection - ES - part1.md",
+      "instructor/04 - Inspection - ES - part2.md"
+    ],
+    "pc1": {
+      "title_en": "Inspection Knowledge",
+      "questions": [
+        {
+          "idx": 0, "type": "fill", "blanks": 1,
+          "text": "Parts coming off the press must be ________ thoroughly before dumping into a 'good parts' barrel.",
+          "answer": ["inspected"]
+        },
+        {
+          "idx": 1, "type": "fill", "blanks": 1,
+          "text": "If you shut down the press for a quality problem, you must immediately ________ the bad parts.",
+          "answer": ["aggregate (segregate/collect)"]
+        },
+        {
+          "idx": 2, "type": "mc",
+          "text": "Most rejections are caused by ________ defects.",
+          "options": {"a": "Attribute", "b": "Visual", "c": "Variable", "d": "Measurement error", "e": "None of the above"},
+          "answer": "b"
+        },
+        {
+          "idx": 3, "type": "fill", "blanks": 1,
+          "text": "The first step to performing inspection is to interpret the ________.",
+          "answer": ["specification"]
+        },
+        {
+          "idx": 4, "type": "fill", "blanks": 2,
+          "text": "A variable gage measures the ________ of a feature, while an ________ gage only checks whether the feature is good or bad.",
+          "answer": ["size", "attribute"]
+        },
+        {
+          "idx": 5, "type": "fill", "blanks": 1,
+          "text": "One of the most important steps after cleaning a height indicator is to ________ the indicator on the base, or the surface you are taking the measurement from.",
+          "answer": ["zero"]
+        },
+        {
+          "idx": 6, "type": "mc",
+          "text": "The accuracy of measuring tools is maintained by performing ________ at regular intervals.",
+          "options": {"a": "Zero adjustment", "b": "Rebuild", "c": "Lead error adjustment", "d": "Calibration"},
+          "answer": "d"
+        },
+        {
+          "idx": 7, "type": "fill", "blanks": 1,
+          "text": "One method of overcoming inspection problems is to ________ them from occurring.",
+          "answer": ["prevent"]
+        },
+        {
+          "idx": 8, "type": "fill", "blanks": 1,
+          "text": "When using effective interpersonal skills, always attack the ________, not the person.",
+          "answer": ["problem"]
+        },
+        {
+          "idx": 9, "type": "fill", "blanks": 1,
+          "text": "When you can't reach agreement on a quality issue, always ask a ________ to help resolve the problem.",
+          "answer": ["mediator"]
+        },
+        {
+          "idx": 10, "type": "mc",
+          "text": "One of the ways to anticipate problems is to look for:",
+          "options": {"a": "Something that has changed", "b": "Someone who made a mistake", "c": "Lack of SPC charting", "d": "None of the above"},
+          "answer": "a"
+        }
+      ]
+    },
+    "pc2": {
+      "title_en": "Inspection Tools",
+      "statement_en": "Given any inspection tool, can correctly operate the tool to measure the required dimension, to the criteria found on the checklist below.",
+      "items": [
+        {"idx": 0, "section": "Micrometer", "text": "Selected the correct size micrometer."},
+        {"idx": 1, "section": "Micrometer", "text": "Cleaned the faces and the part to be measured."},
+        {"idx": 2, "section": "Micrometer", "text": "Checked zero setting."},
+        {"idx": 3, "section": "Micrometer", "text": "Grasped the micrometer correctly, cradling the frame in the palm of the hand."},
+        {"idx": 4, "section": "Micrometer", "text": "Adjusted micrometer to approximate size by turning between thumb and forefinger. Did not twirl the micrometer."},
+        {"idx": 5, "section": "Micrometer", "text": "Established line of measurement by rocking side to side and over center."},
+        {"idx": 6, "section": "Micrometer", "text": "Took a number of readings and noted the high and low readings."},
+        {"idx": 7, "section": "Micrometer", "text": "Obtained correct measurement for each pin gage or gage block."},
+        {"idx": 8, "section": "Calipers", "text": "Cleaned the jaws and the part to be measured."},
+        {"idx": 9, "section": "Calipers", "text": "Loosened lock screw and set jaw slightly larger than the dimension to be measured."},
+        {"idx": 10, "section": "Calipers", "text": "Placed the fixed jaw against the reference point of the part."},
+        {"idx": 11, "section": "Calipers", "text": "Rocked the calipers slightly to obtain correct seat of jaws and feel."},
+        {"idx": 12, "section": "Calipers", "text": "Took a number of readings and noted the high and low readings."},
+        {"idx": 13, "section": "Calipers", "text": "Obtained correct measurements for outside, inside, and depth measurements."},
+        {"idx": 14, "section": "Indicators", "text": "Selected the correct tip."},
+        {"idx": 15, "section": "Indicators", "text": "Adjusted the tip so that it is parallel or perpendicular to the work."},
+        {"idx": 16, "section": "Indicators", "text": "Correctly adjusted the height of the indicator to the height of the piece to be measured."},
+        {"idx": 17, "section": "Indicators", "text": "Correctly adjusted to zero using a standard."},
+        {"idx": 18, "section": "Indicators", "text": "Correctly slid the work under the indicator tip."},
+        {"idx": 19, "section": "Indicators", "text": "Took a number of readings and averaged them."},
+        {"idx": 20, "section": "Indicators", "text": "Obtained correct measurement each time."},
+        {"idx": 21, "section": "Height Indicators", "text": "Selected the correct tip."},
+        {"idx": 22, "section": "Height Indicators", "text": "Cleaned the indicator and tightened tip."},
+        {"idx": 23, "section": "Height Indicators", "text": "Cleaned the base, measuring surfaces, and tip."},
+        {"idx": 24, "section": "Height Indicators", "text": "Zeroed the indicator on the base or the surface being measured from."},
+        {"idx": 25, "section": "Height Indicators", "text": "Raised the indicator tip and placed it on the surface being measured."},
+        {"idx": 26, "section": "Height Indicators", "text": "Obtained correct measurement each time."},
+        {"idx": 27, "section": "Ring Gages", "text": "Selected correct gage, cleaned gage and part."},
+        {"idx": 28, "section": "Ring Gages", "text": "Correctly applied gage to part (started squarely, did not force or turn)."},
+        {"idx": 29, "section": "Ring Gages", "text": "Correctly identified whether part was good or bad."},
+        {"idx": 30, "section": "Plug Gages", "text": "Selected correct gage, cleaned gage and part."},
+        {"idx": 31, "section": "Plug Gages", "text": "Correctly applied gage to part (started squarely, did not force or turn)."},
+        {"idx": 32, "section": "Plug Gages", "text": "Correctly identified whether part was good or bad."},
+        {"idx": 33, "section": "Attribute Gages (Fingernail/Height/Radius)", "text": "Selected correct gage, cleaned gage and part."},
+        {"idx": 34, "section": "Attribute Gages (Fingernail/Height/Radius)", "text": "Correctly applied part to gage."},
+        {"idx": 35, "section": "Attribute Gages (Fingernail/Height/Radius)", "text": "Correctly identified whether part was good or bad."}
+      ]
+    },
+    "pc3": {
+      "title_en": "Defect Identification",
+      "statement_en": "Given any shell, can correctly identify all defects and take appropriate action. Trainer assigns sample box of parts (A–L) and observes defect identification.",
+      "items": [
+        {"idx": 0, "text": "Part A — Correctly identified all defects and took appropriate action."},
+        {"idx": 1, "text": "Part B — Correctly identified all defects and took appropriate action."},
+        {"idx": 2, "text": "Part C — Correctly identified all defects and took appropriate action."},
+        {"idx": 3, "text": "Part D — Correctly identified all defects and took appropriate action."},
+        {"idx": 4, "text": "Part E — Correctly identified all defects and took appropriate action."},
+        {"idx": 5, "text": "Part F — Correctly identified all defects and took appropriate action."},
+        {"idx": 6, "text": "Part G — Correctly identified all defects and took appropriate action."},
+        {"idx": 7, "text": "Part H — Correctly identified all defects and took appropriate action."},
+        {"idx": 8, "text": "Part I — Correctly identified all defects and took appropriate action."},
+        {"idx": 9, "text": "Part J — Correctly identified all defects and took appropriate action."},
+        {"idx": 10, "text": "Part K — Correctly identified all defects and took appropriate action."},
+        {"idx": 11, "text": "Part L — Correctly identified all defects and took appropriate action."}
+      ]
+    }
+  },
+  {
+    "code": "05_materials",
+    "sort_order": 5,
+    "name_en": "Materials",
+    "name_es": "Materiales",
+    "has_pc1": true, "has_pc2": true, "has_pc3": false,
+    "lesson_en": ["trainee/05 - Materials.md"],
+    "lesson_es": ["instructor/05 - Materials - ES.md"],
+    "pc1": {
+      "title_en": "Materials Knowledge",
+      "questions": [
+        {
+          "idx": 0, "type": "fill", "blanks": 1,
+          "text": "The type of material can always be identified by using the ________ sheet.",
+          "answer": ["process"]
+        },
+        {
+          "idx": 1, "type": "tf",
+          "text": "An overhead crane can be operated by anyone, as long as they operate it safely.",
+          "answer": "F"
+        },
+        {
+          "idx": 2, "type": "fill", "blanks": 1,
+          "text": "When dumping scrap, always ________ the container before using it.",
+          "answer": ["clean"]
+        },
+        {
+          "idx": 3, "type": "list", "parts": 4,
+          "text": "What four things must you remember each time you dump scrap?",
+          "answer": ["Identify the material", "Identify the container", "Never mix materials", "Dump scrap safely"]
+        },
+        {
+          "idx": 4, "type": "list", "parts": 4,
+          "text": "To prevent the possibility of getting cut, you must always do the following:",
+          "labels": ["a. Wear ________ when handling any object.", "b. Use the ________ equipment.", "c. Use the equipment ________.", "d. Identify potential cut hazards and ________ them."],
+          "answer": ["gloves", "proper", "correctly", "eliminate"]
+        },
+        {
+          "idx": 5, "type": "mc",
+          "text": "The main job of stock reel keepers are to:",
+          "options": {
+            "a": "Turn the mandrel.",
+            "b": "Apply outward pressure to the inside of the coil, so the coil won't slip.",
+            "c": "Prevent the outer wraps of the coil from slipping off the coil sideways.",
+            "d": "Create a buffer of material between the stock reel and the press.",
+            "e": "None of the above."
+          },
+          "answer": "c"
+        },
+        {
+          "idx": 6, "type": "tf",
+          "text": "The correct coil to be used for a job can be identified by matching the coil tag to the production schedule.",
+          "answer": "T"
+        },
+        {
+          "idx": 7, "type": "mc",
+          "text": "When unbanding a coil always remove the ________ bands first.",
+          "options": {"a": "Radial", "b": "Outside diameter (OD)", "c": "Front", "d": "Back", "e": "Both a and b"},
+          "answer": "a"
+        },
+        {
+          "idx": 8, "type": "fill", "blanks": 1,
+          "text": "A coil must always be positioned so that the stock will feed from the ________ of the coil.",
+          "answer": ["top"]
+        },
+        {
+          "idx": 9, "type": "fill", "blanks": 1,
+          "text": "The 'Scrap Report' is a record of all the parts ________ at the press.",
+          "answer": ["scrapped"]
+        },
+        {
+          "idx": 10, "type": "tf",
+          "text": "It is your job to fill out the scrap report at the end of each shift.",
+          "answer": "T"
+        },
+        {
+          "idx": 11, "type": "fill", "blanks": 1,
+          "text": "The loose end of a coil must always be in the ________ position when unbanding a coil on a stock reel.",
+          "answer": ["down"]
+        },
+        {
+          "idx": 12, "type": "tf",
+          "text": "If you see a visual defect in the material, immediately tell your supervisor, but leave the press running.",
+          "answer": "F"
+        }
+      ]
+    },
+    "pc2": {
+      "title_en": "Materials",
+      "statement_en": "Given the situations listed below involving materials, can perform all activities to the criteria found on the checklist below.",
+      "items": [
+        {"idx": 0, "section": "Scrap Removal", "text": "Correctly identified the material type."},
+        {"idx": 1, "section": "Scrap Removal", "text": "Correctly identified the scrap container."},
+        {"idx": 2, "section": "Scrap Removal", "text": "Cleaned the scrap container if required."},
+        {"idx": 3, "section": "Scrap Removal", "text": "Did not mix materials."},
+        {"idx": 4, "section": "Scrap Removal", "text": "Asked for help when dumping scrap if too heavy."},
+        {"idx": 5, "section": "Scrap Removal", "text": "Wore gloves when handling scrap."},
+        {"idx": 6, "section": "Scrap Removal", "text": "Prevented hazards before beginning."},
+        {"idx": 7, "section": "Scrap Removal", "text": "Used the legs, not the back, when lifting."},
+        {"idx": 8, "section": "Scrap Removal", "text": "Asked for assistance if he/she didn't know where to dump scrap."},
+        {"idx": 9, "section": "Scrap Removal", "text": "Followed all safety rules and guidelines."},
+        {"idx": 10, "section": "Scrap Report", "text": "Successfully located a blank scrap report form."},
+        {"idx": 11, "section": "Scrap Report", "text": "Completed the Scrap Report at the end of the shift."},
+        {"idx": 12, "section": "Scrap Report", "text": "All scrapped parts were included in the weigh in."},
+        {"idx": 13, "section": "Scrap Report", "text": "Correctly weighed the scrapped parts."},
+        {"idx": 14, "section": "Scrap Report", "text": "All items on the Scrap Report are filled in accurately and correctly."},
+        {"idx": 15, "section": "Scrap Report", "text": "Asked Quality Assurance for disposition on parts that required it."},
+        {"idx": 16, "section": "Scrap Report", "text": "Disposed of scrap in the correct scrap container."},
+        {"idx": 17, "section": "Scrap Report", "text": "Turned in Scrap Report to the correct location."},
+        {"idx": 18, "section": "Hang a Coil", "text": "Possesses a valid crane license before operating the crane."},
+        {"idx": 19, "section": "Hang a Coil", "text": "Possesses a valid Hi-Lo license before operating the Hi-Lo."},
+        {"idx": 20, "section": "Hang a Coil", "text": "Correctly identified the coil or skid of material to be used."},
+        {"idx": 21, "section": "Hang a Coil", "text": "If space between coils was too small for sling, correctly used prybar or Hi-Lo fork with spacer."},
+        {"idx": 22, "section": "Hang a Coil", "text": "Correctly attached sling around coil and onto crane hook."},
+        {"idx": 23, "section": "Hang a Coil", "text": "Picked up coil with a minimum of swinging."},
+        {"idx": 24, "section": "Hang a Coil", "text": "Turned the coil so that the stock will feed from top of coil."},
+        {"idx": 25, "section": "Hang a Coil", "text": "Adjusted mandrel small enough to slip coil onto reel."},
+        {"idx": 26, "section": "Hang a Coil", "text": "Positioned coil against back of mandrel."},
+        {"idx": 27, "section": "Hang a Coil", "text": "Removed sling and manually jogged the mandrel so sling is at bottom of coil (did not catch sling on reel)."},
+        {"idx": 28, "section": "Hang a Coil", "text": "Moved crane to a neutral spot."},
+        {"idx": 29, "section": "Hang a Coil", "text": "Expanded mandrel until it holds the internal diameter of the coil securely."},
+        {"idx": 30, "section": "Hang a Coil", "text": "Did not drop the mandrel wrench on the floor."},
+        {"idx": 31, "section": "Hang a Coil", "text": "Slid the keepers on the mandrel arms, positioned against the coil, and tightened snugly."},
+        {"idx": 32, "section": "Hang a Coil", "text": "Positioned the coil so that the loose end is down."},
+        {"idx": 33, "section": "Hang a Coil", "text": "Removed radial banding first, then O.D. bands."},
+        {"idx": 34, "section": "Hang a Coil", "text": "Did not stand in a danger zone when cutting bands."},
+        {"idx": 35, "section": "Hang a Coil", "text": "Cut banding in pieces rather than trying to pull them out."},
+        {"idx": 36, "section": "Hang a Coil", "text": "Wore gloves through the entire coil hanging process."},
+        {"idx": 37, "section": "Hang a Coil", "text": "Operated the stock reel correctly in both manual and automatic mode."},
+        {"idx": 38, "section": "Hang a Coil", "text": "Carefully fed the strip under/through the loop control arm after switching to automatic mode."},
+        {"idx": 39, "section": "Hang a Coil", "text": "Fed the strip correctly through the press (feed rollers, blank, scrap chopper)."},
+        {"idx": 40, "section": "Hang a Coil", "text": "Did not restart the press unless trained to do so correctly."},
+        {"idx": 41, "section": "Hang a Coil", "text": "Followed all safety rules and guidelines."}
+      ]
+    },
+    "pc3": null
+  },
+  {
+    "code": "06_press_controls",
+    "sort_order": 6,
+    "name_en": "Press Controls",
+    "name_es": "Controles de Prensa",
+    "has_pc1": true, "has_pc2": true, "has_pc3": false,
+    "lesson_en": ["trainee/06 - Press Controls.md"],
+    "lesson_es": ["instructor/06 - Press Controls - ES.md"],
+    "pc1": {
+      "title_en": "Press Controls Knowledge",
+      "questions": [
+        {
+          "idx": 0, "type": "fill", "blanks": 1,
+          "text": "A probe system monitors each ________ as it travels through the press.",
+          "answer": ["shell"]
+        },
+        {
+          "idx": 1, "type": "list", "parts": 4,
+          "text": "What four things must you always check before turning a press over?",
+          "answer": ["Is the coolant running into the tooling", "Are all the parts in the fingers", "Visually check each station", "Follow good safety practices"]
+        },
+        {
+          "idx": 2, "type": "tf",
+          "text": "Turning a press over more than once will not cause problems and can be done at any time.",
+          "answer": "F"
+        },
+        {
+          "idx": 3, "type": "mc",
+          "text": "Preventing problems means that you must visually check at least ten items:",
+          "options": {"a": "Once per shift", "b": "Each time you walk up to the press", "c": "Once per day", "d": "Once per hour"},
+          "answer": "b"
+        },
+        {
+          "idx": 4, "type": "fill", "blanks": 1,
+          "text": "The main ingredient in preventing problems is to be ________.",
+          "answer": ["prepared"]
+        },
+        {
+          "idx": 5, "type": "list", "parts": 10,
+          "text": "List the ten items you must visually check each time you walk up to the press:",
+          "answer": [
+            "Press area is neat, clean, and organized",
+            "Lubrication reservoir has enough oil and oil pressure is normal",
+            "Enough coolant in the reservoir",
+            "Coolant flowing into tooling at same location and velocity",
+            "Stock has no visual problems",
+            "Scrap chopper is operating correctly",
+            "Parts and/or scrap coming out of each chute, staying in tubs, tubs not full",
+            "Parts are visually correct — no missing holes, score marks, or smashed parts",
+            "Guard doors are closed and everything looks the same as before",
+            "No new noises detected"
+          ]
+        },
+        {
+          "idx": 6, "type": "list", "parts": 3,
+          "text": "Your goal is to run ________ parts consistently over a period of time. This means that:",
+          "labels": ["Fill in the blank above:", "a. The parts must be ________", "b. The press must be ________"],
+          "answer": ["quality", "good", "running"]
+        }
+      ]
+    },
+    "pc2": {
+      "title_en": "Press Controls",
+      "statement_en": "Given the situations listed below involving press controls, can perform all activities to the criteria found on the checklist below.",
+      "items": [
+        {"idx": 0, "section": "Production Problems Check", "text": "Press area is neat, clean, and organized."},
+        {"idx": 1, "section": "Production Problems Check", "text": "Lubricant reservoir has oil in it."},
+        {"idx": 2, "section": "Production Problems Check", "text": "Oil pressure is normal."},
+        {"idx": 3, "section": "Production Problems Check", "text": "Coolant reservoir has coolant in it."},
+        {"idx": 4, "section": "Production Problems Check", "text": "Coolant is flowing in same location and with the same velocity as before."},
+        {"idx": 5, "section": "Production Problems Check", "text": "Stock has no visual defects."},
+        {"idx": 6, "section": "Production Problems Check", "text": "Scrap-chopper is operating correctly."},
+        {"idx": 7, "section": "Production Problems Check", "text": "Parts and scrap are coming out of each chute, staying in tubs, tubs are not full."},
+        {"idx": 8, "section": "Production Problems Check", "text": "Parts are visually correct — no missing holes, score marks, or smashed parts."},
+        {"idx": 9, "section": "Production Problems Check", "text": "Guard doors are all closed and everything looks as it did before."},
+        {"idx": 10, "section": "Production Problems Check", "text": "No new noises detected."},
+        {"idx": 11, "section": "Turning Over a Press", "text": "Person has completed training to operate the controls of the equipment."},
+        {"idx": 12, "section": "Turning Over a Press", "text": "Coolant is running in the correct location and at the correct velocity."},
+        {"idx": 13, "section": "Turning Over a Press", "text": "All the parts are in the fingers or accounted for."},
+        {"idx": 14, "section": "Turning Over a Press", "text": "Checked if any stations could not be turned over without a part."},
+        {"idx": 15, "section": "Turning Over a Press", "text": "Visually checked each station and the press for problems."},
+        {"idx": 16, "section": "Turning Over a Press", "text": "Closed all press guards."},
+        {"idx": 17, "section": "Turning Over a Press", "text": "Checked entire press area before jogging."},
+        {"idx": 18, "section": "Turning Over a Press", "text": "Followed all safety rules."},
+        {"idx": 19, "section": "Turning Over a Press", "text": "Correctly operated the probe system."},
+        {"idx": 20, "section": "Turning Over a Press", "text": "Jogged the press correctly through one revolution."},
+        {"idx": 21, "section": "Turning Over a Press", "text": "Did not turn over the press more times than necessary."},
+        {"idx": 22, "section": "Starting the Press", "text": "Person has completed training to operate the controls of the equipment."},
+        {"idx": 23, "section": "Starting the Press", "text": "Coolant is running in the correct location and at the correct velocity."},
+        {"idx": 24, "section": "Starting the Press", "text": "All the parts are in the fingers or accounted for."},
+        {"idx": 25, "section": "Starting the Press", "text": "Checked if any stations could not be started without a part."},
+        {"idx": 26, "section": "Starting the Press", "text": "Visually checked each station and the press for problems."},
+        {"idx": 27, "section": "Starting the Press", "text": "Closed all press guards and checked entire press area."},
+        {"idx": 28, "section": "Starting the Press", "text": "Followed all safety rules."},
+        {"idx": 29, "section": "Starting the Press", "text": "Correctly operated the probe system."},
+        {"idx": 30, "section": "Starting the Press", "text": "Jogged through one revolution and did not turn over more times than necessary."},
+        {"idx": 31, "section": "Starting the Press", "text": "Visually checked the tooling and press before running continuous."},
+        {"idx": 32, "section": "Starting the Press", "text": "Correctly started the press."},
+        {"idx": 33, "section": "Starting the Press", "text": "Checked the parts after startup."}
+      ]
+    },
+    "pc3": null
+  }
+]

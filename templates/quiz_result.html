@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}PC#1 Results – {{ mod.name_en }} — Twinplex Training{% endblock %}
+{% block content %}
+<div class="page-header">
+  <a href="{{ url_for('lesson', code=mod.code) }}" class="back-link">← {{ mod.name_en }}</a>
+  <h1>PC#1 Results — {{ mod.pc1.title_en }}</h1>
+  {% if completion.pc1_passed is not none %}
+    {% if completion.pc1_passed == 1 %}
+      <div class="result-banner pass">PASSED — Signed off {{ completion.pc1_signed_at[:10] }}</div>
+    {% else %}
+      <div class="result-banner recheck">RE-CHECK REQUIRED — Signed off {{ completion.pc1_signed_at[:10] }}</div>
+    {% endif %}
+  {% else %}
+    <div class="result-banner pending">
+      Auto-graded: <strong>{{ completion.pc1_score }}/{{ completion.pc1_max_auto }}</strong> MC &amp; T/F correct
+      &nbsp;·&nbsp; Awaiting trainer sign-off for fill-in answers
+    </div>
+  {% endif %}
+</div>
+
+<div class="result-table-wrap">
+  <table class="result-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Operator's Answer</th>
+        <th>Answer Key</th>
+        <th>Auto</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for q in questions %}
+    {% set a = answer_map.get(q.idx, {}) %}
+    <tr class="{% if a.auto_correct == 1 %}row-correct{% elif a.auto_correct == 0 %}row-wrong{% else %}row-manual{% endif %}">
+      <td>{{ q.idx + 1 }}</td>
+      <td class="q-text-cell">{{ q.text }}</td>
+      <td class="answer-cell">
+        {% if a %}{{ a.answer_given }}{% else %}<em>—</em>{% endif %}
+      </td>
+      <td class="key-cell">
+        {% if q.type == 'mc' %}
+          <strong>{{ q.answer.upper() }}</strong> — {{ q.options[q.answer] }}
+        {% elif q.type == 'tf' %}
+          <strong>{{ q.answer }}</strong> — {{ 'True' if q.answer == 'T' else 'False' }}
+        {% elif q.type == 'fill' %}
+          {{ q.answer | join(' / ') }}
+        {% elif q.type == 'list' %}
+          <ol class="key-list">
+          {% for item in q.answer %}
+            <li>{{ item }}</li>
+          {% endfor %}
+          </ol>
+        {% endif %}
+      </td>
+      <td class="auto-cell">
+        {% if a.auto_correct == 1 %}
+          <span class="badge badge-pass">✓</span>
+        {% elif a.auto_correct == 0 %}
+          <span class="badge badge-recheck">✗</span>
+        {% else %}
+          <span class="badge badge-pending">Review</span>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% if completion.pc1_passed is none %}
+<div class="signoff-panel">
+  <h2>Trainer Sign-Off</h2>
+  <p>Review the answers above. Enter your employee ID and PIN to record the result.</p>
+  <form method="post" action="{{ url_for('quiz_signoff', code=mod.code, completion_id=completion.id) }}">
+    <div class="signoff-grid">
+      <div class="field">
+        <label>Trainer Employee ID</label>
+        <input type="text" name="trainer_id" required autocomplete="off">
+      </div>
+      <div class="field">
+        <label>Trainer PIN</label>
+        <input type="password" name="trainer_pin" inputmode="numeric" maxlength="8" required>
+      </div>
+      <div class="field">
+        <label>Result</label>
+        <div class="result-radio">
+          <label><input type="radio" name="result" value="pass" required> <span class="pass-text">PASSED</span></label>
+          <label><input type="radio" name="result" value="recheck"> <span class="recheck-text">RE-CHECK REQUIRED</span></label>
+        </div>
+      </div>
+      <div class="field field-wide">
+        <label>Comments (optional)</label>
+        <textarea name="comments" rows="2" placeholder="Any notes for the training record..."></textarea>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Off PC#1</button>
+  </form>
+</div>
+{% else %}
+<div class="signoff-done">
+  <p>Signed off by trainer on {{ completion.pc1_signed_at[:10] if completion.pc1_signed_at else '—' }}</p>
+  {% if completion.pc1_comments %}
+  <p><strong>Comments:</strong> {{ completion.pc1_comments }}</p>
+  {% endif %}
+  <a href="{{ url_for('quiz', code=mod.code) }}" class="btn btn-secondary">Re-take</a>
+</div>
+{% endif %}
+{% endblock %}

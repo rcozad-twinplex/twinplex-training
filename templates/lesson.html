@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}{{ mod.name_en }} — Twinplex Training{% endblock %}
+{% block content %}
+<div class="lesson-header">
+  <a href="{{ url_for('home') }}" class="back-link">← {% if lang=='es' %}Inicio{% else %}Home{% endif %}</a>
+  <h1>{{ mod.name_en if lang == 'en' else mod.name_es }}</h1>
+  <p class="lesson-lang-note">
+    {% if lang == 'es' %}Versión en español{% else %}English version{% endif %}
+    &nbsp;·&nbsp;
+    {% if lang == 'en' %}
+      <a href="{{ url_for('set_lang', lang='es') }}">Ver en Español</a>
+    {% else %}
+      <a href="{{ url_for('set_lang', lang='en') }}">View in English</a>
+    {% endif %}
+  </p>
+</div>
+
+<div class="lesson-body">
+  {{ lesson_html | safe }}
+</div>
+
+<div class="lesson-actions">
+  {% if mod.has_pc1 %}
+  <div class="action-card">
+    <h3>Performance Check #1 — {% if lang=='es' %}Conocimiento{% else %}Knowledge Test{% endif %}</h3>
+    <p>{% if lang=='es' %}Responde las preguntas de conocimiento sin materiales de referencia.{% else %}Answer all knowledge questions without reference materials.{% endif %}</p>
+    {% if completion.pc1_passed == 1 %}
+      <span class="badge badge-pass">Passed {{ completion.pc1_signed_at[:10] if completion.pc1_signed_at else '' }}</span>
+      <a href="{{ url_for('quiz', code=mod.code) }}" class="btn btn-secondary">Re-take</a>
+    {% else %}
+      <a href="{{ url_for('quiz', code=mod.code) }}" class="btn btn-primary">
+        {% if lang=='es' %}Tomar PC#1{% else %}Take PC#1 Test{% endif %}
+      </a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if mod.has_pc2 %}
+  <div class="action-card">
+    <h3>Performance Check #2 — {% if lang=='es' %}Demostración Práctica{% else %}Practical Demonstration{% endif %}</h3>
+    <p>{% if lang=='es' %}Demostración observada por el instructor con firma digital.{% else %}Trainer-observed demonstration with digital sign-off.{% endif %}</p>
+    {% if completion.pc2_passed == 1 %}
+      <span class="badge badge-pass">Passed {{ completion.pc2_signed_at[:10] if completion.pc2_signed_at else '' }}</span>
+      <a href="{{ url_for('checklist', code=mod.code, check_num=2) }}" class="btn btn-secondary">View</a>
+    {% else %}
+      <a href="{{ url_for('checklist', code=mod.code, check_num=2) }}" class="btn btn-primary">PC#2 Checklist</a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if mod.has_pc3 %}
+  <div class="action-card">
+    <h3>Performance Check #3 — {% if lang=='es' %}Demostración Avanzada{% else %}Advanced Demonstration{% endif %}</h3>
+    <p>{% if lang=='es' %}Demostración observada por el instructor con firma digital.{% else %}Trainer-observed demonstration with digital sign-off.{% endif %}</p>
+    {% if completion.pc3_passed == 1 %}
+      <span class="badge badge-pass">Passed {{ completion.pc3_signed_at[:10] if completion.pc3_signed_at else '' }}</span>
+      <a href="{{ url_for('checklist', code=mod.code, check_num=3) }}" class="btn btn-secondary">View</a>
+    {% else %}
+      <a href="{{ url_for('checklist', code=mod.code, check_num=3) }}" class="btn btn-primary">PC#3 Checklist</a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
