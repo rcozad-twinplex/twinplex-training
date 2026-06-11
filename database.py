@@ -15,7 +15,13 @@ DATABASE_URL = os.environ.get('DATABASE_URL')
 
 def get_db():
     url = urlparse(DATABASE_URL)
-    ssl_ctx = ssl.create_default_context() if 'sslmode=require' in (url.query or '') else None
+    ssl_ctx = None
+    if 'sslmode=require' in (url.query or ''):
+        # Supabase's pooler presents a self-signed cert in its chain, so the
+        # default verifying context rejects it. Encrypt but skip verification.
+        ssl_ctx = ssl.create_default_context()
+        ssl_ctx.check_hostname = False
+        ssl_ctx.verify_mode = ssl.CERT_NONE
     return pg8000.dbapi.connect(
         host=url.hostname,
         port=url.port or 5432,
