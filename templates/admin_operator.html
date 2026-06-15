@@ -15,44 +15,21 @@
     <table class="detail-table">
       <tr><td>Lesson viewed</td><td>{% if c.lesson_viewed %}<span class="badge badge-pass">Yes</span>{% else %}<span class="badge badge-new">No</span>{% endif %}</td></tr>
       <tr><td>Language used</td><td>{{ (c.lang_used or 'en') | upper }}</td></tr>
-      {% if m.get('has_pc1') %}
+      {% for chk in m.get('checks', []) %}
+      {% set r = c.pcs.get(chk.num) %}
       <tr>
-        <td>PC#1 — Knowledge Test</td>
+        <td>PC#{{ chk.num }} — {{ chk.title_en }}{% if chk.type == 'quiz' %} <small>(Knowledge)</small>{% endif %}</td>
         <td>
-          {% if c.pc1_passed == 1 %}<span class="badge badge-pass">PASSED</span>
-          {% elif c.pc1_passed == 0 %}<span class="badge badge-recheck">RE-CHECK</span>
-          {% elif c.pc1_submitted_at %}<span class="badge badge-pending">Awaiting sign-off</span>
+          {% if r and r.passed == 1 %}<span class="badge badge-pass">PASSED</span>
+          {% elif r and r.passed == 0 %}<span class="badge badge-recheck">RE-CHECK</span>
+          {% elif r and r.submitted_at %}<span class="badge badge-pending">Awaiting sign-off</span>
           {% else %}<span class="badge badge-new">Not taken</span>{% endif %}
-          {% if c.pc1_signed_at %} <small>{{ c.pc1_signed_at[:10] }} · Trainer: {{ c.pc1_trainer_name or '—' }}</small>{% endif %}
-          {% if c.pc1_score is not none %} <small>Auto: {{ c.pc1_score }}/{{ c.pc1_max_auto }} MC/TF</small>{% endif %}
+          {% if r and r.signed_at %} <small>{{ r.signed_at[:10] }} · Trainer: {{ r.trainer_name or '—' }}</small>{% endif %}
+          {% if r and r.score is not none %} <small>Auto: {{ r.score }}/{{ r.max_auto }} MC/TF</small>{% endif %}
         </td>
       </tr>
-      {% if c.pc1_comments %}<tr><td>PC#1 Comments</td><td><em>{{ c.pc1_comments }}</em></td></tr>{% endif %}
-      {% endif %}
-      {% if m.get('has_pc2') %}
-      <tr>
-        <td>PC#2 — Practical Demo</td>
-        <td>
-          {% if c.pc2_passed == 1 %}<span class="badge badge-pass">PASSED</span>
-          {% elif c.pc2_passed == 0 %}<span class="badge badge-recheck">RE-CHECK</span>
-          {% else %}<span class="badge badge-new">Not signed off</span>{% endif %}
-          {% if c.pc2_signed_at %} <small>{{ c.pc2_signed_at[:10] }} · Trainer: {{ c.pc2_trainer_name or '—' }}</small>{% endif %}
-        </td>
-      </tr>
-      {% if c.pc2_comments %}<tr><td>PC#2 Comments</td><td><em>{{ c.pc2_comments }}</em></td></tr>{% endif %}
-      {% endif %}
-      {% if m.get('has_pc3') %}
-      <tr>
-        <td>PC#3 — Advanced Demo</td>
-        <td>
-          {% if c.pc3_passed == 1 %}<span class="badge badge-pass">PASSED</span>
-          {% elif c.pc3_passed == 0 %}<span class="badge badge-recheck">RE-CHECK</span>
-          {% else %}<span class="badge badge-new">Not signed off</span>{% endif %}
-          {% if c.pc3_signed_at %} <small>{{ c.pc3_signed_at[:10] }} · Trainer: {{ c.pc3_trainer_name or '—' }}</small>{% endif %}
-        </td>
-      </tr>
-      {% if c.pc3_comments %}<tr><td>PC#3 Comments</td><td><em>{{ c.pc3_comments }}</em></td></tr>{% endif %}
-      {% endif %}
+      {% if r and r.comments %}<tr><td>PC#{{ chk.num }} Comments</td><td><em>{{ r.comments }}</em></td></tr>{% endif %}
+      {% endfor %}
     </table>
   </div>
   {% endfor %}

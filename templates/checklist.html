@@ -1,27 +1,21 @@
 {% extends "base.html" %}
-{% block title %}PC#{{ check_num }} – {{ mod.name_en }} — Twinplex Training{% endblock %}
+{% block title %}PC#{{ num }} – {{ mod.name_en }} — Twinplex Training{% endblock %}
 {% block content %}
 <div class="page-header">
   <a href="{{ url_for('lesson', code=mod.code) }}" class="back-link">← {{ mod.name_en if lang=='en' else mod.name_es }}</a>
-  <h1>Performance Check #{{ check_num }} — {{ checklist_data.title_en }}</h1>
-  {% if check_num == 2 %}
-    {% if completion.pc2_passed == 1 %}
-      <div class="result-banner pass">PASSED — Signed off {{ completion.pc2_signed_at[:10] }}</div>
-    {% elif completion.pc2_passed == 0 %}
-      <div class="result-banner recheck">RE-CHECK REQUIRED — Signed off {{ completion.pc2_signed_at[:10] }}</div>
-    {% endif %}
-  {% else %}
-    {% if completion.pc3_passed == 1 %}
-      <div class="result-banner pass">PASSED — Signed off {{ completion.pc3_signed_at[:10] }}</div>
-    {% elif completion.pc3_passed == 0 %}
-      <div class="result-banner recheck">RE-CHECK REQUIRED — Signed off {{ completion.pc3_signed_at[:10] }}</div>
-    {% endif %}
+  <h1>Performance Check #{{ num }} — {{ checklist_data.title_en }}</h1>
+  {% if result and result.passed == 1 %}
+    <div class="result-banner pass">PASSED — Signed off {{ result.signed_at[:10] if result.signed_at else '' }}</div>
+  {% elif result and result.passed == 0 %}
+    <div class="result-banner recheck">RE-CHECK REQUIRED — Signed off {{ result.signed_at[:10] if result.signed_at else '' }}</div>
   {% endif %}
 </div>
 
+{% if checklist_data.statement_en %}
 <div class="checklist-statement">
   <strong>Performance Check Statement:</strong> {{ checklist_data.statement_en }}
 </div>
+{% endif %}
 
 <div class="checklist-instructions">
   <p><strong>Instructions to Trainer:</strong> Observe the trainee as they perform each activity. Check each item when successfully completed. All items must be checked before signing off.</p>
@@ -29,13 +23,13 @@
 
 <div class="checklist-wrap">
   {% set current_section = namespace(val='') %}
-  {% for item in checklist_data.items %}
+  {% for item in checklist_data['items'] %}
     {% if item.get('section') and item.section != current_section.val %}
       {% set current_section.val = item.section %}
       <div class="checklist-section-head">{{ item.section }}</div>
     {% endif %}
     <div class="checklist-item {% if state.get(item.idx, 0) %}checked{% endif %}"
-         data-idx="{{ item.idx }}" data-completion="{{ completion.id }}" data-checknum="{{ check_num }}">
+         data-idx="{{ item.idx }}" data-completion="{{ completion.id }}" data-checknum="{{ num }}">
       <div class="check-box" onclick="toggleItem(this)">
         {% if state.get(item.idx, 0) %}✓{% endif %}
       </div>
@@ -45,16 +39,15 @@
 </div>
 
 <div class="checklist-progress">
-  <span id="checked-count">{{ state.values() | select | list | length }}</span> / {{ checklist_data.items | length }} items checked
+  <span id="checked-count">{{ state.values() | select | list | length }}</span> / {{ checklist_data['items'] | length }} items checked
 </div>
 
-{% set already_signed = (check_num == 2 and completion.pc2_passed is not none) or
-                        (check_num == 3 and completion.pc3_passed is not none) %}
+{% set already_signed = result and result.passed is not none %}
 {% if not already_signed %}
 <div class="signoff-panel">
   <h2>Trainer Sign-Off</h2>
   <p>When all items are complete, have the trainer enter their credentials to sign off.</p>
-  <form method="post" action="{{ url_for('checklist_signoff', code=mod.code, check_num=check_num) }}">
+  <form method="post" action="{{ url_for('pc_signoff', code=mod.code, num=num) }}">
     <input type="hidden" name="completion_id" value="{{ completion.id }}">
     <div class="signoff-grid">
       <div class="field">
@@ -63,7 +56,7 @@
       </div>
       <div class="field">
         <label>Trainer PIN</label>
-        <input type="password" name="trainer_pin" inputmode="numeric" maxlength="8" required>
+        <input type="password" name="trainer_pin" inputmode="numeric" required>
       </div>
       <div class="field">
         <label>Result</label>
@@ -77,22 +70,20 @@
         <textarea name="comments" rows="2" placeholder="Any notes for the training record..."></textarea>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign Off PC#{{ check_num }}</button>
+    <button type="submit" class="btn btn-primary">Sign Off PC#{{ num }}</button>
   </form>
 </div>
 {% else %}
 <div class="signoff-done">
-  {% set signed_at = completion.pc2_signed_at if check_num == 2 else completion.pc3_signed_at %}
-  {% set comments = completion.pc2_comments if check_num == 2 else completion.pc3_comments %}
-  <p>Signed off on {{ signed_at[:10] if signed_at else '—' }}</p>
-  {% if comments %}<p><strong>Comments:</strong> {{ comments }}</p>{% endif %}
+  <p>Signed off on {{ result.signed_at[:10] if result.signed_at else '—' }}</p>
+  {% if result.comments %}<p><strong>Comments:</strong> {{ result.comments }}</p>{% endif %}
 </div>
 {% endif %}
 {% endblock %}
 
 {% block scripts %}
 <script>
-const TOGGLE_URL = "{{ url_for('checklist_toggle', code=mod.code, check_num=check_num) }}";
-const TOTAL = {{ checklist_data.items | length }};
+const TOGGLE_URL = "{{ url_for('pc_toggle', code=mod.code, num=num) }}";
+const TOTAL = {{ checklist_data['items'] | length }};
 </script>
 {% endblock %}

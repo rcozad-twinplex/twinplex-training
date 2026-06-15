@@ -1,5 +1,6 @@
 import os
 import ssl
+import datetime
 import pg8000.dbapi
 from urllib.parse import urlparse
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -32,6 +33,18 @@ def get_db():
     )
 
 
+def _conv(v):
+    """Normalize DB values for templates: timestamps -> ISO strings so the
+    templates can slice them (e.g. signed_at[:10])."""
+    if isinstance(v, (datetime.datetime, datetime.date)):
+        return v.isoformat()
+    return v
+
+
+def _row(cols, row):
+    return {c: _conv(v) for c, v in zip(cols, row)}
+
+
 def _one(conn, sql, params=()):
     cur = conn.cursor()
     cur.execute(sql, params)
@@ -39,14 +52,14 @@ def _one(conn, sql, params=()):
     if row is None:
         return None
     cols = [d[0] for d in cur.description]
-    return dict(zip(cols, row))
+    return _row(cols, row)
 
 
 def _all(conn, sql, params=()):
     cur = conn.cursor()
     cur.execute(sql, params)
     cols = [d[0] for d in cur.description]
-    return [dict(zip(cols, row)) for row in cur.fetchall()]
+    return [_row(cols, row) for row in cur.fetchall()]
 
 
 def verify_pin(employee_id, pin):
@@ -160,57 +173,115 @@ def get_completion_by_id(completion_id):
         conn.close()
 
 
-def save_pc1_answers(completion_id, answers):
+# ── Performance checks (generalized: any number per module) ──────────────────
+
+def get_pc_result(completion_id, pc_num):
+    conn = get_db()
+    try:
+        return _one(conn,
+            "SELECT * FROM pc_results WHERE completion_id=%s AND pc_num=%s",
+            (completion_id, pc_num))
+    finally:
+        conn.close()
+
+
+def get_pc_results_map(completion_id):
+    """All performance-check results for a completion, keyed by pc_num."""
+    conn = get_db()
+    try:
+        rows = _all(conn,
+            "SELECT * FROM pc_results WHERE completion_id=%s", (completion_id,))
+        return {r['pc_num']: r for r in rows}
+    finally:
+        conn.close()
+
+
+def _attach_pc_results(conn, completions):
+    """Attach a 'pcs' dict {pc_num: result-row(+trainer_name)} to each completion."""
+    if not completions:
+        return completions
+    ids = tuple({c['id'] for c in completions})
+    placeholders = ','.join(['%s'] * len(ids))
+    rows = _all(conn, f"""
+        SELECT r.*, t.name AS trainer_name
+        FROM pc_results r
+        LEFT JOIN users t ON r.trainer_id = t.id
+        WHERE r.completion_id IN ({placeholders})
+    """, ids)
+    by_completion = {}
+    for r in rows:
+        by_completion.setdefault(r['completion_id'], {})[r['pc_num']] = r
+    for c in completions:
+        c['pcs'] = by_completion.get(c['id'], {})
+    return completions
+
+
+def save_quiz_answers(completion_id, pc_num, answers):
     conn = get_db()
     try:
         cur = conn.cursor()
-        cur.execute("DELETE FROM pc1_answers WHERE completion_id = %s", (completion_id,))
+        cur.execute(
+            "DELETE FROM quiz_answers WHERE completion_id=%s AND pc_num=%s",
+            (completion_id, pc_num))
         for a in answers:
             cur.execute(
-                "INSERT INTO pc1_answers (completion_id, question_idx, answer_given, auto_correct)"
-                " VALUES (%s, %s, %s, %s)",
-                (completion_id, a['question_idx'], a['answer_given'], a.get('auto_correct'))
+                "INSERT INTO quiz_answers (completion_id, pc_num, question_idx,"
+                " answer_given, auto_correct) VALUES (%s, %s, %s, %s, %s)",
+                (completion_id, pc_num, a['question_idx'],
+                 a['answer_given'], a.get('auto_correct'))
             )
         conn.commit()
     finally:
         conn.close()
 
 
-def get_pc1_answers(completion_id):
+def get_quiz_answers(completion_id, pc_num):
     conn = get_db()
     try:
         return _all(conn,
-            "SELECT * FROM pc1_answers WHERE completion_id = %s ORDER BY question_idx",
-            (completion_id,))
+            "SELECT * FROM quiz_answers WHERE completion_id=%s AND pc_num=%s"
+            " ORDER BY question_idx",
+            (completion_id, pc_num))
     finally:
         conn.close()
 
 
-def save_pc1_result(completion_id, score, max_auto, trainer_id, passed, comments):
+def upsert_quiz_submission(completion_id, pc_num, score, max_auto):
+    """Record a quiz submission (auto-graded portion) as pending sign-off."""
     conn = get_db()
     try:
         cur = conn.cursor()
         cur.execute(
-            """UPDATE completions
-               SET pc1_score=%s, pc1_max_auto=%s, pc1_trainer_id=%s,
-                   pc1_passed=%s, pc1_signed_at=CURRENT_TIMESTAMP, pc1_comments=%s,
-                   pc1_submitted_at=COALESCE(pc1_submitted_at, CURRENT_TIMESTAMP)
-               WHERE id = %s""",
-            (score, max_auto, trainer_id, passed, comments, completion_id)
+            """INSERT INTO pc_results (completion_id, pc_num, pc_type,
+                   submitted_at, score, max_auto)
+               VALUES (%s, %s, 'quiz', CURRENT_TIMESTAMP, %s, %s)
+               ON CONFLICT (completion_id, pc_num)
+               DO UPDATE SET submitted_at=CURRENT_TIMESTAMP,
+                   score=EXCLUDED.score, max_auto=EXCLUDED.max_auto""",
+            (completion_id, pc_num, score, max_auto)
         )
         conn.commit()
     finally:
         conn.close()
 
 
-def update_pc1_submitted(completion_id, score, max_auto):
+def sign_off_pc(completion_id, pc_num, pc_type, trainer_id, passed, comments,
+                score=None, max_auto=None):
+    """Trainer sign-off for any performance check (quiz or checklist)."""
     conn = get_db()
     try:
         cur = conn.cursor()
         cur.execute(
-            "UPDATE completions SET pc1_submitted_at=CURRENT_TIMESTAMP,"
-            " pc1_score=%s, pc1_max_auto=%s WHERE id=%s",
-            (score, max_auto, completion_id)
+            """INSERT INTO pc_results (completion_id, pc_num, pc_type, score, max_auto,
+                   submitted_at, trainer_id, passed, signed_at, comments)
+               VALUES (%s, %s, %s, %s, %s, CURRENT_TIMESTAMP, %s, %s, CURRENT_TIMESTAMP, %s)
+               ON CONFLICT (completion_id, pc_num)
+               DO UPDATE SET pc_type=EXCLUDED.pc_type,
+                   trainer_id=EXCLUDED.trainer_id, passed=EXCLUDED.passed,
+                   signed_at=CURRENT_TIMESTAMP, comments=EXCLUDED.comments,
+                   submitted_at=COALESCE(pc_results.submitted_at, CURRENT_TIMESTAMP)""",
+            (completion_id, pc_num, pc_type, score, max_auto,
+             trainer_id, passed, comments)
         )
         conn.commit()
     finally:
@@ -245,42 +316,16 @@ def toggle_checklist_item(completion_id, check_num, item_idx, passed):
         conn.close()
 
 
-def save_checklist_signoff(completion_id, check_num, trainer_id, passed, comments):
-    conn = get_db()
-    try:
-        cur = conn.cursor()
-        if check_num == 2:
-            cur.execute(
-                "UPDATE completions SET pc2_trainer_id=%s, pc2_passed=%s,"
-                " pc2_signed_at=CURRENT_TIMESTAMP, pc2_comments=%s WHERE id=%s",
-                (trainer_id, passed, comments, completion_id)
-            )
-        else:
-            cur.execute(
-                "UPDATE completions SET pc3_trainer_id=%s, pc3_passed=%s,"
-                " pc3_signed_at=CURRENT_TIMESTAMP, pc3_comments=%s WHERE id=%s",
-                (trainer_id, passed, comments, completion_id)
-            )
-        conn.commit()
-    finally:
-        conn.close()
-
-
 def get_all_completions():
     conn = get_db()
     try:
-        return _all(conn, """
-            SELECT c.*, u.name as operator_name, u.employee_id,
-                   t1.name as pc1_trainer_name,
-                   t2.name as pc2_trainer_name,
-                   t3.name as pc3_trainer_name
+        rows = _all(conn, """
+            SELECT c.*, u.name as operator_name, u.employee_id
             FROM completions c
             JOIN users u ON c.operator_id = u.id
-            LEFT JOIN users t1 ON c.pc1_trainer_id = t1.id
-            LEFT JOIN users t2 ON c.pc2_trainer_id = t2.id
-            LEFT JOIN users t3 ON c.pc3_trainer_id = t3.id
             ORDER BY u.name, c.module_code
         """)
+        return _attach_pc_results(conn, rows)
     finally:
         conn.close()
 
@@ -288,18 +333,10 @@ def get_all_completions():
 def get_operator_completions(operator_id):
     conn = get_db()
     try:
-        return _all(conn, """
-            SELECT c.*,
-                   t1.name as pc1_trainer_name,
-                   t2.name as pc2_trainer_name,
-                   t3.name as pc3_trainer_name
-            FROM completions c
-            LEFT JOIN users t1 ON c.pc1_trainer_id = t1.id
-            LEFT JOIN users t2 ON c.pc2_trainer_id = t2.id
-            LEFT JOIN users t3 ON c.pc3_trainer_id = t3.id
-            WHERE c.operator_id = %s
-            ORDER BY c.module_code
-        """, (operator_id,))
+        rows = _all(conn,
+            "SELECT * FROM completions WHERE operator_id = %s ORDER BY module_code",
+            (operator_id,))
+        return _attach_pc_results(conn, rows)
     finally:
         conn.close()
 

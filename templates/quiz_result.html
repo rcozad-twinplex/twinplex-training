@@ -1,18 +1,18 @@
 {% extends "base.html" %}
-{% block title %}PC#1 Results – {{ mod.name_en }} — Twinplex Training{% endblock %}
+{% block title %}PC#{{ num }} Results – {{ mod.name_en }} — Twinplex Training{% endblock %}
 {% block content %}
 <div class="page-header">
   <a href="{{ url_for('lesson', code=mod.code) }}" class="back-link">← {{ mod.name_en }}</a>
-  <h1>PC#1 Results — {{ mod.pc1.title_en }}</h1>
-  {% if completion.pc1_passed is not none %}
-    {% if completion.pc1_passed == 1 %}
-      <div class="result-banner pass">PASSED — Signed off {{ completion.pc1_signed_at[:10] }}</div>
+  <h1>PC#{{ num }} Results — {{ check.title_en }}</h1>
+  {% if result and result.passed is not none %}
+    {% if result.passed == 1 %}
+      <div class="result-banner pass">PASSED — Signed off {{ result.signed_at[:10] if result.signed_at else '' }}</div>
     {% else %}
-      <div class="result-banner recheck">RE-CHECK REQUIRED — Signed off {{ completion.pc1_signed_at[:10] }}</div>
+      <div class="result-banner recheck">RE-CHECK REQUIRED — Signed off {{ result.signed_at[:10] if result.signed_at else '' }}</div>
     {% endif %}
   {% else %}
     <div class="result-banner pending">
-      Auto-graded: <strong>{{ completion.pc1_score }}/{{ completion.pc1_max_auto }}</strong> MC &amp; T/F correct
+      Auto-graded: <strong>{{ result.score if result else 0 }}/{{ result.max_auto if result else 0 }}</strong> MC &amp; T/F correct
       &nbsp;·&nbsp; Awaiting trainer sign-off for fill-in answers
     </div>
   {% endif %}
@@ -68,11 +68,12 @@
   </table>
 </div>
 
-{% if completion.pc1_passed is none %}
+{% if not result or result.passed is none %}
 <div class="signoff-panel">
   <h2>Trainer Sign-Off</h2>
   <p>Review the answers above. Enter your employee ID and PIN to record the result.</p>
-  <form method="post" action="{{ url_for('quiz_signoff', code=mod.code, completion_id=completion.id) }}">
+  <form method="post" action="{{ url_for('pc_signoff', code=mod.code, num=num) }}">
+    <input type="hidden" name="completion_id" value="{{ completion.id }}">
     <div class="signoff-grid">
       <div class="field">
         <label>Trainer Employee ID</label>
@@ -80,7 +81,7 @@
       </div>
       <div class="field">
         <label>Trainer PIN</label>
-        <input type="password" name="trainer_pin" inputmode="numeric" maxlength="8" required>
+        <input type="password" name="trainer_pin" inputmode="numeric" required>
       </div>
       <div class="field">
         <label>Result</label>
@@ -94,16 +95,16 @@
         <textarea name="comments" rows="2" placeholder="Any notes for the training record..."></textarea>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign Off PC#1</button>
+    <button type="submit" class="btn btn-primary">Sign Off PC#{{ num }}</button>
   </form>
 </div>
 {% else %}
 <div class="signoff-done">
-  <p>Signed off by trainer on {{ completion.pc1_signed_at[:10] if completion.pc1_signed_at else '—' }}</p>
-  {% if completion.pc1_comments %}
-  <p><strong>Comments:</strong> {{ completion.pc1_comments }}</p>
+  <p>Signed off by trainer on {{ result.signed_at[:10] if result.signed_at else '—' }}</p>
+  {% if result.comments %}
+  <p><strong>Comments:</strong> {{ result.comments }}</p>
   {% endif %}
-  <a href="{{ url_for('quiz', code=mod.code) }}" class="btn btn-secondary">Re-take</a>
+  <a href="{{ url_for('pc', code=mod.code, num=num) }}" class="btn btn-secondary">Re-take</a>
 </div>
 {% endif %}
 {% endblock %}

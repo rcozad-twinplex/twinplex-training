@@ -128,6 +128,18 @@ footer {
   box-shadow: 0 0 0 2px rgba(196,18,55,.15);
 }
 
+/* ── Training Sections ──────────────────────────────────────────────────── */
+.section-block { margin-bottom: 2rem; }
+.section-head {
+  display: flex; align-items: baseline; gap: .6rem;
+  border-bottom: 2px solid #C41237; padding-bottom: .35rem; margin-bottom: .9rem;
+}
+.section-head h2 { font-size: 1.25rem; color: #111111; margin: 0; }
+.section-manual {
+  font-size: .75rem; font-weight: 700; color: #fff; background: #111111;
+  padding: .12rem .5rem; border-radius: 10px; letter-spacing: .02em;
+}
+
 /* ── Home Module Grid ───────────────────────────────────────────────────── */
 .module-grid { display: flex; flex-direction: column; gap: .75rem; }
 .module-card {

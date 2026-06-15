@@ -119,10 +119,10 @@ def set_lang(lang):
 @app.route('/')
 @login_required
 def home():
-    modules = content_mod.get_modules()
+    sections = content_mod.get_modules_by_section()
     completions = {c['module_code']: c
                    for c in db.get_operator_completions(session['user_id'])}
-    return render_template('home.html', modules=modules, completions=completions,
+    return render_template('home.html', sections=sections, completions=completions,
                            lang=session.get('lang', 'en'))
 
 
@@ -140,109 +140,73 @@ def lesson(code):
     html_content = content_mod.render_lesson(code, lang)
     db.mark_lesson_viewed(session['user_id'], code, lang)
     completion = db.get_or_create_completion(session['user_id'], code, lang)
+    pcs = db.get_pc_results_map(completion['id'])
 
     return render_template('lesson.html', mod=mod, lesson_html=html_content,
-                           completion=completion, lang=lang)
+                           completion=completion, pcs=pcs, lang=lang)
 
 
-# ── PC#1 Quiz ─────────────────────────────────────────────────────────────────
+# ── Performance checks (generalized — quiz or checklist, any number) ───────────
 
-@app.route('/module/<code>/quiz', methods=['GET', 'POST'])
+@app.route('/module/<code>/pc/<int:num>', methods=['GET', 'POST'])
 @login_required
-def quiz(code):
+def pc(code, num):
     mod = content_mod.get_module(code)
-    if not mod or not mod.get('has_pc1'):
-        flash('No PC#1 quiz for this module.', 'error')
+    check = content_mod.get_check(mod, num)
+    if not check:
+        flash(f'No Performance Check #{num} for this module.', 'error')
         return redirect(url_for('lesson', code=code))
 
     lang = session.get('lang', 'en')
     completion = db.get_or_create_completion(session['user_id'], code, lang)
-    questions = mod['pc1']['questions']
 
-    if request.method == 'POST':
-        answers, auto_correct, auto_total = grade_quiz(questions, request.form)
-        db.save_pc1_answers(completion['id'], answers)
-        db.update_pc1_submitted(completion['id'], auto_correct, auto_total)
-        return redirect(url_for('quiz_result', code=code,
-                                completion_id=completion['id']))
+    if check['type'] == 'quiz':
+        questions = check['questions']
+        if request.method == 'POST':
+            answers, auto_correct, auto_total = grade_quiz(questions, request.form)
+            db.save_quiz_answers(completion['id'], num, answers)
+            db.upsert_quiz_submission(completion['id'], num, auto_correct, auto_total)
+            return redirect(url_for('pc_result', code=code, num=num,
+                                    completion_id=completion['id']))
+        return render_template('quiz.html', mod=mod, check=check, num=num,
+                               questions=questions, completion=completion, lang=lang)
 
-    return render_template('quiz.html', mod=mod, questions=questions,
-                           completion=completion, lang=lang)
+    # checklist
+    result = db.get_pc_result(completion['id'], num)
+    state = db.get_checklist_state(completion['id'], num)
+    trainers = db.get_trainers()
+    return render_template('checklist.html', mod=mod, check=check, num=num,
+                           checklist_data=check, completion=completion,
+                           result=result, state=state, trainers=trainers, lang=lang)
 
 
-@app.route('/module/<code>/quiz/result/<int:completion_id>')
+@app.route('/module/<code>/pc/<int:num>/result/<int:completion_id>')
 @login_required
-def quiz_result(code, completion_id):
+def pc_result(code, num, completion_id):
     mod = content_mod.get_module(code)
-    if not mod:
-        return redirect(url_for('home'))
+    check = content_mod.get_check(mod, num)
+    if not check or check['type'] != 'quiz':
+        return redirect(url_for('lesson', code=code))
 
     completion = db.get_completion_by_id(completion_id)
     if not completion:
         return redirect(url_for('home'))
 
-    answers = db.get_pc1_answers(completion_id)
-    questions = mod['pc1']['questions']
+    answers = db.get_quiz_answers(completion_id, num)
+    questions = check['questions']
     answer_map = {a['question_idx']: a for a in answers}
+    result = db.get_pc_result(completion_id, num)
     trainers = db.get_trainers()
 
-    return render_template('quiz_result.html', mod=mod, questions=questions,
-                           answer_map=answer_map, completion=completion,
+    return render_template('quiz_result.html', mod=mod, check=check, num=num,
+                           questions=questions, answer_map=answer_map,
+                           completion=completion, result=result,
                            trainers=trainers, lang=session.get('lang', 'en'))
 
 
-@app.route('/module/<code>/quiz/result/<int:completion_id>/signoff', methods=['POST'])
+@app.route('/module/<code>/pc/<int:num>/toggle', methods=['POST'])
 @login_required
-def quiz_signoff(code, completion_id):
-    trainer_emp = request.form.get('trainer_id', '').strip()
-    trainer_pin = request.form.get('trainer_pin', '').strip()
-    passed = 1 if request.form.get('result') == 'pass' else 0
-    comments = request.form.get('comments', '').strip()
-
-    trainer = db.verify_pin(trainer_emp, trainer_pin)
-    if not trainer or trainer['role'] not in ('trainer', 'admin'):
-        flash('Invalid trainer employee ID or PIN.', 'error')
-        return redirect(url_for('quiz_result', code=code, completion_id=completion_id))
-
-    mod = content_mod.get_module(code)
-    questions = mod['pc1']['questions']
-    answers = db.get_pc1_answers(completion_id)
-    auto_total = sum(1 for q in questions if q['type'] in ('mc', 'tf'))
-    auto_correct = sum(1 for a in answers if a.get('auto_correct') == 1)
-
-    db.save_pc1_result(completion_id, auto_correct, auto_total,
-                       trainer['id'], passed, comments)
-    flash(f"PC#1 signed off — {'PASSED' if passed else 'RE-CHECK REQUIRED'}.", 'success')
-    return redirect(url_for('lesson', code=code))
-
-
-# ── Checklists (PC#2 / PC#3) ─────────────────────────────────────────────────
-
-@app.route('/module/<code>/checklist/<int:check_num>')
-@login_required
-def checklist(code, check_num):
-    mod = content_mod.get_module(code)
-    if not mod:
-        return redirect(url_for('home'))
-
-    key = f'pc{check_num}'
-    if not mod.get(key):
-        flash(f'No PC#{check_num} checklist for this module.', 'error')
-        return redirect(url_for('lesson', code=code))
-
-    lang = session.get('lang', 'en')
-    completion = db.get_or_create_completion(session['user_id'], code, lang)
-    state = db.get_checklist_state(completion['id'], check_num)
-    trainers = db.get_trainers()
-
-    return render_template('checklist.html', mod=mod, check_num=check_num,
-                           checklist_data=mod[key], completion=completion,
-                           state=state, trainers=trainers, lang=lang)
-
-
-@app.route('/module/<code>/checklist/<int:check_num>/toggle', methods=['POST'])
-@login_required
-def checklist_toggle(code, check_num):
+def pc_toggle(code, num):
     data = request.get_json()
     completion_id = data.get('completion_id')
     item_idx = int(data.get('item_idx', 0))
@@ -252,13 +216,18 @@ def checklist_toggle(code, check_num):
     if not completion or completion['operator_id'] != session['user_id']:
         return jsonify({'error': 'unauthorized'}), 403
 
-    db.toggle_checklist_item(completion_id, check_num, item_idx, passed)
+    db.toggle_checklist_item(completion_id, num, item_idx, passed)
     return jsonify({'ok': True})
 
 
-@app.route('/module/<code>/checklist/<int:check_num>/signoff', methods=['POST'])
+@app.route('/module/<code>/pc/<int:num>/signoff', methods=['POST'])
 @login_required
-def checklist_signoff(code, check_num):
+def pc_signoff(code, num):
+    mod = content_mod.get_module(code)
+    check = content_mod.get_check(mod, num)
+    if not check:
+        return redirect(url_for('lesson', code=code))
+
     trainer_emp = request.form.get('trainer_id', '').strip()
     trainer_pin = request.form.get('trainer_pin', '').strip()
     passed = 1 if request.form.get('result') == 'pass' else 0
@@ -268,10 +237,21 @@ def checklist_signoff(code, check_num):
     trainer = db.verify_pin(trainer_emp, trainer_pin)
     if not trainer or trainer['role'] not in ('trainer', 'admin'):
         flash('Invalid trainer employee ID or PIN.', 'error')
-        return redirect(url_for('checklist', code=code, check_num=check_num))
+        if check['type'] == 'quiz':
+            return redirect(url_for('pc_result', code=code, num=num,
+                                    completion_id=completion_id))
+        return redirect(url_for('pc', code=code, num=num))
 
-    db.save_checklist_signoff(completion_id, check_num, trainer['id'], passed, comments)
-    flash(f"PC#{check_num} signed off — {'PASSED' if passed else 'RE-CHECK REQUIRED'}.", 'success')
+    score = max_auto = None
+    if check['type'] == 'quiz':
+        questions = check['questions']
+        answers = db.get_quiz_answers(completion_id, num)
+        max_auto = sum(1 for q in questions if q['type'] in ('mc', 'tf'))
+        score = sum(1 for a in answers if a.get('auto_correct') == 1)
+
+    db.sign_off_pc(completion_id, num, check['type'], trainer['id'],
+                   passed, comments, score, max_auto)
+    flash(f"PC#{num} signed off — {'PASSED' if passed else 'RE-CHECK REQUIRED'}.", 'success')
     return redirect(url_for('lesson', code=code))
 
 
@@ -281,10 +261,10 @@ def checklist_signoff(code, check_num):
 @admin_required
 def admin():
     completions = db.get_all_completions()
-    modules = content_mod.get_modules()
+    sections = content_mod.get_modules_by_section()
     users = db.get_all_users()
     return render_template('admin.html', completions=completions,
-                           modules=modules, users=users)
+                           sections=sections, users=users)
 
 
 @app.route('/admin/operator/<int:operator_id>')

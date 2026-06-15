@@ -1,15 +1,15 @@
 {% extends "base.html" %}
-{% block title %}PC#1 – {{ mod.name_en }} — Twinplex Training{% endblock %}
+{% block title %}PC#{{ num }} – {{ mod.name_en }} — Twinplex Training{% endblock %}
 {% block content %}
 <div class="page-header">
   <a href="{{ url_for('lesson', code=mod.code) }}" class="back-link">← {{ mod.name_en if lang=='en' else mod.name_es }}</a>
-  <h1>Performance Check #1 — {{ mod.pc1.title_en }}</h1>
+  <h1>Performance Check #{{ num }} — {{ check.title_en }}</h1>
   <p class="quiz-instructions">
     Answer all questions <strong>without</strong> reference materials. Your trainer will review your answers and sign off.
   </p>
 </div>
 
-<form method="post" action="{{ url_for('quiz', code=mod.code) }}" id="quiz-form">
+<form method="post" action="{{ url_for('pc', code=mod.code, num=num) }}" id="quiz-form">
   <div class="question-list">
   {% for q in questions %}
   <div class="question-card" id="q{{ q.idx }}">

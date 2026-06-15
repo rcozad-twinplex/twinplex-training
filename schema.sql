@@ -58,6 +58,34 @@ CREATE TABLE IF NOT EXISTS checklist_items (
     UNIQUE(completion_id, check_num, item_idx)
 );
 
+-- Generalized performance-check results — supports any number of checks per
+-- module, each either a knowledge quiz or a practical checklist.
+CREATE TABLE IF NOT EXISTS pc_results (
+    id             SERIAL PRIMARY KEY,
+    completion_id  INTEGER NOT NULL REFERENCES completions(id),
+    pc_num         INTEGER NOT NULL,
+    pc_type        TEXT NOT NULL,             -- 'quiz' | 'checklist'
+    submitted_at   TIMESTAMP,
+    score          INTEGER,                   -- quiz: auto-graded correct count
+    max_auto       INTEGER,                   -- quiz: auto-gradable question count
+    trainer_id     INTEGER REFERENCES users(id),
+    passed         INTEGER,                   -- 1 pass, 0 re-check, NULL pending
+    signed_at      TIMESTAMP,
+    comments       TEXT,
+    UNIQUE(completion_id, pc_num)
+);
+
+-- Generalized quiz answers (replaces pc1_answers; pc_num distinguishes which
+-- knowledge check within a module).
+CREATE TABLE IF NOT EXISTS quiz_answers (
+    id             SERIAL PRIMARY KEY,
+    completion_id  INTEGER NOT NULL REFERENCES completions(id),
+    pc_num         INTEGER NOT NULL DEFAULT 1,
+    question_idx   INTEGER NOT NULL,
+    answer_given   TEXT,
+    auto_correct   INTEGER
+);
+
 -- After running this schema, create your first admin account by running:
 --   python seed_admin.py
 -- from the project directory with DATABASE_URL set in your .env file.

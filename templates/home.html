@@ -3,62 +3,53 @@
 {% block content %}
 <div class="page-header">
   <h1>{% if lang == 'es' %}Módulos de Capacitación{% else %}Training Modules{% endif %}</h1>
-  <p>{% if lang == 'es' %}Press Operator Training Series — Manual #1{% else %}Press Operator Training Series — Manual #1{% endif %}</p>
+  <p>{% if lang == 'es' %}Serie de Capacitación Eyelet{% else %}Eyelet Training Series{% endif %}</p>
 </div>
 
-<div class="module-grid">
-  {% for mod in modules %}
-  {% set comp = completions.get(mod.code) %}
-  <div class="module-card {% if comp and comp.lesson_viewed %}started{% endif %}">
-    <div class="module-num">{{ loop.index0 }}</div>
-    <div class="module-info">
-      <h2>{{ mod.name_en if lang == 'en' else mod.name_es }}</h2>
-      <div class="module-status-row">
-        {% if comp %}
-          <span class="badge badge-lesson">{% if lang=='es' %}Lección vista{% else %}Lesson viewed{% endif %}</span>
-          {% if mod.has_pc1 %}
-            {% if comp.pc1_passed == 1 %}
-              <span class="badge badge-pass">PC#1 ✓</span>
-            {% elif comp.pc1_passed == 0 %}
-              <span class="badge badge-recheck">PC#1 Re-check</span>
-            {% elif comp.pc1_submitted_at %}
-              <span class="badge badge-pending">PC#1 Awaiting sign-off</span>
-            {% endif %}
+{% for section, mods in sections %}
+<div class="section-block">
+  <div class="section-head">
+    <h2>{{ section.name_en if lang == 'en' else section.name_es }}</h2>
+    <span class="section-manual">{{ section.manual }}</span>
+  </div>
+
+  <div class="module-grid">
+    {% for mod in mods %}
+    {% set comp = completions.get(mod.code) %}
+    {% set pcs = comp.pcs if comp else {} %}
+    <div class="module-card {% if comp and comp.lesson_viewed %}started{% endif %}">
+      <div class="module-num">{{ loop.index0 }}</div>
+      <div class="module-info">
+        <h2>{{ mod.name_en if lang == 'en' else mod.name_es }}</h2>
+        <div class="module-status-row">
+          {% if comp %}
+            <span class="badge badge-lesson">{% if lang=='es' %}Lección vista{% else %}Lesson viewed{% endif %}</span>
+            {% for chk in mod.checks %}
+              {% set r = pcs.get(chk.num) %}
+              {% if r and r.passed == 1 %}
+                <span class="badge badge-pass">PC#{{ chk.num }} ✓</span>
+              {% elif r and r.passed == 0 %}
+                <span class="badge badge-recheck">PC#{{ chk.num }} Re-check</span>
+              {% elif r and r.submitted_at %}
+                <span class="badge badge-pending">PC#{{ chk.num }} Pending</span>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            <span class="badge badge-new">{% if lang=='es' %}No iniciado{% else %}Not started{% endif %}</span>
           {% endif %}
-          {% if mod.has_pc2 %}
-            {% if comp.pc2_passed == 1 %}
-              <span class="badge badge-pass">PC#2 ✓</span>
-            {% elif comp.pc2_passed == 0 %}
-              <span class="badge badge-recheck">PC#2 Re-check</span>
-            {% endif %}
-          {% endif %}
-          {% if mod.has_pc3 %}
-            {% if comp.pc3_passed == 1 %}
-              <span class="badge badge-pass">PC#3 ✓</span>
-            {% elif comp.pc3_passed == 0 %}
-              <span class="badge badge-recheck">PC#3 Re-check</span>
-            {% endif %}
-          {% endif %}
-        {% else %}
-          <span class="badge badge-new">{% if lang=='es' %}No iniciado{% else %}Not started{% endif %}</span>
-        {% endif %}
+        </div>
+      </div>
+      <div class="module-actions">
+        <a href="{{ url_for('lesson', code=mod.code) }}" class="btn btn-primary">
+          {% if lang == 'es' %}Ver Lección{% else %}View Lesson{% endif %}
+        </a>
+        {% for chk in mod.checks %}
+        <a href="{{ url_for('pc', code=mod.code, num=chk.num) }}" class="btn btn-secondary">PC#{{ chk.num }}</a>
+        {% endfor %}
       </div>
     </div>
-    <div class="module-actions">
-      <a href="{{ url_for('lesson', code=mod.code) }}" class="btn btn-primary">
-        {% if lang == 'es' %}Ver Lección{% else %}View Lesson{% endif %}
-      </a>
-      {% if mod.has_pc1 %}
-      <a href="{{ url_for('quiz', code=mod.code) }}" class="btn btn-secondary">PC#1</a>
-      {% endif %}
-      {% if mod.has_pc2 %}
-      <a href="{{ url_for('checklist', code=mod.code, check_num=2) }}" class="btn btn-secondary">PC#2</a>
-      {% endif %}
-      {% if mod.has_pc3 %}
-      <a href="{{ url_for('checklist', code=mod.code, check_num=3) }}" class="btn btn-secondary">PC#3</a>
-      {% endif %}
-    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
+{% endfor %}
 {% endblock %}

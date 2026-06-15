@@ -6,21 +6,55 @@ import markdown
 TRANSCRIPTS_DIR = os.path.join(os.path.dirname(__file__), 'transcripts')
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 
-_modules_cache = None
+_data_cache = None
+
+
+def _load():
+    global _data_cache
+    if _data_cache is None:
+        with open(os.path.join(DATA_DIR, 'modules.json'), encoding='utf-8') as f:
+            _data_cache = json.load(f)
+    return _data_cache
+
+
+def get_sections():
+    """Training sections (Press Operator, Die Setter, etc.) sorted for display."""
+    return sorted(_load().get('sections', []), key=lambda s: s.get('sort_order', 0))
 
 
 def get_modules():
-    global _modules_cache
-    if _modules_cache is None:
-        with open(os.path.join(DATA_DIR, 'modules.json'), encoding='utf-8') as f:
-            _modules_cache = json.load(f)
-    return _modules_cache
+    """All modules across all sections, in sort order."""
+    return sorted(_load().get('modules', []), key=lambda m: m.get('sort_order', 0))
+
+
+def get_modules_by_section():
+    """List of (section, [modules]) tuples, sections in display order.
+
+    Only sections that actually have modules are returned, so partially built
+    curricula don't show empty headers."""
+    mods = get_modules()
+    out = []
+    for s in get_sections():
+        sec_mods = [m for m in mods if m.get('section') == s['code']]
+        if sec_mods:
+            out.append((s, sec_mods))
+    return out
 
 
 def get_module(code):
     for m in get_modules():
         if m['code'] == code:
             return m
+    return None
+
+
+def get_check(module, num):
+    """Return the check dict with the given num from a module, or None."""
+    if not module:
+        return None
+    for c in module.get('checks', []):
+        if c['num'] == int(num):
+            return c
     return None
 
 
