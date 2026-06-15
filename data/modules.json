@@ -1871,6 +1871,3614 @@
           ]
         }
       ]
+    },
+    {
+      "code": "ds02_tooling_components",
+      "section": "die_setter",
+      "sort_order": 102,
+      "name_en": "Tooling Components",
+      "name_es": "Componentes de Herramientas",
+      "lesson_en": [
+        "trainee/DS 02 - Tooling Components.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 02 - Tooling Components.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Tooling Components",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "mc",
+              "text": "The components that are changed for each job can be termed:",
+              "options": {
+                "a": "Job tooling",
+                "b": "Press components",
+                "c": "Tool assembly",
+                "d": "None of the above"
+              },
+              "answer": "a"
+            },
+            {
+              "idx": 1,
+              "type": "list",
+              "parts": 7,
+              "text": "What do we call the seven standard pieces of tooling found in most stations?",
+              "labels": [
+                "a.",
+                "b.",
+                "c.",
+                "d.",
+                "e.",
+                "f.",
+                "g."
+              ],
+              "answer": [
+                "punch",
+                "die",
+                "thimble",
+                "knockout",
+                "punch holder",
+                "die block",
+                "transfer fingers"
+              ]
+            },
+            {
+              "idx": 2,
+              "type": "list",
+              "parts": 2,
+              "text": "What are the two major reasons for inspecting tools before a job run?",
+              "labels": [
+                "a.",
+                "b."
+              ],
+              "answer": [
+                "to maintain a part to blueprint specifications",
+                "to maintain a tool within wear specifications"
+              ]
+            },
+            {
+              "idx": 3,
+              "type": "fill",
+              "blanks": 1,
+              "text": "Tooling may be replaced or job prints updated, only after approval from my ________.",
+              "answer": [
+                "Supervisor"
+              ]
+            },
+            {
+              "idx": 4,
+              "type": "mc",
+              "text": "A transfer block has a correct inside diameter of 1.891 before mounting it in the slide. After it is mounted in the slide, but before the mounting screws are tightened, it maintains an inside diameter of 1.891. After tightening the mounting screws, the inside diameter measures 1.895. Which of the following is true about the transfer block?",
+              "options": {
+                "a": "it's too small",
+                "b": "it's too large",
+                "c": "it's just right",
+                "d": "it must be repaired or replaced",
+                "e": "B and D",
+                "f": "None of the above"
+              },
+              "answer": "e"
+            },
+            {
+              "idx": 5,
+              "type": "tf",
+              "text": "A stripper removes the part from the die.",
+              "answer": "F"
+            },
+            {
+              "idx": 6,
+              "type": "fill",
+              "blanks": 1,
+              "text": "A cap screw must enter the tool or component a minimum of ________ times it's diameter.",
+              "answer": [
+                "1 1/2"
+              ]
+            },
+            {
+              "idx": 7,
+              "type": "list",
+              "parts": 2,
+              "text": "List two of the four reasons why mating surfaces might not be seating squarely against each other.",
+              "labels": [
+                "a.",
+                "b."
+              ],
+              "answer": [
+                "Radii too large",
+                "Tapered or non-square shoulder"
+              ]
+            },
+            {
+              "idx": 8,
+              "type": "fill",
+              "blanks": 1,
+              "text": "When using a set screw to fasten, use a second set screw locked against the first to prevent it from ________.",
+              "answer": [
+                "backing out"
+              ]
+            },
+            {
+              "idx": 9,
+              "type": "fill",
+              "blanks": 1,
+              "text": "All nicks, burrs, and gouges must be ________ before assembly.",
+              "answer": [
+                "removed"
+              ]
+            },
+            {
+              "idx": 10,
+              "type": "fill",
+              "blanks": 1,
+              "text": "Where there is more than one fastener, each must be ________ together to give you an even grip.",
+              "answer": [
+                "tightened"
+              ]
+            },
+            {
+              "idx": 11,
+              "type": "fill",
+              "blanks": 1,
+              "text": "A transfer block's size is measured (before/after) the transfer block is mounted in the slide and the cap screws tightened.",
+              "answer": [
+                "after"
+              ]
+            },
+            {
+              "idx": 12,
+              "type": "list",
+              "parts": 2,
+              "text": "In addition to the standard assembly procedures, what two conditions must be met each time a transfer block is mounted in the slide?",
+              "labels": [
+                "a.",
+                "b."
+              ],
+              "answer": [
+                "Correct size",
+                "Flush with bottom of slide"
+              ]
+            },
+            {
+              "idx": 13,
+              "type": "tf",
+              "text": "Each finger for a job will always be marked with a station number.",
+              "answer": "T"
+            },
+            {
+              "idx": 14,
+              "type": "fill",
+              "blanks": 1,
+              "text": "The two finger springs for each station must be ________.",
+              "answer": [
+                "Identical"
+              ]
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "checklist",
+          "title_en": "Tooling Identification",
+          "statement_en": "Given a list to tooling components, locate, identify, and explain the purpose of each, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Located/Identified and explained purpose of: Punch"
+            },
+            {
+              "idx": 1,
+              "text": "Located/Identified and explained purpose of: Die"
+            },
+            {
+              "idx": 2,
+              "text": "Located/Identified and explained purpose of: Thimble"
+            },
+            {
+              "idx": 3,
+              "text": "Located/Identified and explained purpose of: Knockout"
+            },
+            {
+              "idx": 4,
+              "text": "Located/Identified and explained purpose of: Punch holder"
+            },
+            {
+              "idx": 5,
+              "text": "Located/Identified and explained purpose of: Die block"
+            },
+            {
+              "idx": 6,
+              "text": "Located/Identified and explained purpose of: Transfer fingers"
+            }
+          ]
+        },
+        {
+          "num": 3,
+          "type": "checklist",
+          "title_en": "Tooling Location",
+          "statement_en": "Given a job number, can locate all necessary tooling and components, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Located the correct job check list."
+            },
+            {
+              "idx": 1,
+              "text": "Located the cabinet where the job is stored."
+            },
+            {
+              "idx": 2,
+              "text": "Located all blanking station components."
+            },
+            {
+              "idx": 3,
+              "text": "Located all cupping station components."
+            },
+            {
+              "idx": 4,
+              "text": "Located all drawing station components."
+            },
+            {
+              "idx": 5,
+              "text": "Located all trimming station components."
+            },
+            {
+              "idx": 6,
+              "text": "Located all piercing station components."
+            },
+            {
+              "idx": 7,
+              "text": "Located all beading station components."
+            },
+            {
+              "idx": 8,
+              "text": "Located all side piercing station components."
+            },
+            {
+              "idx": 9,
+              "text": "Identified and located the correct slide."
+            },
+            {
+              "idx": 10,
+              "text": "Identified and located any auxiliary tooling and components."
+            },
+            {
+              "idx": 11,
+              "text": "Located the slide sample used for setup."
+            },
+            {
+              "idx": 12,
+              "text": "Identified any items missing from the above list."
+            }
+          ]
+        },
+        {
+          "num": 4,
+          "type": "checklist",
+          "title_en": "Tooling Inspection",
+          "statement_en": "Given any tooling and it's blueprint, list any out-of-spec conditions, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Inspected all dimensions."
+            },
+            {
+              "idx": 1,
+              "text": "Identified all \"out of specification\" occurrences."
+            },
+            {
+              "idx": 2,
+              "text": "Identified all \"out of wear tolerance\" occurrences."
+            },
+            {
+              "idx": 3,
+              "text": "Correctly identified whether to change the tool, update the job print, or stay the same for each out of spec condition."
+            },
+            {
+              "idx": 4,
+              "text": "Returned all tooling and components to it's appropriate spot."
+            },
+            {
+              "idx": 5,
+              "text": "Identified any other unusual or incorrect conditions."
+            }
+          ]
+        },
+        {
+          "num": 5,
+          "type": "checklist",
+          "title_en": "Tooling Assembly",
+          "statement_en": "Given any tooling which requires assembly, demonstrate the procedures found on the checksheet, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "Assemble Punch and Chuck",
+              "text": "Fastener enters punch a minimum of 1½ times it's diameter."
+            },
+            {
+              "idx": 1,
+              "section": "Assemble Punch and Chuck",
+              "text": "Fastener is torqued to specification."
+            },
+            {
+              "idx": 2,
+              "section": "Assemble Punch and Chuck",
+              "text": "Checked if punch end seats squarely against back end of chuck counterbore."
+            },
+            {
+              "idx": 3,
+              "section": "Assemble Punch and Chuck",
+              "text": "Checked if mating surfaces seat squarely."
+            },
+            {
+              "idx": 4,
+              "section": "Assemble die in die block",
+              "text": "Placed die squarely into die block opening."
+            },
+            {
+              "idx": 5,
+              "section": "Assemble die in die block",
+              "text": "Die enters die block smoothly, without excessive hammering."
+            },
+            {
+              "idx": 6,
+              "section": "Assemble die in die block",
+              "text": "Used a soft-faced hammer to position die in die block."
+            },
+            {
+              "idx": 7,
+              "section": "Assemble die in die block",
+              "text": "Checked if die is seated squarely against shoulder of die block."
+            },
+            {
+              "idx": 8,
+              "section": "Assemble die in die block",
+              "text": "Checked if die is flush (within .001) with both top and bottom of die block."
+            },
+            {
+              "idx": 9,
+              "section": "Assemble die in die block",
+              "text": "Used dial indicator or \"tap\" method to align (within .0005) flat on die with the block key slot."
+            },
+            {
+              "idx": 10,
+              "section": "Assemble die in die block",
+              "text": "Tightened both screws in the key to torque specification; both screws were tightened simultaneously so that equal pressure is exerted on both."
+            },
+            {
+              "idx": 11,
+              "section": "Assemble die in die block",
+              "text": "Checked if die is tight in the die block."
+            },
+            {
+              "idx": 12,
+              "section": "Assemble die in die block",
+              "text": "Key fasteners enter die block a minimum of 1½ times it's diameter."
+            },
+            {
+              "idx": 13,
+              "section": "Assemble transfer block in slide",
+              "text": "Correct transfer block selected."
+            },
+            {
+              "idx": 14,
+              "section": "Assemble transfer block in slide",
+              "text": "Transfer block is free of burrs, nicks, and gouges."
+            },
+            {
+              "idx": 15,
+              "section": "Assemble transfer block in slide",
+              "text": "Transfer block is aligned correctly in slide."
+            },
+            {
+              "idx": 16,
+              "section": "Assemble transfer block in slide",
+              "text": "Transfer block is flush, within .003 with bottom of slide."
+            },
+            {
+              "idx": 17,
+              "section": "Assemble transfer block in slide",
+              "text": "Transfer block mounting screws tighten on shoulder of screw, not the threaded end."
+            },
+            {
+              "idx": 18,
+              "section": "Assemble transfer block in slide",
+              "text": "Mounting screws are torqued to specification."
+            },
+            {
+              "idx": 19,
+              "section": "Assemble transfer block in slide",
+              "text": "Transfer block is correct size and holds blank tightly without distorting."
+            },
+            {
+              "idx": 20,
+              "section": "Assemble finger in slide",
+              "text": "Located correct slide."
+            },
+            {
+              "idx": 21,
+              "section": "Assemble finger in slide",
+              "text": "Located correct fingers."
+            },
+            {
+              "idx": 22,
+              "section": "Assemble finger in slide",
+              "text": "Located correct slide line-up plate."
+            },
+            {
+              "idx": 23,
+              "section": "Assemble finger in slide",
+              "text": "Checked transfer slide and fingers for burrs, nicks, gouges, and bends."
+            },
+            {
+              "idx": 24,
+              "section": "Assemble finger in slide",
+              "text": "Fingers are mounted in correct station."
+            },
+            {
+              "idx": 25,
+              "section": "Assemble finger in slide",
+              "text": "Finger mounted screws are in and torqued to specification."
+            },
+            {
+              "idx": 26,
+              "section": "Assemble finger in slide",
+              "text": "Finger springs have correct wire diameter, spring diameter, and spring length."
+            },
+            {
+              "idx": 27,
+              "section": "Assemble finger in slide",
+              "text": "The ends of each finger spring are crimped shut."
+            },
+            {
+              "idx": 28,
+              "section": "Assemble finger in slide",
+              "text": "The two finger springs used for each station are identical in wire diameter, spring diameter, spring length, and tension."
+            },
+            {
+              "idx": 29,
+              "section": "Assemble finger in slide",
+              "text": "All springs are in. The set screws are adjusted so that the correct tension is put on the shell and neither the springs or the fingers bottom out when the finger is opened."
+            },
+            {
+              "idx": 30,
+              "section": "Assemble finger in slide",
+              "text": "Fingers have full and complete movement."
+            },
+            {
+              "idx": 31,
+              "section": "Assemble finger in slide",
+              "text": "Finger location has been set with the slide line-up plate."
+            },
+            {
+              "idx": 32,
+              "section": "Assemble finger in slide",
+              "text": "Fingers grip the shell correctly with the slide setup plug in place."
+            },
+            {
+              "idx": 33,
+              "section": "Assemble finger in slide",
+              "text": "Fingers do not stick on die blocks or line-up plate when opened."
+            },
+            {
+              "idx": 34,
+              "section": "Assemble punch, pilot, and nib",
+              "text": "Nib seats squarely against pilot should."
+            },
+            {
+              "idx": 35,
+              "section": "Assemble punch, pilot, and nib",
+              "text": "Nib seats squarely against punch end."
+            },
+            {
+              "idx": 36,
+              "section": "Assemble punch, pilot, and nib",
+              "text": "Fastener enters punch a minimum of 1½ times it's diameter."
+            },
+            {
+              "idx": 37,
+              "section": "Assemble blank nib and retainer",
+              "text": "Nib should seats squarely against retainer."
+            },
+            {
+              "idx": 38,
+              "section": "Assemble blank nib and retainer",
+              "text": "Checked for radius on back edge of nib."
+            },
+            {
+              "idx": 39,
+              "section": "Assemble blank nib and retainer",
+              "text": "Checked for outside diameter radius on end of retainer."
+            },
+            {
+              "idx": 40,
+              "section": "Assemble blank nib and retainer",
+              "text": "Checked cutting edge for sharpness and edge type."
+            },
+            {
+              "idx": 41,
+              "section": "Assemble blank nib and retainer",
+              "text": "Fastener enters retainer a minimum of 1½ times it's diameter."
+            },
+            {
+              "idx": 42,
+              "section": "Assemble blank die in retainer",
+              "text": "Placed die squarely into opening."
+            },
+            {
+              "idx": 43,
+              "section": "Assemble blank die in retainer",
+              "text": "Die enters retainer smoothly, without excessive hammering."
+            },
+            {
+              "idx": 44,
+              "section": "Assemble blank die in retainer",
+              "text": "Used a soft-faced hammer to position die."
+            },
+            {
+              "idx": 45,
+              "section": "Assemble blank die in retainer",
+              "text": "Checked if die is seated squarely against shoulder of retainer."
+            },
+            {
+              "idx": 46,
+              "section": "Assemble blank die in retainer",
+              "text": "Checked if die sticks out of bottom of retainer."
+            },
+            {
+              "idx": 47,
+              "section": "Assemble blank die in retainer",
+              "text": "Key screws enter retainer a minimum of 1½ times their diameter."
+            },
+            {
+              "idx": 48,
+              "section": "Assemble blank die in retainer",
+              "text": "Key screws are tightened to torque specification."
+            },
+            {
+              "idx": 49,
+              "section": "Assemble blank die in retainer",
+              "text": "Checked if die is tight in the retainer, after tightening screws."
+            },
+            {
+              "idx": 50,
+              "section": "Assemble spring loaded pilot and punch",
+              "text": "Selected spring of the correct length, wire diameter, and spring diameter."
+            },
+            {
+              "idx": 51,
+              "section": "Assemble spring loaded pilot and punch",
+              "text": "Selected the correct size roll pin."
+            },
+            {
+              "idx": 52,
+              "section": "Assemble spring loaded pilot and punch",
+              "text": "Tapped the pin into the hole with the flat on the pilot in the correct position."
+            },
+            {
+              "idx": 53,
+              "section": "Assemble spring loaded pilot and punch",
+              "text": "Assembled pin, spring, and set screw so that the pin has the correct position."
+            },
+            {
+              "idx": 54,
+              "section": "Assemble spring loaded pilot and punch",
+              "text": "Ground the ends of the roll pin flush with the punch diameter without damaging the punch."
+            },
+            {
+              "idx": 55,
+              "section": "Assemble spring loaded pilot and punch",
+              "text": "Pilot operates freely within the punch."
+            },
+            {
+              "idx": 56,
+              "section": "Assemble spring loaded pin into punch",
+              "text": "Selected pin of the correct size and type."
+            },
+            {
+              "idx": 57,
+              "section": "Assemble spring loaded pin into punch",
+              "text": "Selected spring of the correct length, wire diameter, and spring diameter."
+            },
+            {
+              "idx": 58,
+              "section": "Assemble spring loaded pin into punch",
+              "text": "Ground pin to correct length."
+            },
+            {
+              "idx": 59,
+              "section": "Assemble spring loaded pin into punch",
+              "text": "Assembled pin, spring, and set screw so that the pin has the correct tension on it."
+            },
+            {
+              "idx": 60,
+              "section": "Assemble spring loaded pin into punch",
+              "text": "Tightened second set screw against the first so that the first set screw does not back off."
+            },
+            {
+              "idx": 61,
+              "section": "Assemble flange trim die into die block",
+              "text": "Correctly calculated the thickness of the spacer ring."
+            },
+            {
+              "idx": 62,
+              "section": "Assemble flange trim die into die block",
+              "text": "Ground spacer ring to calculated thickness."
+            },
+            {
+              "idx": 63,
+              "section": "Assemble flange trim die into die block",
+              "text": "Placed ring on die and placed die squarely into die block opening. Die enters retainer smoothly, without excessive hammering."
+            },
+            {
+              "idx": 64,
+              "section": "Assemble flange trim die into die block",
+              "text": "Used a soft-faced hammer to position die in die block."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "type": "checklist",
+          "title_en": "Tool Lay Out",
+          "statement_en": "Given any job, lay out all tooling and components on the job cart to the standards found on the check sheet.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "The job cart used is the correct one for the machine or job being set up."
+            },
+            {
+              "idx": 1,
+              "text": "Correct slide line-up plate is on cart."
+            },
+            {
+              "idx": 2,
+              "text": "Correct job order is on cart."
+            },
+            {
+              "idx": 3,
+              "text": "Correct job check list is on cart."
+            },
+            {
+              "idx": 4,
+              "text": "Correct pages and quality paperwork are on cart."
+            },
+            {
+              "idx": 5,
+              "text": "Correct documentation sheet is on cart."
+            },
+            {
+              "idx": 6,
+              "text": "Correct punch assemblies are on cart, in proper station sequence."
+            },
+            {
+              "idx": 7,
+              "text": "Correct die assemblies are on cart, in proper station sequence."
+            },
+            {
+              "idx": 8,
+              "text": "Correct slide samples are on cart."
+            },
+            {
+              "idx": 9,
+              "text": "Correct production print is on cart."
+            },
+            {
+              "idx": 10,
+              "text": "Side motion components are on cart."
+            },
+            {
+              "idx": 11,
+              "text": "Correct trim bracket assembly is on cart."
+            },
+            {
+              "idx": 12,
+              "text": "All tooling and components found on the job check list are on cart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ds03_press_components",
+      "section": "die_setter",
+      "sort_order": 103,
+      "name_en": "Press Components",
+      "name_es": "Componentes de Prensa",
+      "lesson_en": [
+        "trainee/DS 03 - Press Components.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 03 - Press Components.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Press Component Knowledge",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "list",
+              "parts": 8,
+              "text": "Briefly describe the function of each of the following components.",
+              "labels": [
+                "Gibs",
+                "Roll feed",
+                "Transfer mechanism",
+                "Probe system",
+                "Wedge or adjustment screw",
+                "Yoke",
+                "Adjustment rod (gooser rod)",
+                "Roller bearing"
+              ],
+              "answer": [
+                "House plungers in specific locations - upper and lower",
+                "Feeds the stock through the machine",
+                "Provides back and forth motion to the slide",
+                "Monitors the transfer of parts between stations",
+                "Provides fine adjustment of punch length in an ICOP",
+                "Connects plunger and lifter rod together in an ICOP",
+                "Transmits motion from wedge to roller bearing",
+                "Provides a bearing surface between the plunger and the plunger cam"
+              ]
+            },
+            {
+              "idx": 1,
+              "type": "mc",
+              "text": "The model number 15-8 means:",
+              "options": {
+                "a": "15 stations in a 8 size frame.",
+                "b": "8 stations in a 15 size frame.",
+                "c": "Nothing. It is just an insignificant number to designate the press.",
+                "d": "There are 15 plungers which are size 8."
+              },
+              "answer": "b"
+            },
+            {
+              "idx": 2,
+              "type": "tf",
+              "text": "The name ICOP means \"Individual cam operated plunger\".",
+              "answer": "T"
+            },
+            {
+              "idx": 3,
+              "type": "tf",
+              "text": "On an ICOP, the motor and clutch drive the back shaft, which drives the top shaft, which drives the side shaft, which drives the bottom shaft.",
+              "answer": "T"
+            },
+            {
+              "idx": 4,
+              "type": "tf",
+              "text": "On any transfer press, one revolution of the press is more than one revolution of the bottom shaft, depending on the speed.",
+              "answer": "F"
+            },
+            {
+              "idx": 5,
+              "type": "list",
+              "parts": 3,
+              "text": "What three problems are caused by a bumper not being flush?",
+              "answer": [
+                "Pull out hold down bolts for the die block.",
+                "Knockout remains below die surface - parts tip over.",
+                "Knockout cam turns on bottom shaft."
+              ]
+            },
+            {
+              "idx": 6,
+              "type": "mc",
+              "text": "In timing an ICOP, the general rule is:",
+              "options": {
+                "a": "Faster, lower; slower, higher",
+                "b": "Faster, lower; lower, higher",
+                "c": "Faster, higher; slower, lower",
+                "d": "Timing has nothing to do with the height of the plunger",
+                "e": "None of the above"
+              },
+              "answer": "c"
+            },
+            {
+              "idx": 7,
+              "type": "mc",
+              "text": "The limits to which you can time a plunger include which of the following:",
+              "options": {
+                "a": "So fast that the roller locks up on the plunger cam.",
+                "b": "So slow that the part coming into the station gets tipped over.",
+                "c": "There are no limits",
+                "d": "A & B",
+                "e": "None of the above"
+              },
+              "answer": "d"
+            },
+            {
+              "idx": 8,
+              "type": "fill",
+              "blanks": 1,
+              "text": "The first lift dwells the part so that the ________ can pick up the part.",
+              "answer": [
+                "transfer fingers"
+              ]
+            },
+            {
+              "idx": 9,
+              "type": "tf",
+              "text": "In the model number 3-25, the 25 refers to the frame size.",
+              "answer": "F"
+            },
+            {
+              "idx": 10,
+              "type": "tf",
+              "text": "A Baird uses a series of individual plungers.",
+              "answer": "F"
+            },
+            {
+              "idx": 11,
+              "type": "mc",
+              "text": "The model number 814 tells us that there is approximately ________ tons per station.",
+              "options": {
+                "a": "81",
+                "b": "14",
+                "c": "4",
+                "d": "8"
+              },
+              "answer": "d"
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "checklist",
+          "title_en": "Press Component Identification",
+          "statement_en": "Given a list of press components for an ICOP, a Platarg, and a Baird press, locate, identify, and explain the purpose for each, at the press, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Upper Cam Shaft"
+            },
+            {
+              "idx": 1,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Gibs"
+            },
+            {
+              "idx": 2,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Stripper delay"
+            },
+            {
+              "idx": 3,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Roll feed"
+            },
+            {
+              "idx": 4,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Wedge"
+            },
+            {
+              "idx": 5,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Lifter arm/bar"
+            },
+            {
+              "idx": 6,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Roller bearing"
+            },
+            {
+              "idx": 7,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Kicker"
+            },
+            {
+              "idx": 8,
+              "section": "Waterbury Farrel ICOP/Platarg - locate, identify, and explain purpose",
+              "text": "Pressure pad linkage"
+            },
+            {
+              "idx": 9,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Side shaft"
+            },
+            {
+              "idx": 10,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Bottom shaft"
+            },
+            {
+              "idx": 11,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Scrap chopper"
+            },
+            {
+              "idx": 12,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Transfer mechanism"
+            },
+            {
+              "idx": 13,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Plunger"
+            },
+            {
+              "idx": 14,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Gooser bar"
+            },
+            {
+              "idx": 15,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Bumper rod"
+            },
+            {
+              "idx": 16,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Stripper arm"
+            },
+            {
+              "idx": 17,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Lifter rod friction"
+            },
+            {
+              "idx": 18,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Yoke"
+            },
+            {
+              "idx": 19,
+              "section": "Waterbury Farrel ICOP/Platarg - find and explain (tell the name)",
+              "text": "Air spring cylinder"
+            },
+            {
+              "idx": 20,
+              "section": "Baird - locate, identify, and explain purpose",
+              "text": "Ram"
+            },
+            {
+              "idx": 21,
+              "section": "Baird - locate, identify, and explain purpose",
+              "text": "Roll feed"
+            },
+            {
+              "idx": 22,
+              "section": "Baird - locate, identify, and explain purpose",
+              "text": "Punch holder"
+            },
+            {
+              "idx": 23,
+              "section": "Baird - locate, identify, and explain purpose",
+              "text": "Adjustment screw"
+            },
+            {
+              "idx": 24,
+              "section": "Baird - locate, identify, and explain purpose",
+              "text": "Stripper arm"
+            },
+            {
+              "idx": 25,
+              "section": "Baird - find and explain (tell the name)",
+              "text": "Stripper mechanism"
+            },
+            {
+              "idx": 26,
+              "section": "Baird - find and explain (tell the name)",
+              "text": "Die set"
+            },
+            {
+              "idx": 27,
+              "section": "Baird - find and explain (tell the name)",
+              "text": "Chuck holder strap"
+            },
+            {
+              "idx": 28,
+              "section": "Baird - find and explain (tell the name)",
+              "text": "Bumper rod"
+            },
+            {
+              "idx": 29,
+              "section": "Baird - find and explain (tell the name)",
+              "text": "Kicker"
+            }
+          ]
+        },
+        {
+          "num": 3,
+          "type": "checklist",
+          "title_en": "Timing an ICOP or Platarg",
+          "statement_en": "Given a Waterbury Farrel ICOP or a Platarg with adjustable timing, can demonstrate and explain timing requirements and adjustments to the standards found on the checksheet, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Explained the operation of the press. (Motor and clutch, backshaft, topshaft, side shaft, and bottom shaft)"
+            },
+            {
+              "idx": 1,
+              "text": "Demonstrated and identified \"downstroke\", \"first lift\", \"transfer back\", \"second lift\", and \"transfer forward\" as they barred the press over."
+            },
+            {
+              "idx": 2,
+              "text": "Timed a station to its slowest timing. Part coming in is not knocked over."
+            },
+            {
+              "idx": 3,
+              "text": "Timed a station to its fastest timing. Station does not lock up."
+            },
+            {
+              "idx": 4,
+              "text": "Completed all the above steps safely and without incident. Recognized all danger points to self, tooling, press components, and press."
+            },
+            {
+              "idx": 5,
+              "text": "Returned all tools and equipment to the appropriate spot."
+            },
+            {
+              "idx": 6,
+              "text": "Left press clean and in good condition."
+            }
+          ]
+        },
+        {
+          "num": 4,
+          "type": "checklist",
+          "title_en": "Pre-set Components",
+          "statement_en": "Given any job in an ICOP, Platarg, or Baird press, can adjust press components to meet standards described on check sheet.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "ICOP Knockout Assembly",
+              "text": "Can correctly name the components of the assembly: bumper rod, bumper nib, bumper friction, bumper bushing (top and bottom), bumper bushing plate, kicker, knockout cam."
+            },
+            {
+              "idx": 1,
+              "section": "ICOP Knockout Assembly",
+              "text": "Checked for and removed burrs."
+            },
+            {
+              "idx": 2,
+              "section": "ICOP Knockout Assembly",
+              "text": "Cleaned hole and bumper assembly."
+            },
+            {
+              "idx": 3,
+              "section": "ICOP Knockout Assembly",
+              "text": "Correctly inserted and mounted bumper bushings."
+            },
+            {
+              "idx": 4,
+              "section": "ICOP Knockout Assembly",
+              "text": "Correctly mounted kicker."
+            },
+            {
+              "idx": 5,
+              "section": "ICOP Knockout Assembly",
+              "text": "Mounted cam so that rounded portion leads."
+            },
+            {
+              "idx": 6,
+              "section": "ICOP Knockout Assembly",
+              "text": "Correctly inserted and mounted bumper."
+            },
+            {
+              "idx": 7,
+              "section": "ICOP Knockout Assembly",
+              "text": "Correctly inserted and adjusted bumper friction."
+            },
+            {
+              "idx": 8,
+              "section": "ICOP Knockout Assembly",
+              "text": "Jogged press to correct degree position to adjust timing of knockout cam."
+            },
+            {
+              "idx": 9,
+              "section": "ICOP Knockout Assembly",
+              "text": "Timed cam so that flat spot is straight up and down."
+            },
+            {
+              "idx": 10,
+              "section": "ICOP Knockout Assembly",
+              "text": "Tightened cam bolts simultaneously and checked for even gap."
+            },
+            {
+              "idx": 11,
+              "section": "ICOP Knockout Assembly",
+              "text": "Checked if knockout cam was in fully up position."
+            },
+            {
+              "idx": 12,
+              "section": "ICOP Knockout Assembly",
+              "text": "Pushed down on bumper and checked if bumper was flush with bed."
+            },
+            {
+              "idx": 13,
+              "section": "ICOP Knockout Assembly",
+              "text": "Changed washers or re-ground bumper nib to achieve flush status."
+            },
+            {
+              "idx": 14,
+              "section": "Position Die Blocks",
+              "text": "Checked for and removed burrs from die block or bed."
+            },
+            {
+              "idx": 15,
+              "section": "Position Die Blocks",
+              "text": "Wiped bed and die block clean."
+            },
+            {
+              "idx": 16,
+              "section": "Position Die Blocks",
+              "text": "Pushed bumper rod down far enough to allow knockout to drop into bumper hole (approximately 1/2 inch)."
+            },
+            {
+              "idx": 17,
+              "section": "Position Die Blocks",
+              "text": "Die block assemblies are placed in correct station."
+            },
+            {
+              "idx": 18,
+              "section": "Position Die Blocks",
+              "text": "Snugged down front die bolt."
+            },
+            {
+              "idx": 19,
+              "section": "Position Die Blocks",
+              "text": "Returned all tools and components to correct location."
+            },
+            {
+              "idx": 20,
+              "section": "Baird Bumper Assembly",
+              "text": "Can correctly name the components of the bumper assembly: bumper rod, bumper rod end, bumper spring, bumper mounting plate, kicker, knockout cam."
+            },
+            {
+              "idx": 21,
+              "section": "Baird Bumper Assembly",
+              "text": "Checked for and removed burrs."
+            },
+            {
+              "idx": 22,
+              "section": "Baird Bumper Assembly",
+              "text": "Cleaned hole and bumper assembly."
+            },
+            {
+              "idx": 23,
+              "section": "Baird Bumper Assembly",
+              "text": "Correctly inserted and mounted bumper assembly."
+            },
+            {
+              "idx": 24,
+              "section": "Baird Bumper Assembly",
+              "text": "Tested spring tension and movement of bumper."
+            },
+            {
+              "idx": 25,
+              "section": "Baird Bumper Assembly",
+              "text": "Adjusted bumper rod end flush with bed."
+            },
+            {
+              "idx": 26,
+              "section": "Baird Bumper Assembly",
+              "text": "Tightened lock nut against adjustment nut without changing adjustment."
+            },
+            {
+              "idx": 27,
+              "section": "Baird Bumper Assembly",
+              "text": "Mounted kicker so that adjustment screw is on center with bumper rod."
+            },
+            {
+              "idx": 28,
+              "section": "Baird Bumper Assembly",
+              "text": "Mounted knockout cam so that the cam fall-off occurs after the cam reaches top dead center."
+            },
+            {
+              "idx": 29,
+              "section": "Baird Bumper Assembly",
+              "text": "Jogged machine to correct position to time cam."
+            },
+            {
+              "idx": 30,
+              "section": "Baird Bumper Assembly",
+              "text": "Adjusted cam to top dead center and tightened."
+            },
+            {
+              "idx": 31,
+              "section": "Baird Bumper Assembly",
+              "text": "Adjusted kicker adjustment bolt upward until it contacts the bumper rod and tightened lock nut."
+            },
+            {
+              "idx": 32,
+              "section": "Baird Bumper Assembly",
+              "text": "In the position given in \"12\", the kicker does not lock up."
+            },
+            {
+              "idx": 33,
+              "section": "Baird Bumper Assembly",
+              "text": "Explained what will happened if the kicker is adjusted during the run."
+            },
+            {
+              "idx": 34,
+              "section": "Mounting the Slide",
+              "text": "Slide slipped in freely."
+            },
+            {
+              "idx": 35,
+              "section": "Mounting the Slide",
+              "text": "Inserted and tighten pin or screw."
+            },
+            {
+              "idx": 36,
+              "section": "Mounting the Slide",
+              "text": "Installed slide friction. Tension is set so the slide slap is eliminated. Friction is neither over or under tightened."
+            },
+            {
+              "idx": 37,
+              "section": "Mounting the Slide",
+              "text": "Installed and adjusted front slide guide correctly."
+            },
+            {
+              "idx": 38,
+              "section": "Mounting the Slide",
+              "text": "Backed off adjustment screw on front slide guide."
+            },
+            {
+              "idx": 39,
+              "section": "Mounting the Slide",
+              "text": "Applied layout dye to end of blank punch."
+            },
+            {
+              "idx": 40,
+              "section": "Mounting the Slide",
+              "text": "Threaded blank punch into plunger and tightened."
+            },
+            {
+              "idx": 41,
+              "section": "Mounting the Slide",
+              "text": "Barred punch downward into transfer block and back up after checking rough alignment."
+            },
+            {
+              "idx": 42,
+              "section": "Mounting the Slide",
+              "text": "Determined if punch lined up with transfer block and communicated problem to Supervisor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ds04_blanking",
+      "section": "die_setter",
+      "sort_order": 104,
+      "name_en": "Blanking",
+      "name_es": "Corte de Disco",
+      "lesson_en": [
+        "trainee/DS 04 - Blanking.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 04 - Blanking.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Blanking Knowledge",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "fill",
+              "blanks": 1,
+              "text": "The proper way to back off a roller box is listed in this module. Give a brief explanation of this procedure.",
+              "answer": [
+                "Loosen the roller box locking screw and pry the roller box down until it contacts the top of the plunger, then tighten the locking screw"
+              ]
+            },
+            {
+              "idx": 1,
+              "type": "list",
+              "parts": 2,
+              "text": "List the two reasons for leaving a two material thickness space between the blank punch and the bed in the fully down position.",
+              "answer": [
+                "In case of a double blank",
+                "So the blank does not scrape the bed during transfer"
+              ]
+            },
+            {
+              "idx": 2,
+              "type": "mc",
+              "text": "What must you be careful for when tightening up an adjustment wedge lock screw?",
+              "options": {
+                "a": "A hernia",
+                "b": "Twisting off the head",
+                "c": "Breaking the wedge in two",
+                "d": "The wedge moving as you tighten it"
+              },
+              "answer": "b"
+            },
+            {
+              "idx": 3,
+              "type": "mc",
+              "text": "The reason for using parallels during the alignment process is that it allows you to:",
+              "options": {
+                "a": "Have your hands free to hold the shims",
+                "b": "Align the blank holder with the bed",
+                "c": "Hold the blank exactly parallel",
+                "d": "Align the blank without assistance",
+                "e": "None of the above"
+              },
+              "answer": "d"
+            },
+            {
+              "idx": 4,
+              "type": "tf",
+              "text": "The visual alignment method should be used whenever possible.",
+              "answer": "T"
+            },
+            {
+              "idx": 5,
+              "type": "mc",
+              "text": "What thickness shims would you use to align a blank which has .002 total clearance?",
+              "options": {
+                "a": ".002",
+                "b": ".0005",
+                "c": ".001",
+                "d": ".004"
+              },
+              "answer": "c"
+            },
+            {
+              "idx": 6,
+              "type": "tf",
+              "text": "The visual method of alignment relies on your ability to create equal clearance all the way around the punch and die by sight.",
+              "answer": "T"
+            },
+            {
+              "idx": 7,
+              "type": "fill",
+              "blanks": 1,
+              "text": "The best way to double check alignment is to use layout dye and look for ________ on the nib diameter.",
+              "answer": [
+                "scratches"
+              ]
+            },
+            {
+              "idx": 8,
+              "type": "list",
+              "parts": 4,
+              "text": "List the four characteristics that must be present after you make and inspect your first blank:",
+              "answer": [
+                "Held securely by the transfer block",
+                "Free of defects like nicks, scratches, and burrs",
+                "Has an even break around its edge",
+                "Delivered to the next station without interruption of operation"
+              ]
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "checklist",
+          "title_en": "Identify Blank Components",
+          "statement_en": "Given a cross-section of a blank station, can identify each component by name, with 100 percent accuracy. Refer to the cross-section for an ICOP/Platarg press and identify the components labeled A through I.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "A — Setscrew"
+            },
+            {
+              "idx": 1,
+              "text": "B — Blank retainer"
+            },
+            {
+              "idx": 2,
+              "text": "C — Ejector pin spring"
+            },
+            {
+              "idx": 3,
+              "text": "D — Blank nib"
+            },
+            {
+              "idx": 4,
+              "text": "E — Retainer bolt"
+            },
+            {
+              "idx": 5,
+              "text": "F — Ejector pin"
+            },
+            {
+              "idx": 6,
+              "text": "G — Stripper plate"
+            },
+            {
+              "idx": 7,
+              "text": "H — Blank die"
+            },
+            {
+              "idx": 8,
+              "text": "I — Transfer block"
+            }
+          ]
+        },
+        {
+          "num": 3,
+          "type": "checklist",
+          "title_en": "Sharpening Blank Station Components",
+          "statement_en": "Given any blank punch and die, can sharpen them to the standards found on the performance check, with 100 percent accuracy. The trainee must sharpen the tooling listed below.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "Blank Die",
+              "text": "Obtained correct grinding fixture."
+            },
+            {
+              "idx": 1,
+              "section": "Blank Die",
+              "text": "Cleaned die and fixture."
+            },
+            {
+              "idx": 2,
+              "section": "Blank Die",
+              "text": "Correctly located die in fixture."
+            },
+            {
+              "idx": 3,
+              "section": "Blank Die",
+              "text": "Tightened mounting screws securely. Die is tight."
+            },
+            {
+              "idx": 4,
+              "section": "Blank Die",
+              "text": "Mounted fixture in grinder so that die shear angle runs side-to-side and the fixture is tipped backward."
+            },
+            {
+              "idx": 5,
+              "section": "Blank Die",
+              "text": "Removed all nicks or shear marks."
+            },
+            {
+              "idx": 6,
+              "section": "Blank Die",
+              "text": "Shear angles meet on die center."
+            },
+            {
+              "idx": 7,
+              "section": "Blank Die",
+              "text": "No bump is formed where shear angles meet."
+            },
+            {
+              "idx": 8,
+              "section": "Blank Die",
+              "text": "Removed die from fixture."
+            },
+            {
+              "idx": 9,
+              "section": "Blank Die",
+              "text": "Demagnetized fixture and die."
+            },
+            {
+              "idx": 10,
+              "section": "Blank Die",
+              "text": "Removed burr from cutting edge."
+            },
+            {
+              "idx": 11,
+              "section": "Blank Die",
+              "text": "Radiused the top outside edge where the top of the die meets the outside angle of the die life."
+            },
+            {
+              "idx": 12,
+              "section": "Blank Die",
+              "text": "Cleaned tools thoroughly of all dust and dirt."
+            },
+            {
+              "idx": 13,
+              "section": "Blank Die",
+              "text": "Stored tools in correct location."
+            },
+            {
+              "idx": 14,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Obtained correct grinding fixture."
+            },
+            {
+              "idx": 15,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Cleaned punch and fixture."
+            },
+            {
+              "idx": 16,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Tightened punch into fixture so that punch will not loosen during grinding."
+            },
+            {
+              "idx": 17,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Blocked up fixture on grinder."
+            },
+            {
+              "idx": 18,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Removed enough material during grinding operation to eliminate any nicks or shear marks."
+            },
+            {
+              "idx": 19,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Demagnetized punch and fixture."
+            },
+            {
+              "idx": 20,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Ground a 20° X 1/8 inch angle on the punch on jobs where the material is .015 thick or less."
+            },
+            {
+              "idx": 21,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Cleaned tools thoroughly."
+            },
+            {
+              "idx": 22,
+              "section": "ICOP/Platarg Blank Punch",
+              "text": "Stored tools in correct location."
+            },
+            {
+              "idx": 23,
+              "section": "Baird Blank Punch",
+              "text": "Obtained angle plate and two clamps."
+            },
+            {
+              "idx": 24,
+              "section": "Baird Blank Punch",
+              "text": "Cleaned angle plate and punch."
+            },
+            {
+              "idx": 25,
+              "section": "Baird Blank Punch",
+              "text": "Set the angle plate on its side on the magnetic chuck."
+            },
+            {
+              "idx": 26,
+              "section": "Baird Blank Punch",
+              "text": "Set the backside of the blank punch against the angle plate."
+            },
+            {
+              "idx": 27,
+              "section": "Baird Blank Punch",
+              "text": "Turned on the magnet and clamped the blank punch to the angle plate."
+            },
+            {
+              "idx": 28,
+              "section": "Baird Blank Punch",
+              "text": "Turned off the magnet and tipped the blank punch up to grind the top surface."
+            },
+            {
+              "idx": 29,
+              "section": "Baird Blank Punch",
+              "text": "Ground first .0005 to determine if punch was being ground square. (Checked and/or realigned if it was not.)"
+            },
+            {
+              "idx": 30,
+              "section": "Baird Blank Punch",
+              "text": "Ground the cutting edge to remove all shear marks and/or chips."
+            },
+            {
+              "idx": 31,
+              "section": "Baird Blank Punch",
+              "text": "Demagnetized punch, angle plate and clamps."
+            },
+            {
+              "idx": 32,
+              "section": "Baird Blank Punch",
+              "text": "Lapped the end of the punch using at most a medium lapping compound."
+            },
+            {
+              "idx": 33,
+              "section": "Baird Blank Punch",
+              "text": "Removed burr from cutting edge."
+            },
+            {
+              "idx": 34,
+              "section": "Baird Blank Punch",
+              "text": "Cleaned tools thoroughly."
+            },
+            {
+              "idx": 35,
+              "section": "Baird Blank Punch",
+              "text": "Stored tools in correct location."
+            }
+          ]
+        },
+        {
+          "num": 4,
+          "type": "checklist",
+          "title_en": "Mount and Align Blank Tools",
+          "statement_en": "Given a blank punch, blank die, and a stripper plate, mount and align them so that the blank has an even break, is held securely by the transfer block, is delivered to the next station without interruption of operation, and is free from defects, with 100 percent accuracy. As the trainee mounts a blank station in both a Baird and an ICOP press, check each item successfully completed.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Cleaned shoulder and threads of chuck and the inside of the plunger of all dirt and foreign material."
+            },
+            {
+              "idx": 1,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Using left hand to hold the punch against plunger, threaded the punch into the plunger and tightened it to torque specifications."
+            },
+            {
+              "idx": 2,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Checked if wedge is completely backed out. Loosened roller box locking screw and pried roller box down."
+            },
+            {
+              "idx": 3,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Double-checked blank punch length to make sure punch will not bottom out in the fully down position."
+            },
+            {
+              "idx": 4,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Barred punch to fully down position."
+            },
+            {
+              "idx": 5,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Loosened up lifter bar."
+            },
+            {
+              "idx": 6,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Tapped in wedge to create two to three material thicknesses between bottom of punch and bed."
+            },
+            {
+              "idx": 7,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Loosened lifter bar and created a gap of about 1/16 - 1/8 of an inch between the lifter bar and the lifter cam. (While maintaining the two to three material thicknesses between punch and bed and plunger roller is contacting the plunger cam.) Re-tightened lifter bar."
+            },
+            {
+              "idx": 8,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Checked to make sure that the roller bearing does not lock up with the plunger cam at several points within one machine revolution."
+            },
+            {
+              "idx": 9,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Double-checked all adjustments and the tightness of all bolts and components."
+            },
+            {
+              "idx": 10,
+              "section": "ICOP/Platarg — Mount Blank Punch",
+              "text": "Returned all tools to correct location."
+            },
+            {
+              "idx": 11,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Checked for and removed burrs from press and tooling."
+            },
+            {
+              "idx": 12,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Wiped press and tools clean of dirt."
+            },
+            {
+              "idx": 13,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Mounted blank punch correctly (see competency check #4)."
+            },
+            {
+              "idx": 14,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Removed blank punch, inserted punch in die, slid entire unit in press. Threaded blank punch back up into plunger."
+            },
+            {
+              "idx": 15,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Barred press over into the position where the blank punch is 1/8 of an inch above blank die."
+            },
+            {
+              "idx": 16,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Placed two, 3/8 to 1/2 inch parallels under blank die retainer so that blank punch is inside of die."
+            },
+            {
+              "idx": 17,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Barred blank punch down approximately 1/2 inch, and removed parallels - blank punch is still inside die."
+            },
+            {
+              "idx": 18,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Threaded hold down bolts into retainer, leaving them finger tight."
+            },
+            {
+              "idx": 19,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Lined up punch and die using appropriate method."
+            },
+            {
+              "idx": 20,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Double-checked alignment using layout dye. No rub marks are visible."
+            },
+            {
+              "idx": 21,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Mounted blank stripper plate, centered around punch."
+            },
+            {
+              "idx": 22,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Inserted material and produced a blank."
+            },
+            {
+              "idx": 23,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Blank is free of defects, has an even break, and is held securely by transfer block."
+            },
+            {
+              "idx": 24,
+              "section": "ICOP/Platarg — Mount and Align Blank Tools",
+              "text": "Blank is delivered to the next station with no interruption of operation."
+            },
+            {
+              "idx": 25,
+              "section": "U.S. Baird",
+              "text": "Checked for and removed burrs from press and tooling."
+            },
+            {
+              "idx": 26,
+              "section": "U.S. Baird",
+              "text": "Wiped press and tools clean of dirt."
+            },
+            {
+              "idx": 27,
+              "section": "U.S. Baird",
+              "text": "Assembled blank punch, cup punch, bracket, and clamps correctly."
+            },
+            {
+              "idx": 28,
+              "section": "U.S. Baird",
+              "text": "Slid blank die retainer assembly onto press, inserted hold-down bolts leaving them finger tight."
+            },
+            {
+              "idx": 29,
+              "section": "U.S. Baird",
+              "text": "Mounted blank punch assembly correctly."
+            },
+            {
+              "idx": 30,
+              "section": "U.S. Baird",
+              "text": "Tightened bracket bolts to torque specification while holding it in it's fully up position."
+            },
+            {
+              "idx": 31,
+              "section": "U.S. Baird",
+              "text": "Mounted front cup arm dog and tightened bolt to torque specification."
+            },
+            {
+              "idx": 32,
+              "section": "U.S. Baird",
+              "text": "Backed off adjustment screw, and held punch fully up while snugging up strap bolts."
+            },
+            {
+              "idx": 33,
+              "section": "U.S. Baird",
+              "text": "Barred ram downward until punch is approximately 1/4 inch above die."
+            },
+            {
+              "idx": 34,
+              "section": "U.S. Baird",
+              "text": "Loosened punch strap bolts and gently lowered blank punch into die."
+            },
+            {
+              "idx": 35,
+              "section": "U.S. Baird",
+              "text": "Barred ram downward to bottom dead center."
+            },
+            {
+              "idx": 36,
+              "section": "U.S. Baird",
+              "text": "Placing a thickness gage the same thickness as the material between the top of the blank punch and the bottom of the adjustment screw, adjusted the punch downward until it contacts bottom."
+            },
+            {
+              "idx": 37,
+              "section": "U.S. Baird",
+              "text": "Tightened the adjustment screw lock screw."
+            },
+            {
+              "idx": 38,
+              "section": "U.S. Baird",
+              "text": "Lifted blank punch fully up and tightened strap bolts, starting with lower right bolt."
+            },
+            {
+              "idx": 39,
+              "section": "U.S. Baird",
+              "text": "Aligned punch and die using appropriate method."
+            },
+            {
+              "idx": 40,
+              "section": "U.S. Baird",
+              "text": "Double-checked alignment using layout dye. No rub marks are visible."
+            },
+            {
+              "idx": 41,
+              "section": "U.S. Baird",
+              "text": "Mounted stripper plate, centered around punch."
+            },
+            {
+              "idx": 42,
+              "section": "U.S. Baird",
+              "text": "Inserted material and produced a blank."
+            },
+            {
+              "idx": 43,
+              "section": "U.S. Baird",
+              "text": "Blank is free of defects, has an even break."
+            },
+            {
+              "idx": 44,
+              "section": "U.S. Baird",
+              "text": "Cupped shell matches slide sample and is held securely by the fingers."
+            },
+            {
+              "idx": 45,
+              "section": "U.S. Baird",
+              "text": "Cup is delivered to the next station with no interruption of operation."
+            }
+          ]
+        },
+        {
+          "num": 5,
+          "type": "checklist",
+          "title_en": "Adjust Roll Feed",
+          "statement_en": "Given a standard roll feed unit, adjust throw so that the bridge between each blank is less than 1/16 of an inch, yet does not cut out, with 100 percent accuracy. Assign the trainee to adjust the feed on a standard roll feed for jobs being set up at the current time.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Jogged the press to the correct location to adjust the roll feed."
+            },
+            {
+              "idx": 1,
+              "text": "Loosened lock nut and adjusted arm in correct direction."
+            },
+            {
+              "idx": 2,
+              "text": "Bridge is less than 1/16 inch wide, without cutting out."
+            },
+            {
+              "idx": 3,
+              "text": "Checked if feed rolls are placing appropriate tension on stock. Used \"shears\" method to measure drag."
+            },
+            {
+              "idx": 4,
+              "text": "Checked if material is being delivered straight into the chopper, without buckling."
+            },
+            {
+              "idx": 5,
+              "text": "Adjusted feed roll tension correctly to eliminate improper tension and feeding off center into chopper."
+            },
+            {
+              "idx": 6,
+              "text": "Checked brake adjustment and adjusted the brake as required."
+            },
+            {
+              "idx": 7,
+              "text": "Bridge width does not vary from blank to blank."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "type": "checklist",
+          "title_en": "Correct Blank Station Problems",
+          "statement_en": "Given 10 problems in a blank station, can identify the cause of the problem and the possible solutions for each, with 100 percent accuracy. For each of the following problems, list all possible causes and the solutions for each. (Refer to 'Correct Blank Station Problems' in the lesson for the correct answers.)",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Problem 1: Blank is cut out — identified all possible causes (a–f) and the solutions for each."
+            },
+            {
+              "idx": 1,
+              "text": "Problem 2: Blank produces shavings — identified all possible causes (a–f) and the solutions for each."
+            },
+            {
+              "idx": 2,
+              "text": "Problem 3: Bridge varies in width — identified all possible causes (a–f) and the solutions for each."
+            },
+            {
+              "idx": 3,
+              "text": "Problem 4: Blank pulls up — identified all possible causes (a–c) and the solutions for each."
+            },
+            {
+              "idx": 4,
+              "text": "Problem 5: Blank loose in transfer block — identified all possible causes (a–d) and the solutions for each."
+            },
+            {
+              "idx": 5,
+              "text": "Problem 6: Scrap buckles in front of chopper — identified all possible causes (a–e) and the solutions for each."
+            },
+            {
+              "idx": 6,
+              "text": "Problem 7: Uneven break around edge of blank — identified all possible causes (a–c) and the solutions for each."
+            },
+            {
+              "idx": 7,
+              "text": "Problem 8: Material does not feed forward — identified all possible causes (a–c) and the solutions for each."
+            },
+            {
+              "idx": 8,
+              "text": "Problem 9: Blank slips under slide — identified all possible causes (a–b) and the solutions for each."
+            },
+            {
+              "idx": 9,
+              "text": "Problem 10: Blank has scratch marks on its surface — identified all possible causes (a–c) and the solutions for each."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ds05_cupping",
+      "section": "die_setter",
+      "sort_order": 105,
+      "name_en": "Cupping",
+      "name_es": "Formación de Copa",
+      "lesson_en": [
+        "trainee/DS 05 - Cupping.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 05 - Cupping.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Cupping Knowledge",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "list",
+              "parts": 2,
+              "text": "Name the two adjustments that can be made with the pressure pad adjustment linkage:",
+              "answer": [
+                "pressure on the blank",
+                "stripper height adjustment"
+              ],
+              "labels": [
+                "a.",
+                "b."
+              ]
+            },
+            {
+              "idx": 1,
+              "type": "fill",
+              "blanks": 1,
+              "text": "Describe the spot where the pressure on the blank is correct: ________",
+              "answer": [
+                "just enough to remove the wrinkles"
+              ]
+            },
+            {
+              "idx": 2,
+              "type": "list",
+              "parts": 4,
+              "text": "List the steps involved in shimming a punch:",
+              "answer": [
+                "Bar or jog the punch downward until it enters the shell.",
+                "Loosen the chuck and place the proper thickness shim behind the chuck in a location which, after tightening the chuck securely, will center the punch within the shell.",
+                "Loosen the die and jog the shell down into it for proper alignment. Tighten the die bolts.",
+                "Repeat this process until the shell has uniform flange, radii, and draw rings."
+              ],
+              "labels": [
+                "a.",
+                "b.",
+                "c.",
+                "d."
+              ]
+            },
+            {
+              "idx": 3,
+              "type": "tf",
+              "text": "The stripper dogs used for the pressure pad are identical to those used for a standard stripper.",
+              "answer": "F"
+            },
+            {
+              "idx": 4,
+              "type": "mc",
+              "text": "The pressure exerted on the blank comes from the pressure pad. This pressure is changed by adjusting the:",
+              "options": {
+                "a": "lifter bar",
+                "b": "stop collar",
+                "c": "adjustment rod",
+                "d": "b and c",
+                "e": "none of the above"
+              },
+              "answer": "c"
+            },
+            {
+              "idx": 5,
+              "type": "tf",
+              "text": "The punch should be two to three material thicknesses above the die surface at the first lift position.",
+              "answer": "T"
+            },
+            {
+              "idx": 6,
+              "type": "tf",
+              "text": "The knockout cam must be adjusted so that the knockout is fully up in the first lift position.",
+              "answer": "F"
+            },
+            {
+              "idx": 7,
+              "type": "mc",
+              "text": "Which way do you turn the stop collar to lower the stripper height adjustment for the pressure pad?",
+              "options": {
+                "a": "Upward",
+                "b": "Downward"
+              },
+              "answer": "a"
+            },
+            {
+              "idx": 8,
+              "type": "tf",
+              "text": "After making one cup, you can run the press through one revolution to make another shell, without worrying about the operation of the cup station.",
+              "answer": "F"
+            },
+            {
+              "idx": 9,
+              "type": "fill",
+              "blanks": 1,
+              "text": "The pressure exerted on the blank during the cupping operation must be just enough to remove the ________.",
+              "answer": [
+                "wrinkles"
+              ]
+            },
+            {
+              "idx": 10,
+              "type": "tf",
+              "text": "Shimming the punch is needed because the punch does not line up with the fingers.",
+              "answer": "T"
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "checklist",
+          "title_en": "Mount the Cup Station",
+          "statement_en": "Given a cross-section of a cup station, name each component and explain its function, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Identified the chuck or punch holder."
+            },
+            {
+              "idx": 1,
+              "text": "Identified the punch."
+            },
+            {
+              "idx": 2,
+              "text": "Identified the pressure pad."
+            },
+            {
+              "idx": 3,
+              "text": "Identified the cup die."
+            },
+            {
+              "idx": 4,
+              "text": "Identified the knockout."
+            },
+            {
+              "idx": 5,
+              "text": "Identified the pressure pad linkage (pressure pad/arm, lower arm, and linkage adjustment screw)."
+            },
+            {
+              "idx": 6,
+              "text": "Explained the function of each cup station component."
+            }
+          ]
+        },
+        {
+          "num": 3,
+          "type": "checklist",
+          "title_en": "Mount and Adjust Cup Tools",
+          "statement_en": "Given the cup station tools for one job, in an ICOP press, mount, align, and adjust each component so that the criteria on the check sheet are met, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Checked for and removed burrs from tooling and press."
+            },
+            {
+              "idx": 1,
+              "text": "Wiped tooling and plunger and cleaned of dirt and foreign material."
+            },
+            {
+              "idx": 2,
+              "text": "Inserted dogs (with smaller diameter and shorter length shanks than standard) into the pressure pad arm."
+            },
+            {
+              "idx": 3,
+              "text": "Inserted pressure pad into pressure pad arm opening and onto dogs."
+            },
+            {
+              "idx": 4,
+              "text": "Inserted punch into pressure pad, threaded punch into plunger, and tightened securely."
+            },
+            {
+              "idx": 5,
+              "text": "Backed off stripper adjustment and pressure adjustment."
+            },
+            {
+              "idx": 6,
+              "text": "Jogged slide to forward position. Pushed down on pressure pad arm to determine if pressure pad moves freely into transfer block."
+            },
+            {
+              "idx": 7,
+              "text": "Jogged punch down to about 1/4 inch above die."
+            },
+            {
+              "idx": 8,
+              "text": "Loosened front die bolt and pried punch into die."
+            },
+            {
+              "idx": 9,
+              "text": "Jogged punch to bottom of stroke. Snugged front die bolt."
+            },
+            {
+              "idx": 10,
+              "text": "Using a strip of raw material or feeler gage of the same thickness, adjusted pressure exerted by pressure pad on blank. Tightened lock nuts securely."
+            },
+            {
+              "idx": 11,
+              "text": "Jogged punch to first lift position. Double-checked to make sure pressure pad would clear first pair of fingers."
+            },
+            {
+              "idx": 12,
+              "text": "Loosened lifter bar and adjusted punch timing so punch is two to three material thicknesses off die surface. Lifter bar is centered on lifter cam. Lifter bar bolts are tightened securely."
+            },
+            {
+              "idx": 13,
+              "text": "Double-checked knockout cam timing - knockout should be two to three material thicknesses below die surface."
+            },
+            {
+              "idx": 14,
+              "text": "Jogged press to stripper delay position. Adjusted stripper height using slide sample of this station. Tightened lock nut securely."
+            },
+            {
+              "idx": 15,
+              "text": "Jogged press to top of stroke, with slide in forward position, and a blank in the transfer block. Loosened up die block and jogged shell into the die. Tightened up die block securely."
+            },
+            {
+              "idx": 16,
+              "text": "Jogged punch back up to top very slowly, double-checking operation of station."
+            },
+            {
+              "idx": 17,
+              "text": "Inspected shell for length, concentricity of radii, appearance and made adjustments to match it to slide sample."
+            },
+            {
+              "idx": 18,
+              "text": "Pressure is adjusted to remove wrinkles but not to exert more pressure than is needed to remove wrinkles."
+            },
+            {
+              "idx": 19,
+              "text": "Shell is gripped firmly by fingers and transfers to next station without interruption of operation."
+            },
+            {
+              "idx": 20,
+              "text": "Double-checked all adjustments and the tightness of all bolts."
+            }
+          ]
+        },
+        {
+          "num": 4,
+          "type": "checklist",
+          "title_en": "Correct Cup Station Problems",
+          "statement_en": "Given nine problems in a cup station, identify the cause of each and the possible solutions, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Identified causes and solutions for: Wrinkles in the flange."
+            },
+            {
+              "idx": 1,
+              "text": "Identified causes and solutions for: Shell radii larger on one side than the other."
+            },
+            {
+              "idx": 2,
+              "text": "Identified causes and solutions for: Bulge in side wall."
+            },
+            {
+              "idx": 3,
+              "text": "Identified causes and solutions for: Shell tips over as slide moves forward."
+            },
+            {
+              "idx": 4,
+              "text": "Identified causes and solutions for: Score marks on shell."
+            },
+            {
+              "idx": 5,
+              "text": "Identified causes and solutions for: Cut-out in flange."
+            },
+            {
+              "idx": 6,
+              "text": "Identified causes and solutions for: Flange is eared."
+            },
+            {
+              "idx": 7,
+              "text": "Identified causes and solutions for: Flange is larger on one side than the other."
+            },
+            {
+              "idx": 8,
+              "text": "Identified causes and solutions for: Cup wall is too thin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ds06_drawing",
+      "section": "die_setter",
+      "sort_order": 106,
+      "name_en": "Drawing",
+      "name_es": "Embutido",
+      "lesson_en": [
+        "trainee/DS 06 - Drawing.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 06 - Drawing.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Draw/Redraw Knowledge",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "list",
+              "parts": 5,
+              "text": "List the five types of draw stations.",
+              "answer": [
+                "standard draw",
+                "step draw",
+                "redraw",
+                "finish draw",
+                "flattening stations"
+              ]
+            },
+            {
+              "idx": 1,
+              "type": "list",
+              "parts": 2,
+              "text": "List the two reasons for using a spring sleeve in a draw station.",
+              "answer": [
+                "aligns the shell on the punch",
+                "prevents wrinkles in the flange"
+              ]
+            },
+            {
+              "idx": 2,
+              "type": "fill",
+              "blanks": 1,
+              "text": "With a bottoming knockout, adjusting the punch too deeply will cause the punch to ____.",
+              "answer": [
+                "bottom out on the knockout"
+              ]
+            },
+            {
+              "idx": 3,
+              "type": "mc",
+              "text": "The nest is used to provide:",
+              "options": {
+                "a": "wrinkle control",
+                "b": "alignment",
+                "c": "depth setting",
+                "d": "a and b",
+                "e": "none of the above"
+              },
+              "answer": "b"
+            },
+            {
+              "idx": 4,
+              "type": "fill",
+              "blanks": 2,
+              "text": "A draw punch must be ____ material thicknesses off die surface in the ____ lift position.",
+              "answer": [
+                "2 to 3",
+                "first"
+              ]
+            },
+            {
+              "idx": 5,
+              "type": "fill",
+              "blanks": 1,
+              "text": "The stripper height must be set in the stripper delay position. The shell must be carried about ____ off die surface.",
+              "answer": [
+                "1/32"
+              ]
+            },
+            {
+              "idx": 6,
+              "type": "fill",
+              "blanks": 1,
+              "text": "If a spring sleeve is used, the punch may need to be timed more slowly. Where does the punch get adjusted on first lift if this occurs?",
+              "answer": [
+                "fully down position"
+              ]
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "quiz",
+          "title_en": "Identify Draw/Redraw Station Components",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "list",
+              "parts": 6,
+              "text": "Given the cross-section of a draw/redraw station, identify each labeled component (A through F) by name.",
+              "answer": [
+                "retainer bolt",
+                "chuck",
+                "draw punch",
+                "stripper",
+                "draw die",
+                "knockout"
+              ],
+              "labels": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F"
+              ]
+            }
+          ]
+        },
+        {
+          "num": 3,
+          "type": "checklist",
+          "title_en": "Mount Draw/Redraw Tools",
+          "statement_en": "Given the draw/redraw station tools for each draw situation, mount, align, and adjust each tool or component so that the criteria on the checksheet are met, with 100 percent accuracy. As the trainee mounts the tools for both a draw station and a redraw station (which uses a spring sleeve), place a check next to each item successfully completed by the trainee.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Cleaned shoulder and threads of chuck and the inside of the plunger of all dirt and foreign material."
+            },
+            {
+              "idx": 1,
+              "text": "Inserted stripper dogs into stripper arm."
+            },
+            {
+              "idx": 2,
+              "text": "Backed off stripper adjustment screw."
+            },
+            {
+              "idx": 3,
+              "text": "Inserted punch into stripper, threaded punch into plunger, and tightened securely."
+            },
+            {
+              "idx": 4,
+              "text": "Jogged punch down to within 1/4 inch of die surface."
+            },
+            {
+              "idx": 5,
+              "text": "Loosened front bolt."
+            },
+            {
+              "idx": 6,
+              "text": "Pried punch into die. Snugged front die bolt."
+            },
+            {
+              "idx": 7,
+              "text": "Jogged press to first lift position."
+            },
+            {
+              "idx": 8,
+              "text": "Loosened lifter bar. Adjusted punch height to create a two to three material thickness gap between the bottom of the punch and the top of the die."
+            },
+            {
+              "idx": 9,
+              "text": "Adjusted knockout cam so that the knockout is two to three material thicknesses below die surface."
+            },
+            {
+              "idx": 10,
+              "text": "Centered lifter bar on lifter cam and tightened bolts securely."
+            },
+            {
+              "idx": 11,
+              "text": "Jogged press to stripper delay position."
+            },
+            {
+              "idx": 12,
+              "text": "Using the slide sample from the station, adjusted the stripper height so that the shell is carried about 1/32 off die surface. Tightened lock nut securely."
+            },
+            {
+              "idx": 13,
+              "text": "Inserted shell into finger, loosened front die bolt, and jogged shell into the die, stopping on bottom. Tightened front die bolt securely."
+            },
+            {
+              "idx": 14,
+              "text": "Jogged press to top of stroke. Checked shell length and adjusted wedge to create correct shell length. Jogged one more shell through the station."
+            },
+            {
+              "idx": 15,
+              "text": "Drawn shell is free of score marks, rub marks, shavings, and bulges. Radii are concentric."
+            },
+            {
+              "idx": 16,
+              "text": "Shell is the same length as the slide sample and is held securely by the fingers."
+            },
+            {
+              "idx": 17,
+              "text": "Shell is delivered to the next station with no interruption of operation."
+            },
+            {
+              "idx": 18,
+              "text": "Double-checked all adjustments and the tightness of all bolts."
+            }
+          ]
+        },
+        {
+          "num": 4,
+          "type": "quiz",
+          "title_en": "Correct Draw/Redraw Station Problems",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "list",
+              "parts": 5,
+              "text": "Wrinkles in the flange: list the possible causes.",
+              "answer": [
+                "spring sleeve spring broken",
+                "blank cut-out",
+                "shell is drawn too deeply",
+                "shell coming in is too short",
+                "insufficient hold-down pressure"
+              ]
+            },
+            {
+              "idx": 1,
+              "type": "list",
+              "parts": 4,
+              "text": "Shell radii larger on one side than the other: list the possible causes.",
+              "answer": [
+                "misaligned punch and die",
+                "non-concentric radii",
+                "fingers misaligned with tooling",
+                "finger spring tension"
+              ]
+            },
+            {
+              "idx": 2,
+              "type": "list",
+              "parts": 3,
+              "text": "Bulge in side wall of shell / collapsed shell bottom (caused by timing/adjustment of components): list the possible solutions.",
+              "answer": [
+                "knockout timing too fast",
+                "punch timed too slow",
+                "stripper set too low"
+              ]
+            },
+            {
+              "idx": 3,
+              "type": "list",
+              "parts": 2,
+              "text": "Shell tips over as slide moves forward: list the possible causes.",
+              "answer": [
+                "timing/adjustment of components",
+                "fingers do not grip shell properly"
+              ]
+            },
+            {
+              "idx": 4,
+              "type": "list",
+              "parts": 3,
+              "text": "Score marks on shell: list the possible causes.",
+              "answer": [
+                "tools scored or loaded up",
+                "shell bottom going in is scored",
+                "shavings and/or chips"
+              ]
+            },
+            {
+              "idx": 5,
+              "type": "list",
+              "parts": 2,
+              "text": "Cut-out in flange: list the possible causes.",
+              "answer": [
+                "blank cutting-out",
+                "material is earring"
+              ]
+            },
+            {
+              "idx": 6,
+              "type": "list",
+              "parts": 2,
+              "text": "Flange is eared: list the possible causes.",
+              "answer": [
+                "material problem",
+                "draws not balanced"
+              ]
+            },
+            {
+              "idx": 7,
+              "type": "list",
+              "parts": 2,
+              "text": "Flange is larger on one side than the other: list the possible causes.",
+              "answer": [
+                "punch and die misaligned",
+                "fingers do not line up with tooling"
+              ]
+            },
+            {
+              "idx": 8,
+              "type": "list",
+              "parts": 3,
+              "text": "Shell wall is too thin: list the possible causes.",
+              "answer": [
+                "excessive thin-out during drawing",
+                "draws not balanced",
+                "previous flange being pulled into die"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ds07_trimming",
+      "section": "die_setter",
+      "sort_order": 107,
+      "name_en": "Trimming",
+      "name_es": "Recorte",
+      "lesson_en": [
+        "trainee/DS 07 - Trimming.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 07 - Trimming.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Trimming Knowledge",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "list",
+              "parts": 2,
+              "text": "The two types of trim stations are:",
+              "answer": [
+                "flange",
+                "pinch"
+              ]
+            },
+            {
+              "idx": 1,
+              "type": "list",
+              "parts": 4,
+              "text": "The four types of scrap removal devices are:",
+              "answer": [
+                "trim horn",
+                "solid plate with blower",
+                "finger method",
+                "transducer"
+              ]
+            },
+            {
+              "idx": 2,
+              "type": "fill",
+              "blanks": 1,
+              "text": "The timing of the knockout cam for a flange trim must be ________ than for a pinch trim.",
+              "answer": [
+                "faster"
+              ]
+            },
+            {
+              "idx": 3,
+              "type": "list",
+              "parts": 4,
+              "text": "What four things can cause a sheared cutting edge.",
+              "answer": [
+                "Excessive tool wear",
+                "Chipped edges on the tools",
+                "Misalignment of the punch and die",
+                "Shell tipping over and crunching between punch and die"
+              ]
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "checklist",
+          "title_en": "Identify Trim Station Components",
+          "statement_en": "Given a cross-section of a trim station, can identify each component by name, with 100 percent accuracy. Refer to the cross-section of a trim station and identify each of the components labeled A through H.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "A — retainer bolt"
+            },
+            {
+              "idx": 1,
+              "text": "B — chuck"
+            },
+            {
+              "idx": 2,
+              "text": "C — trim punch"
+            },
+            {
+              "idx": 3,
+              "text": "D — stripper plate"
+            },
+            {
+              "idx": 4,
+              "text": "E — trim nib"
+            },
+            {
+              "idx": 5,
+              "text": "F — trim pilot"
+            },
+            {
+              "idx": 6,
+              "text": "G — retainer bolt"
+            },
+            {
+              "idx": 7,
+              "text": "H — trim die"
+            }
+          ]
+        },
+        {
+          "num": 3,
+          "type": "checklist",
+          "title_en": "Sharpening Trim Station Components",
+          "statement_en": "Given the tools for a trim station, sharpen each to the standards found on the checksheet, with 100 percent accuracy. Observe the trainee as they sharpen trim station tools.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "Punch",
+              "text": "Removed insert from punch."
+            },
+            {
+              "idx": 1,
+              "section": "Punch",
+              "text": "Removed burrs from insert O.D."
+            },
+            {
+              "idx": 2,
+              "section": "Punch",
+              "text": "Kept insert square while grinding."
+            },
+            {
+              "idx": 3,
+              "section": "Punch",
+              "text": "Sharpened insert correctly."
+            },
+            {
+              "idx": 4,
+              "section": "Punch",
+              "text": "All shear is removed."
+            },
+            {
+              "idx": 5,
+              "section": "Punch",
+              "text": "Removed burr from sharpened edge."
+            },
+            {
+              "idx": 6,
+              "section": "Punch",
+              "text": "Correctly placed .005 radius on insert when appropriate."
+            },
+            {
+              "idx": 7,
+              "section": "Punch",
+              "text": "Correctly reassembled punch."
+            },
+            {
+              "idx": 8,
+              "section": "Die",
+              "text": "Set up die correctly on grinder."
+            },
+            {
+              "idx": 9,
+              "section": "Die",
+              "text": "Sharpened die correctly."
+            },
+            {
+              "idx": 10,
+              "section": "Die",
+              "text": "All shear is removed in .015 or .030 increments."
+            },
+            {
+              "idx": 11,
+              "section": "Die",
+              "text": "Removed burr from cutting edge."
+            },
+            {
+              "idx": 12,
+              "section": "Die",
+              "text": "Cut back shoulder of die if appropriate."
+            },
+            {
+              "idx": 13,
+              "section": "Die",
+              "text": "Correctly reassembled die."
+            }
+          ]
+        },
+        {
+          "num": 4,
+          "type": "checklist",
+          "title_en": "Mount Trim Tools",
+          "statement_en": "Given the tooling for both a flange and a pinch trim in both a Baird and an ICOP/Platarg press, can mount, align, and adjust each component so that the criteria on the check sheet are met, with 100 percent accuracy. Observe the trainee as they mount, align, and adjust a trim station in a press.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Cleaned shoulder and threads of chuck and the inside of the plunger of all dirt and foreign material."
+            },
+            {
+              "idx": 1,
+              "text": "Removed stripper arm."
+            },
+            {
+              "idx": 2,
+              "text": "Inserted punch into plunger and tightened securely."
+            },
+            {
+              "idx": 3,
+              "text": "Jogged punch down to within 1/4 inch of die surface."
+            },
+            {
+              "idx": 4,
+              "text": "Loosened front die bolt."
+            },
+            {
+              "idx": 5,
+              "text": "Pryed punch downward until cutting edges are about 1/32 of an inch apart. Loosened the chuck and turned the punch into the die without shearing the cutting edges. Pryed punch fully down and tightened chuck securely. Punch/insert is still in die."
+            },
+            {
+              "idx": 6,
+              "text": "Aligned punch and die either with shims or visual method. Tightened both front and back die bolts securely."
+            },
+            {
+              "idx": 7,
+              "text": "Double-checked alignment using layout dye."
+            },
+            {
+              "idx": 8,
+              "text": "Adjusted punch depth so that it enters die approximately 1/16 of an inch with the plunger on bottom."
+            },
+            {
+              "idx": 9,
+              "text": "Jogged press to the point where the fingers have cleared the trim ring."
+            },
+            {
+              "idx": 10,
+              "text": "Loosened lifter bar and adjusted punch to the point where the cutting edge is in the fully down position."
+            },
+            {
+              "idx": 11,
+              "text": "Centered lifter bar on the lifter cam and tightened it securely."
+            },
+            {
+              "idx": 12,
+              "text": "Loosened knockout cam and backed it off. Snugged up both bolts."
+            },
+            {
+              "idx": 13,
+              "text": "Jogged punch to the top of the stroke. Mount stripper plate, leaving it loose."
+            },
+            {
+              "idx": 14,
+              "text": "Pryed punch into opening and jogged punch to the bottom of it's stroke."
+            },
+            {
+              "idx": 15,
+              "text": "Lifted stripper plate to within 1/8 inch of contacting the bottom of the chuck. Centered the opening around the punch and tightened securely."
+            },
+            {
+              "idx": 16,
+              "text": "Mounted blower so that the blower pipe is slightly under and centered on the stripper plate. Tightened securely. Jogged press to top of stroke."
+            },
+            {
+              "idx": 17,
+              "text": "Pinch trim - inserted a shell and jogged the punch to the point where the fingers are fully back. Loosened the knockout cam and adjusted it so that the part will just begin exiting the die. Flange trim - inserted a shell and jogged the punch to a point where the fingers will clear the trim ring. Loosened the knockout cam and adjusted it so that the part will follow the punch up and out of the die, before the next fingers begin touching the part."
+            },
+            {
+              "idx": 18,
+              "text": "Jogged one or more shell through the station to make final adjustments and double check operation of the station."
+            },
+            {
+              "idx": 19,
+              "text": "Trimmed shell is free of score marks, shavings, bulges, and burrs; edge of trim has even break."
+            },
+            {
+              "idx": 20,
+              "text": "Shell is the same length as the slide sample and is held securely by the fingers."
+            },
+            {
+              "idx": 21,
+              "text": "Shell is delivered to the next station with no interruption of operation."
+            },
+            {
+              "idx": 22,
+              "text": "Double-checked all adjustments and the tightness of all components."
+            }
+          ]
+        },
+        {
+          "num": 5,
+          "type": "checklist",
+          "title_en": "Correct Trim Station Problems",
+          "statement_en": "Given a list of problems in a trim station, can identify the possible causes and solutions for each, with 100 percent accuracy. For each of the following problems, identify all possible causes and the solutions for each. (Refer to 'Correct Trim Station Problems' in the lesson for the correct answers.)",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Problem 1: Flange shell has bent flange — identified all possible causes (a–b) and the solutions for each."
+            },
+            {
+              "idx": 1,
+              "text": "Problem 2: Wrinkled or cut-out flange — identified all possible causes (a–b) and the solutions for each."
+            },
+            {
+              "idx": 2,
+              "text": "Problem 3: Bulge in side — identified all possible causes (a–b) and the solutions for each."
+            },
+            {
+              "idx": 3,
+              "text": "Problem 4: Shell tips over as slide moves forward — identified all possible causes (a–b) and the solutions for each."
+            },
+            {
+              "idx": 4,
+              "text": "Problem 5: Pinch trimmed shell pulls up — identified all possible causes (a–b) and the solutions for each."
+            },
+            {
+              "idx": 5,
+              "text": "Problem 6: Sheared cutting edges — identified all possible causes (a–c) and the solutions for each."
+            },
+            {
+              "idx": 6,
+              "text": "Problem 7: Trimmed shell catches under fingers — identified all possible causes (a–b) and the solutions for each."
+            },
+            {
+              "idx": 7,
+              "text": "Problem 8: Trim rings dropping — identified all possible causes (a–d) and the solutions for each."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ds08_piercing",
+      "section": "die_setter",
+      "sort_order": 108,
+      "name_en": "Piercing",
+      "name_es": "Perforado",
+      "lesson_en": [
+        "trainee/DS 08 - Piercing.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 08 - Piercing.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Pierce Knowledge",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "list",
+              "parts": 2,
+              "text": "The two types of pierce stations are:",
+              "answer": [
+                "full bottom",
+                "partial bottom"
+              ]
+            },
+            {
+              "idx": 1,
+              "type": "fill",
+              "blanks": 1,
+              "text": "The pierce is timed so that the fingers are fully ________ before the punch begins moving upward.",
+              "answer": [
+                "back"
+              ]
+            },
+            {
+              "idx": 2,
+              "type": "mc",
+              "text": "What is the best method of putting the punch into the die when aligning a round pierce?",
+              "options": {
+                "a": "pry punch into die",
+                "b": "jog punch into die",
+                "c": "loosen chuck and turn punch into die",
+                "d": "use a die set"
+              },
+              "answer": "c"
+            },
+            {
+              "idx": 3,
+              "type": "list",
+              "parts": 4,
+              "text": "What are the sharpening standards for full and partial bottom pierces? Give the standard for the punch and the die of each.",
+              "answer": [
+                "Full bottom punch: angle/radius",
+                "Full bottom die: angle/sharp",
+                "Partial bottom punch: sharp",
+                "Partial bottom die: sharp"
+              ],
+              "labels": [
+                "Full - Punch",
+                "Full - Die",
+                "Partial - Punch",
+                "Partial - Die"
+              ]
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "checklist",
+          "title_en": "Identify Pierce Station Components",
+          "statement_en": "Given a cross section of a pierce station, can identify each component by name and explain its function, with 100 percent accuracy. Refer to the cross-section of a pierce station and identify the components labeled A through G.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "A — Retainer bolt"
+            },
+            {
+              "idx": 1,
+              "text": "B — Chuck"
+            },
+            {
+              "idx": 2,
+              "text": "C — Pierce punch"
+            },
+            {
+              "idx": 3,
+              "text": "D — Stripper"
+            },
+            {
+              "idx": 4,
+              "text": "E — Pierce die"
+            },
+            {
+              "idx": 5,
+              "text": "F — Pierce die retainer"
+            },
+            {
+              "idx": 6,
+              "text": "G — Filler block"
+            }
+          ]
+        },
+        {
+          "num": 3,
+          "type": "checklist",
+          "title_en": "Sharpening Pierce Station Components",
+          "statement_en": "Given the tools for a pierce station, sharpen each to the standards found on the checksheet, with 100 percent accuracy. Observe the trainee as they sharpen pierce station tools. Place a check next to each item successfully completed by the trainee.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "Punch",
+              "text": "Removed punch from punch holder."
+            },
+            {
+              "idx": 1,
+              "section": "Punch",
+              "text": "Kept punch square while grinding."
+            },
+            {
+              "idx": 2,
+              "section": "Punch",
+              "text": "Sharpened punch correctly."
+            },
+            {
+              "idx": 3,
+              "section": "Punch",
+              "text": "All shear is removed."
+            },
+            {
+              "idx": 4,
+              "section": "Punch",
+              "text": "Removed burr from sharpened edge."
+            },
+            {
+              "idx": 5,
+              "section": "Punch",
+              "text": "Correctly placed .005 radius or angle when appropriate."
+            },
+            {
+              "idx": 6,
+              "section": "Punch",
+              "text": "Correctly reassembled punch."
+            },
+            {
+              "idx": 7,
+              "section": "Die",
+              "text": "Set up die correctly on grinder."
+            },
+            {
+              "idx": 8,
+              "section": "Die",
+              "text": "Sharpened die correctly."
+            },
+            {
+              "idx": 9,
+              "section": "Die",
+              "text": "All shear is removed in .015 or .030 increments."
+            },
+            {
+              "idx": 10,
+              "section": "Die",
+              "text": "Removed burr from cutting edge."
+            },
+            {
+              "idx": 11,
+              "section": "Die",
+              "text": "Cut back shoulder of die if appropriate."
+            },
+            {
+              "idx": 12,
+              "section": "Die",
+              "text": "Correctly reassembled die."
+            }
+          ]
+        },
+        {
+          "num": 4,
+          "type": "checklist",
+          "title_en": "Mount Pierce Tools",
+          "statement_en": "Given the tools for both a full bottom and partial bottom pierce, in a transfer press, mount, align, and adjust each component so that the criteria on the check sheet are met, with 100 percent accuracy. As the trainee mounts both a full bottom and a partial bottom pierce station, place a check next to each item successfully completed by the trainee.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Cleaned shoulder and threads of punch holder and the inside of the plunger of all dirt and foreign material."
+            },
+            {
+              "idx": 1,
+              "text": "Removed stripper arm."
+            },
+            {
+              "idx": 2,
+              "text": "Inserted punch into plunger and tightened securely."
+            },
+            {
+              "idx": 3,
+              "text": "Barred punch down to within 1/4 inch of the surface."
+            },
+            {
+              "idx": 4,
+              "text": "Loosened front die bolt."
+            },
+            {
+              "idx": 5,
+              "text": "Pryed punch downward until cutting edges are about 1/32 of an inch apart. Loosened the chuck and turned the punch into the die without shearing the cutting edges. Pryed punch fully down and tightened chuck securely. Punch/lob is still in die."
+            },
+            {
+              "idx": 6,
+              "text": "Aligned punch and die either with shims or visual method. Tightened both front and back die bolts securely."
+            },
+            {
+              "idx": 7,
+              "text": "Double-checked alignment using layout dye."
+            },
+            {
+              "idx": 8,
+              "text": "Jogged punch to the fully down position and adjusted the punch so that it enters die about 1/16 of an inch."
+            },
+            {
+              "idx": 9,
+              "text": "Barred press to the point where the fingers are fully back."
+            },
+            {
+              "idx": 10,
+              "text": "Loosened lifter bar and adjusted punch to the point where the cutting edge is in the fully down position."
+            },
+            {
+              "idx": 11,
+              "text": "Centered lifter bar on the lifter cam and tightened it securely."
+            },
+            {
+              "idx": 12,
+              "text": "Jogged punch to the top of the stroke. Mounted stripper plate, leaving it loose."
+            },
+            {
+              "idx": 13,
+              "text": "Pryed punch into opening and jogged punch to the bottom of it's stroke."
+            },
+            {
+              "idx": 14,
+              "text": "Using a slide sample, adjusted stripper plate to strip shell 1/32 off die surface. Centered the opening around the punch and tightened securely."
+            },
+            {
+              "idx": 15,
+              "text": "Jogged one more shell through the station to make final adjustments and double check operation of the station."
+            },
+            {
+              "idx": 16,
+              "text": "Pierced shell is free of score marks, shavings, bulges, and burrs; edge of pierce has even break."
+            },
+            {
+              "idx": 17,
+              "text": "Shell is the same length as the slide sample and is held securely by the fingers."
+            },
+            {
+              "idx": 18,
+              "text": "Shell is delivered to the next station with no interruption of operation."
+            },
+            {
+              "idx": 19,
+              "text": "Double-checked all adjustments and the tightness of all components."
+            }
+          ]
+        },
+        {
+          "num": 5,
+          "type": "checklist",
+          "title_en": "Correct Pierce Station Problems",
+          "statement_en": "Given four problems in a pierce station, can identify the possible causes and solutions for each, with 100 percent accuracy. For each of the following problems, identify all possible causes and the solution for each. (Refer to 'Correct Piercing Station Problems' in the lesson for the correct answers.)",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Problem 1: Bulge in side — identified all possible causes (a–f) and the solution for each."
+            },
+            {
+              "idx": 1,
+              "text": "Problem 2: Shell tips over as slide moves forward — identified all possible causes (a–b) and the solution for each."
+            },
+            {
+              "idx": 2,
+              "text": "Problem 3: Sheared cutting edges — identified all possible causes (a–c) and the solution for each."
+            },
+            {
+              "idx": 3,
+              "text": "Problem 4: Slugs pulling up — identified all possible causes (a–e) and the solution for each."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ds09_setup_completion",
+      "section": "die_setter",
+      "sort_order": 109,
+      "name_en": "Setup Completion",
+      "name_es": "Finalización del Ajuste",
+      "lesson_en": [
+        "trainee/DS 09 - Setup Completion.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 09 - Setup Completion.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Setup Completion Knowledge",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "tf",
+              "text": "The probe feeler wire is the only thing that may touch.",
+              "answer": "T"
+            },
+            {
+              "idx": 1,
+              "type": "fill",
+              "blanks": 1,
+              "text": "If any part of the probe assembly other than the feeler comes into contact with something, the probe will ________ out.",
+              "answer": [
+                "ground"
+              ]
+            },
+            {
+              "idx": 2,
+              "type": "fill",
+              "blanks": 1,
+              "text": "To make sure the probe is hitting only the part, jog an empty ________ through the press.",
+              "answer": [
+                "station"
+              ]
+            },
+            {
+              "idx": 3,
+              "type": "fill",
+              "blanks": 1,
+              "text": "A probe must be adjusted, not ________.",
+              "answer": [
+                "bent"
+              ]
+            },
+            {
+              "idx": 4,
+              "type": "mc",
+              "text": "What is the purpose of a mini-test-run?",
+              "options": {
+                "a": "To break in new tooling before production",
+                "b": "To determine if the press is ready to run and the shell is in spec",
+                "c": "To warm up the press lubrication system",
+                "d": "To count the number of spare tools needed"
+              },
+              "answer": "b"
+            },
+            {
+              "idx": 5,
+              "type": "fill",
+              "blanks": 2,
+              "text": "You should give a first press approval only after you are confident the press will run ________ parts on a ________ basis.",
+              "answer": [
+                "quality",
+                "consistent"
+              ]
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "checklist",
+          "title_en": "Identify Probe Components",
+          "statement_en": "Given a cross section of a probe, can identify each component by name, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "A - feeler and arm assembly"
+            },
+            {
+              "idx": 1,
+              "text": "B - lockscrew"
+            },
+            {
+              "idx": 2,
+              "text": "C - probe head"
+            },
+            {
+              "idx": 3,
+              "text": "D - fiber insert"
+            },
+            {
+              "idx": 4,
+              "text": "E - probe adaptor"
+            },
+            {
+              "idx": 5,
+              "text": "F - lockscrew"
+            },
+            {
+              "idx": 6,
+              "text": "G - probe sleeve"
+            },
+            {
+              "idx": 7,
+              "text": "H - probe bracket"
+            }
+          ]
+        },
+        {
+          "num": 3,
+          "type": "checklist",
+          "title_en": "Run Press Automatically",
+          "statement_en": "Given the probes for one job, mount and adjust each one so that the criteria on the checksheet are met, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Correctly assembled each probe."
+            },
+            {
+              "idx": 1,
+              "text": "The slot in the fiber insert is pointed up."
+            },
+            {
+              "idx": 2,
+              "text": "Correctly mounted probes in press."
+            },
+            {
+              "idx": 3,
+              "text": "Probe feeler wires are centered between stations."
+            },
+            {
+              "idx": 4,
+              "text": "Probe feeler wires are centered between fingers."
+            },
+            {
+              "idx": 5,
+              "text": "Probe feeler wires are set to correct height."
+            },
+            {
+              "idx": 6,
+              "text": "No part of the probe touches anything around it."
+            },
+            {
+              "idx": 7,
+              "text": "Checked all banana plugs for tightness."
+            },
+            {
+              "idx": 8,
+              "text": "Checked the sequence of probes by touching one end of the probe wire to a ground."
+            },
+            {
+              "idx": 9,
+              "text": "All lights on the panel work."
+            },
+            {
+              "idx": 10,
+              "text": "Checked to make sure probes do not touch anything but the shell."
+            },
+            {
+              "idx": 11,
+              "text": "All probes hit simultaneously."
+            },
+            {
+              "idx": 12,
+              "text": "With the press running, checked to make sure the press shuts off if a probe wire is pulled."
+            }
+          ]
+        },
+        {
+          "num": 4,
+          "type": "checklist",
+          "title_en": "Correct Probe System Problems",
+          "statement_en": "Given a list of problems with a probe system, can identify the possible causes and solutions for each, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "Indicator light does not go on",
+              "text": "Identified possible causes (burnt out bulb; probe not touching shell; bad probe wire; probe wire not tight in probe bar or probe adaptor; bad relay) and solutions (replace bulb; re-adjust probe / find out where shell went; replace probe wire; expand banana plugs; replace relay)."
+            },
+            {
+              "idx": 1,
+              "section": "Indicator light stays on",
+              "text": "Identified possible causes (probe grounding out; probe wire grounding out; bad relay) and solutions (clear shavings / re-adjust probe; move the wire so it does not cross another wire or touch a press part; replace relay)."
+            },
+            {
+              "idx": 2,
+              "section": "Indicator lights do not go on together",
+              "text": "Identified possible cause (probes not timed together) and solution (adjust probes to contact each shell simultaneously)."
+            },
+            {
+              "idx": 3,
+              "section": "Press shuts off when there is nothing mechanically wrong with it",
+              "text": "Identified possible causes (bad relay; probe timing is off; banana plug tightness; cam actuated limit switches timed incorrectly) and solutions (replace relay; re-adjust probes; expand plug ends; contact maintenance department)."
+            },
+            {
+              "idx": 4,
+              "section": "Press continues running after probe wire is pulled",
+              "text": "Identified possible causes (bad relay; bad master relay; poorly adjusted cam-actuated limit switches) and solutions (replace relay; replace relay; contact maintenance department)."
+            }
+          ]
+        },
+        {
+          "num": 5,
+          "type": "checklist",
+          "title_en": "Perform Mini-Test Run",
+          "statement_en": "Given a job that has been set up, complete the activities needed to run the job automatically and perform a mini-test run, so that the criteria on the check sheet are met, with 100 percent accuracy.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Double-check tightness of all bolts."
+            },
+            {
+              "idx": 1,
+              "text": "Attached and/or closed all press guards."
+            },
+            {
+              "idx": 2,
+              "text": "Turned coolant on."
+            },
+            {
+              "idx": 3,
+              "text": "Adjusted shell to specification."
+            },
+            {
+              "idx": 4,
+              "text": "Ran press to look for problems."
+            },
+            {
+              "idx": 5,
+              "text": "Checked probe system operation (pulled probe wires)."
+            },
+            {
+              "idx": 6,
+              "text": "Checked press guarding operation."
+            },
+            {
+              "idx": 7,
+              "text": "Solved all problems as they occurred."
+            },
+            {
+              "idx": 8,
+              "text": "Performed first piece approval only after being assured that the press would run quality parts on a consistent basis."
+            },
+            {
+              "idx": 9,
+              "text": "Did not walk away from the press after starting it up."
+            },
+            {
+              "idx": 10,
+              "text": "Communicated status of press to press operators and floor inspectors."
+            },
+            {
+              "idx": 11,
+              "text": "Double-checked part quality."
+            }
+          ]
+        },
+        {
+          "num": 6,
+          "type": "checklist",
+          "title_en": "Perform Job Setup",
+          "statement_en": "Given any job, perform a complete job setup to meet requirements found on checksheet.",
+          "items": [
+            {
+              "idx": 0,
+              "section": "External Activities",
+              "text": "Obtained and distributed job order."
+            },
+            {
+              "idx": 1,
+              "section": "External Activities",
+              "text": "Checked if all necessary gages and quality records are laid out."
+            },
+            {
+              "idx": 2,
+              "section": "External Activities",
+              "text": "Identified shell and job characteristics."
+            },
+            {
+              "idx": 3,
+              "section": "External Activities",
+              "text": "Interpreted layout sheet."
+            },
+            {
+              "idx": 4,
+              "section": "External Activities",
+              "text": "Analyzed process log records and list any special and recurring problems."
+            },
+            {
+              "idx": 5,
+              "section": "External Activities",
+              "text": "Eliminated all problems before setup."
+            },
+            {
+              "idx": 6,
+              "section": "External Activities",
+              "text": "Located all necessary tooling and components."
+            },
+            {
+              "idx": 7,
+              "section": "External Activities",
+              "text": "Inspected all tooling for out-of-spec conditions."
+            },
+            {
+              "idx": 8,
+              "section": "External Activities",
+              "text": "Assembled all tooling appropriately."
+            },
+            {
+              "idx": 9,
+              "section": "External Activities",
+              "text": "Assembled transfer block and fingers appropriately in slide."
+            },
+            {
+              "idx": 10,
+              "section": "External Activities",
+              "text": "Layed out all tools and components appropriately on cart."
+            },
+            {
+              "idx": 11,
+              "section": "Internal Activities",
+              "text": "Used setup documentation sheets to adjust press components to standard for the job."
+            },
+            {
+              "idx": 12,
+              "section": "Internal Activities",
+              "text": "Positioned all the block assemblies."
+            },
+            {
+              "idx": 13,
+              "section": "Internal Activities",
+              "text": "Mounted slide motion assembly."
+            },
+            {
+              "idx": 14,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted slide."
+            },
+            {
+              "idx": 15,
+              "section": "Internal Activities",
+              "text": "Mounted the blank punch."
+            },
+            {
+              "idx": 16,
+              "section": "Internal Activities",
+              "text": "Mounted and aligned the blank tools."
+            },
+            {
+              "idx": 17,
+              "section": "Internal Activities",
+              "text": "Adjusted the roll or stagger feed."
+            },
+            {
+              "idx": 18,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted cup tools."
+            },
+            {
+              "idx": 19,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted draw/redraw tools."
+            },
+            {
+              "idx": 20,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted trim tools."
+            },
+            {
+              "idx": 21,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted pierce tools."
+            },
+            {
+              "idx": 22,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted bead tools."
+            },
+            {
+              "idx": 23,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted side pierce tools."
+            },
+            {
+              "idx": 24,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted lance tools."
+            },
+            {
+              "idx": 25,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted roll and arbor station."
+            },
+            {
+              "idx": 26,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted any specialty stations."
+            },
+            {
+              "idx": 27,
+              "section": "Internal Activities",
+              "text": "Mounted and adjusted all probes correctly."
+            },
+            {
+              "idx": 28,
+              "section": "Internal Activities",
+              "text": "Performed mini-test-run."
+            },
+            {
+              "idx": 29,
+              "section": "Internal Activities",
+              "text": "Solved all problems as they occurred."
+            },
+            {
+              "idx": 30,
+              "section": "Internal Activities",
+              "text": "Performed first piece approval."
+            },
+            {
+              "idx": 31,
+              "section": "Internal Activities",
+              "text": "Communicated status of press to press operators and floor inspectors."
+            },
+            {
+              "idx": 32,
+              "section": "Internal Activities",
+              "text": "Parts meet quality standards."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
