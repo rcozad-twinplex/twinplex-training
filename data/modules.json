@@ -1730,6 +1730,147 @@
           ]
         }
       ]
+    },
+    {
+      "code": "ds00_overview",
+      "section": "die_setter",
+      "sort_order": 100,
+      "name_en": "Overview",
+      "name_es": "Descripción General",
+      "lesson_en": [
+        "trainee/DS 00 - Overview.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 00 - Overview.md"
+      ],
+      "checks": []
+    },
+    {
+      "code": "ds01_setup_prep",
+      "section": "die_setter",
+      "sort_order": 101,
+      "name_en": "Setup Preparation",
+      "name_es": "Preparación de Ajuste",
+      "lesson_en": [
+        "trainee/DS 01 - Setup Preparation.md"
+      ],
+      "lesson_es": [
+        "trainee/DS 01 - Setup Preparation.md"
+      ],
+      "checks": [
+        {
+          "num": 1,
+          "type": "quiz",
+          "title_en": "Setup Knowledge",
+          "questions": [
+            {
+              "idx": 0,
+              "type": "fill",
+              "blanks": 1,
+              "text": "A setup must always be planned, ________, and precise.",
+              "answer": [
+                "organized"
+              ]
+            },
+            {
+              "idx": 1,
+              "type": "tf",
+              "text": "Preparing for a setup and the setup itself has a great impact on the total job-run time.",
+              "answer": "T"
+            },
+            {
+              "idx": 2,
+              "type": "mc",
+              "text": "Before running a part in a production mode after a setup, a ________ must be completed:",
+              "options": {
+                "a": "Process log",
+                "b": "Blueprint",
+                "c": "First piece inspection",
+                "d": "Setup sheet",
+                "e": "None of the above"
+              },
+              "answer": "c"
+            },
+            {
+              "idx": 3,
+              "type": "fill",
+              "blanks": 1,
+              "text": "A process log gives you a method of keeping a ________ of your job.",
+              "answer": [
+                "diary"
+              ]
+            },
+            {
+              "idx": 4,
+              "type": "tf",
+              "text": "A setup is not successful unless the job runs consistently over a long term.",
+              "answer": "T"
+            },
+            {
+              "idx": 5,
+              "type": "tf",
+              "text": "Setup time does not include cleaning the press.",
+              "answer": "F"
+            }
+          ]
+        },
+        {
+          "num": 2,
+          "type": "checklist",
+          "title_en": "Setup Preparation",
+          "statement_en": "Given a job to prepare for setup, can locate and interpret the production schedule, job packet, gages and quality paperwork, blueprint, process log records, and setup documentation information, to the standards found on the performance check.",
+          "items": [
+            {
+              "idx": 0,
+              "text": "Located the production schedule."
+            },
+            {
+              "idx": 1,
+              "text": "Correctly interpreted information found on the production schedule."
+            },
+            {
+              "idx": 2,
+              "text": "Located the job packet."
+            },
+            {
+              "idx": 3,
+              "text": "Correctly interpreted information found on the job packet."
+            },
+            {
+              "idx": 4,
+              "text": "Located the quality paperwork."
+            },
+            {
+              "idx": 5,
+              "text": "Correctly interpreted information found on the quality paperwork."
+            },
+            {
+              "idx": 6,
+              "text": "Located the blueprint."
+            },
+            {
+              "idx": 7,
+              "text": "Correctly interpreted information found on the blueprint."
+            },
+            {
+              "idx": 8,
+              "text": "Located the process log records."
+            },
+            {
+              "idx": 9,
+              "text": "Correctly interpreted information found on the process log records."
+            },
+            {
+              "idx": 10,
+              "text": "Located the setup documentation."
+            },
+            {
+              "idx": 11,
+              "text": "Correctly interpreted information found on the setup documentation."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
